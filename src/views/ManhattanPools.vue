@@ -1,0 +1,595 @@
+<template>
+    <div class="home">
+        <img alt="Vue logo" src="../assets/logo.png" />
+        <HelloWorld msg="Welcome to Your Vue.js App" />
+    </div>
+</template>
+
+<script>
+// @ is an alias to /src
+import HelloWorld from "@/components/HelloWorld.vue";
+
+export default {
+    name: "ManhattanPools",
+    components: {
+        HelloWorld,
+    },
+    data() {
+        return {
+            [
+                {
+                    locId: "m164"
+                    borough: "Manhattan",
+                    name: "Asser Levy Pool",
+                    street: "390 Asser Levy Place",
+                    zip: 10010,
+                    phone: "(212) 447-2020",
+                    betweens: "Asser Levy Place and East 23rd Street"
+                    variants: [
+                        {
+                            poolId: "m164a"
+                            indoor: true,
+                            desc: "Intermediate Pool",
+                            length: 66,
+                            width: 26,
+                            depth: 8,
+                            accessible: true,
+                            schedule: "https://www.nycgovparks.org/facilities/recreationcenters/M164/schedule#Pool",
+                            notes: null,
+                        },
+                        {
+                            poolId: "m164b"
+                            indoor: false,
+                            desc: "Outdoor Intermediate Pool",
+                            length: 125,
+                            width: 45,
+                            depth: 4,
+                            accessible: true,
+                            schedule: "summer",
+                            notes: null,
+                        },
+                        {
+                            poolId: "m164c"
+                            indoor: false,
+                            desc: "Outdoor Wading Pool",
+                            length: 41.67,
+                            width: 25,
+                            depth: 1.5,
+                            accessible: false,
+                            schedule: "summer",
+                            notes: null,
+                        },
+                    ],
+                },
+                {
+                    locId: "m260"
+                    borough: "Manhattan",
+                    name: "Chelsea Pool",
+                    street: "446 West 25th Street",
+                    zip: 10001,
+                    phone: "(212) 255-3705",
+                    betweens: "West 25th Street between 9th and 10th Avenues",
+                    variants: [
+                        {
+                            poolId: "m260a",
+                            indoor: true,
+                            desc: "Intermediate Pool",
+                            length: 75,
+                            width: 43,
+                            depth: 10,
+                            accessible: true,
+                            schedule: "https://www.nycgovparks.org/facilities/recreationcenters/M260/schedule#Pool",
+                            notes: null,
+                        },
+                    ],
+                },
+                {
+                    locId: "m063"
+                    borough: "Manhattan",
+                    name: "Gertrude Ederle Pool",
+                    street: "232 West 60th Street",
+                    zip: 10023,
+                    phone: "(212) 397-3159",
+                    betweens: "West 60th Street between West End and Amsterdam Avenues",
+                    variants: [
+                        {
+                            poolId: "m063a",
+                            indoor: true,
+                            desc: "Intermediate Pool",
+                            length: 60,
+                            width: 35,
+                            depth: 8,
+                            accessible: true,
+                            schedule: "https://www.nycgovparks.org/facilities/recreationcenters/M063/schedule#Pool",
+                            notes: null,
+                        },
+                    ],
+                },
+                {
+                    locId: "m131"
+                    borough: "Manhattan",
+                    name: "Hansborough Pool",
+                    street: "35 West 134th Street",
+                    zip: 10037,
+                    phone: "(212) 234-9603",
+                    betweens: "East 134th Street between Fifth and Lenox Avenues",
+                    variants: [
+                        {
+                            poolId: "m131a",
+                            indoor: true,
+                            desc: "Intermediate Pool",
+                            length: 75,
+                            width: 35,
+                            depth: 9,
+                            accessible: true,
+                            schedule: "https://www.nycgovparks.org/facilities/recreationcenters/M131/schedule#Pool",
+                            notes: "Currently closed for renovation. Check schedule link for updates.",
+                        },
+                    ],
+                },
+                {
+                    locId: "m130"
+                    borough: "Manhattan",
+                    name: "Recreation Center 54 Pool",
+                    street: "348 East 54th Street",
+                    zip: 10022,
+                    phone: "(212) 754-5411",
+                    betweens: "East 54th Street between First and Second Avenues",
+                    variants: [
+                        {
+                            poolId: "m130a",
+                            indoor: true,
+                            desc: "Intermediate Pool",
+                            length: 54,
+                            width: 50,
+                            depth: 12,
+                            accessible: true,
+                            schedule: "https://www.nycgovparks.org/facilities/recreationcenters/M130/schedule#Pool",
+                            notes: "Currently closed for emergency maintenance.",
+                        },
+                    ],
+                },
+                {
+                    locId: "m103",
+                    borough: "Manhattan",
+                    name: "Tony Dapolito Pool",
+                    street: "1 Clarkson Street",
+                    zip: 10014,
+                    phone: "(212) 242-5228",
+                    betweens: "Clarkson Street and Seventh Avenue South",
+                    variants: [
+                        {
+                            poolId: "m103a",
+                            indoor: true,
+                            desc: "Intermediate Pool",
+                            length: 70,
+                            width: 21,
+                            depth: 8,
+                            accessible: true,
+                            schedule: "https://www.nycgovparks.org/facilities/recreationcenters/M103/schedule#Pool",
+                            notes: "Closed for renovation.",
+                        },
+                        {
+                            poolId: "m103b",
+                            indoor: false,
+                            desc: "Outdoor Intermediate Pool",
+                            length: 100,
+                            width: 50,
+                            depth: 9,
+                            accessible: true,
+                            schedule: "summer",
+                            notes: null,
+                        },
+                        {
+                            poolId: "m103c"
+                            indoor: false,
+                            desc: "Outdoor Diving Pool",
+                            length: 35,
+                            width: 47,
+                            depth: 9,
+                            accessible: false,
+                            schedule: "summer",
+                            notes: null,
+                        },
+                    ],
+                },
+            {
+                locId: "m193",
+                borough: "Manhattan",
+                name: "Abe Lincoln Pool",
+                street: "24 East 135th Street",
+                zip: 10037,
+                phone: "(212) 491-1714",
+                betweens: "East 135th Street and Fifth Avenue",
+                variants: [
+                    {
+                        poolId: "m193a"
+                        indoor: false,
+                        desc: "Outdoor Mini Pool",
+                        length: 40,
+                        width: 20,
+                        depth: 3,
+                        accessible: false,
+                        schedule: "summer",
+                        notes: "Inside Abraham Lincoln Playground.",
+                    },
+                ],
+            },
+            {
+                locId: "m270",
+                borough: "Manhattan",
+                name: "Dry Dock Pool",
+                street: "149 East 10th Street",
+                zip: 10003,
+                phone: "(212) 677-4481",
+                betweens: "East 10th Street between Avenues C and D",
+                variants: [
+                    {
+                        poolId: "m270a",
+                        indoor: false,
+                        desc: "Outdoor Intermediate Pool",
+                        length: 75,
+                        width: 60,
+                        depth: 3,
+                        accessible: true,
+                        schedule: "summer",
+                        notes: "Inside Dry Dock Playground.",
+                    },
+                    {
+                        poolId: "m270b",
+                        indoor: false,
+                        desc: "Outdoor Wading Pool",
+                        length: 30,
+                        width: 20,
+                        depth: 1.5,
+                        accessible: false,
+                        schedule: "summer",
+                        notes: "Inside Dry Dock Playground.",
+                    },
+                ],
+            },
+            {
+                locId: "m220",
+                borough: "Manhattan",
+                name: "Frederick Douglass Pool",
+                street: "Amsterdam Avenue between 100th & 102nd Streets",
+                zip: 10025,
+                phone: "(212) 316-3241",
+                betweens: "Amsterdam Avenue between 100th & 102nd Streets",
+                variants: [
+                    {
+                        poolId: "m220a",
+                        indoor: false,
+                        desc: "Outdoor Mini Pool",
+                        length: 40,
+                        width: 20,
+                        depth: 3,
+                        accessible: true,
+                        schedule: "summer",
+                        notes: "Inside Frederick Douglass Playground.",
+                    },
+                ],
+            },
+            {
+                locId: "m033",
+                borough: "Manhattan",
+                name: "Hamilton Fish Pool",
+                street: "128 Pitt Street",
+                zip: 10002,
+                phone: "(212) 387-7691",
+                betweens: "Pitt Street between East Houston and Stanton Streets",
+                variants: [
+                    {
+                        poolId: "m033a",
+                        indoor: false,
+                        desc: "Outdoor Olympic Pool",
+                        length: 165,
+                        width: 98,
+                        depth: 2.5,
+                        accessible: true,
+                        schedule: "summer",
+                        notes: "Inside Hamilton Fish Park.",
+                    },
+                    {
+                        poolId: "m033b",
+                        indoor: false,
+                        desc: "Outdoor Wading Pool",
+                        length: 67,
+                        width: 98,
+                        depth: 2.5,
+                        accessible: false,
+                        schedule: "summer",
+                        notes: "Inside Hamilton Fish Park.",
+                    },
+                ],
+            },
+            {
+                locId: "m037"
+                borough: "Manhattan",
+                name: "Highbridge Pool",
+                street: "Amsterdam Avenue and West 173rd Street",
+                zip: 10033,
+                phone: "(212) 927-2400",
+                betweens: "Amsterdam Avenue and West 173rd Street",
+                variants: [
+                    {
+                        poolId: "m037a"
+                        indoor: false,
+                        desc: "Outdoor Olympic Pool"
+                        length: 220,
+                        width: 162,
+                        depth: 10.5,
+                        accessible: true,
+                        schedule: "summer",
+                        notes: "Inside Highbridge Park.",
+                    },
+                    {
+                        poolId: "m037b"
+                        indoor: false,
+                        desc: "Outdoor Wading Pool"
+                        length: 220,
+                        width: 92,
+                        depth: 2,
+                        accessible: false,
+                        schedule: "summer",
+                        notes: "Inside Highbridge Park.",
+                    },
+                ],
+            },
+            {
+                locId: "m014"
+                borough: "Manhattan",
+                name: "Jackie Robinson Pool",
+                street: "85 Bradhurst Avenue",
+                zip: 10039,
+                phone: "(212) 234-9606",
+                betweens: "Bradhurst Avenue and West 146th Street",
+                variants: [
+                    {
+                        poolId: "m014a"
+                        indoor: false,
+                        desc: "Outdoor Olympic Pool"
+                        length: 235,
+                        width: 82,
+                        depth: 3.5,
+                        accessible: true,
+                        schedule: "summer",
+                        notes: "Inside Jackie Robinson Park.",
+                    },
+                ],
+            },
+            {
+                locId: "m045"
+                borough: "Manhattan",
+                name: "John Jay Pool",
+                street: "77 Cherokee Place",
+                zip: 10075,
+                phone: "(212) 794-6566",
+                betweens: "Cherokee Place between East 77th and East 78th Streets",
+                variants: [
+                    {
+                        poolId: "m045a"
+                        indoor: false,
+                        desc: "Outdoor Intermediate Pool"
+                        length: 145,
+                        width: 49,
+                        depth: 4,
+                        accessible: true,
+                        schedule: "summer",
+                        notes: "Inside John Jay Park.",
+                    },
+                    {
+                        poolId: "m045b"
+                        indoor: false,
+                        desc: "Outdoor Diving Pool"
+                        length: 60,
+                        width: 40,
+                        depth: 8,
+                        accessible: false,
+                        schedule: "summer",
+                        notes: "Inside John Jay Park.",
+                    },
+                ],
+            },
+            {
+                locId: "m010"
+                borough: "Manhattan",
+                name: "Lasker Pool",
+                street: "Park Drive Loop, North end of Central Park",
+                zip: 10029,
+                phone: "(212-534-7639)",
+                betweens: "Park Drive Loop, North end of Central Park",
+                variants: [
+                    {
+                        poolId: "m010a"
+                        indoor: false,
+                        desc: "Outdoor Olympic Pool"
+                        length: 240,
+                        width: 190,
+                        depth: 3.75,
+                        accessible: true,
+                        schedule: "summer",
+                        notes: "Inside Central Park.",
+                    },
+                    {
+                        poolId: "m010b"
+                        indoor: false,
+                        desc: "Outdoor Wading Pool"
+                        length: 63.5,
+                        width: 14.5,
+                        depth: 1.25,
+                        accessible: false,
+                        schedule: "summer",
+                        notes: "Inside Central Park.",
+                    },
+                ],
+            },
+            {
+                locId: "m058"
+                borough: "Manhattan",
+                name: "Marcus Garvey Pool",
+                street: "West 124th Street betwwen Mount Morris Park West and Madison Avenue",
+                zip: 10027,
+                phone: "(212) 410-2818",
+                betweens: "West 124th Street betwwen Mount Morris Park West and Madison Avenue",
+                variants: [
+                    {
+                        poolId: "m058a"
+                        indoor: false,
+                        desc: "Outdoor Intermediate Pool"
+                        length: 165,
+                        width: 75,
+                        depth: 4,
+                        accessible: true,
+                        schedule: "summer",
+                        notes: "Inside Marcus Garvey Park.",
+                    },
+                ],
+            },
+            {
+                locId: "m190"
+                borough: "Manhattan",
+                name: "Sheltering Arms Pool",
+                street: "1350 Amsterdam Avenue",
+                zip: 10027,
+                phone: "(212) 662-6191",
+                betweens: "Amsterdam Avenue between West 128th and West 129th Street",
+                variants: [
+                    {
+                        poolId: "m190a"
+                        indoor: false,
+                        desc: "Outdoor Intermediate Pool"
+                        length: 75,
+                        width: 60,
+                        depth: 3.5,
+                        accessible: true,
+                        schedule: "summer",
+                        notes: "Inside Sheltering Arms Playground.",
+                    },
+                    {
+                        poolId: "m190b"
+                        indoor: false,
+                        desc: "Outdoor Wading Pool"
+                        length: 30,
+                        width: 20,
+                        depth: 1.5,
+                        accessible: false,
+                        schedule: "summer",
+                        notes: "Inside Sheltering Arms Playground.",
+                    },
+                ],
+            },
+            {
+                locId: "m047"
+                borough: "Manhattan",
+                name: "Thomas Jefferson Pool",
+                street: "2180 First Avenue",
+                zip: 10029,
+                phone: "(212) 860-1372",
+                betweens: "First Avenue between East 111th and East 114th Streets",
+                variants: [
+                    {
+                        poolId: "m047a"
+                        indoor: false,
+                        desc: "Outdoor Olympic Pool"
+                        length: 239,
+                        width: 97,
+                        depth: 4,
+                        accessible: true,
+                        schedule: "summer",
+                        notes: "Inside Thomas Jefferson Park.",
+                    },
+                    {
+                        poolId: "m047a"
+                        indoor: false,
+                        desc: "Outdoor Wading Pool"
+                        length: 48,
+                        width: 97,
+                        depth: 1.5,
+                        accessible: false,
+                        schedule: "summer",
+                        notes: "Inside Thomas Jefferson Park.",
+                    },
+                ],
+            },
+            {
+                locId: "m088"
+                borough: "Manhattan",
+                name: "Tompkins Square Pool",
+                street: "Avenue A between East 7th and East 10th Streets",
+                zip: 10009,
+                phone: "(212) 387-6784",
+                betweens: "Avenue A between East 7th and East 10th Streets",
+                variants: [
+                    {
+                        poolId: "m088a"
+                        indoor: false,
+                        desc: "Outdoor Mini Pool"
+                        length: 40,
+                        width: 20,
+                        depth: 3,
+                        accessible: false,
+                        schedule: "summer",
+                        notes: "Inside Tompkins Square.",
+                    },
+                ],
+            },
+            {
+                locId: "m069"
+                borough: "Manhattan",
+                name: "Vesuvio Pool",
+                street: "101 Thompson Street",
+                zip: 10012,
+                phone: "(212) 343-0959",
+                betweens: "Thompson Street between Spring and Prince Streets",
+                variants: [
+                    {
+                        poolId: "m069a"
+                        indoor: false,
+                        desc: "Outdoor Mini Pool"
+                        length: 40,
+                        width: 20,
+                        depth: 3,
+                        accessible: true,
+                        schedule: "summer",
+                        notes: "Inside Vesuvio Playground.",
+                    },
+                ],
+            },
+            {
+                locId: "m273"
+                borough: "Manhattan",
+                name: "Wagner Pool",
+                street: "East 124th Street between First and Second Avenues",
+                zip: 10035,
+                phone: "(212) 534-4238",
+                betweens: "East 124th Street between First and Second Avenues",
+                variants: [
+                    {
+                        poolId: "m273a"
+                        indoor: false,
+                        desc: "Outdoor Intermediate Pool"
+                        length: 75,
+                        width: 60,
+                        depth: 3.5,
+                        accessible: true,
+                        schedule: "summer",
+                        notes: "Inside the Wagner Houses.",
+                    },
+                   {
+                        poolId: "m273a"
+                        indoor: false,
+                        desc: "Outdoor Wading Pool"
+                        length: 24,
+                        width: 24,
+                        depth: 9,
+                        accessible: false,
+                        schedule: "summer",
+                        notes: "Inside the Wagner Houses.",
+                    },
+                ],
+            }         
+        }
+    }
+};
+</script>

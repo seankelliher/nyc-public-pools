@@ -1,0 +1,443 @@
+<template>
+    <div class="home">
+        <img alt="Vue logo" src="../assets/logo.png" />
+        <HelloWorld msg="Welcome to Your Vue.js App" />
+    </div>
+</template>
+
+<script>
+// @ is an alias to /src
+import HelloWorld from "@/components/HelloWorld.vue";
+
+export default {
+    name: "BrooklynPools",
+    components: {
+        HelloWorld,
+    },
+    data() {
+        return {
+            [
+                {
+                    locId: "b270"
+                    borough: "Brooklyn",
+                    name: "Brownsville Pool",
+                    street: "1555 Linden Boulevard",
+                    zip: 11212,
+                    phone: "(718) 485-4633"
+                    betweens: "Linden Boulevard and Christopher Avenue"
+                    variants: [
+                        {
+                            poolId: "b270a"
+                            indoor: true,
+                            desc: "Intermediate Pool"
+                            length: 75,
+                            width: 30,
+                            depth: 8,
+                            accessible: true,
+                            schedule: "https://www.nycgovparks.org/facilities/recreationcenters/B270/schedule#Pool",
+                            notes: "Closed for emergency maintenance.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b085"
+                    borough: "Brooklyn",
+                    name: "Metropolitan Pool",
+                    street: "261 Bedford Avenue",
+                    zip: 11211,
+                    phone: "(718) 599-5707"
+                    betweens: "Bedford and Metropolitan Avenues"
+                    variants: [
+                        {
+                            poolId: "b085a"
+                            indoor: true,
+                            desc: "Intermediate Pool"
+                            length: 75,
+                            width: 30,
+                            depth: null,
+                            accessible: true,
+                            schedule: "https://www.nycgovparks.org/facilities/recreationcenters/B085/schedule#Pool",
+                            notes: "Depth of pool not stated.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b008",
+                    borough: "Brooklyn",
+                    name: "Betsy Head Pool",
+                    street: "694 Thomas S. Boyland Street",
+                    zip: 11212,
+                    phone: "(718) 257-1635/6",
+                    betweens: "Thomas S. Boyland Street between Livonia and Dumont Avenues",
+                    variants: [
+                        {
+                            poolId: "b008a"
+                            indoor: false,
+                            desc: "Outdoor Olympic Pool",
+                            length: 330,
+                            width: 165,
+                            depth: 4.25,
+                            accessible: true,
+                            schedule: "summer",
+                            notes: "Inside Betsy Head Park.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b310",
+                    borough: "Brooklyn",
+                    name: "Bushwick Pool",
+                    street: "835 Flushing Avenue",
+                    zip: 11206,
+                    phone: "(718) 452-2116",
+                    betweens: "Flushing Avenue and Beaver Street",
+                    variants: [
+                        {
+                            poolId: "b310a"
+                            indoor: false,
+                            desc: "Outdoor Intermediate Pool",
+                            length: 75,
+                            width: 60,
+                            depth: 3,
+                            accessible: true,
+                            schedule: "summer",
+                            notes: "Inside Bushwick Playground.",
+                        },
+                        {
+                            poolId: "b310b"
+                            indoor: false,
+                            desc: "Outdoor Wading Pool",
+                            length: 30,
+                            width: 20,
+                            depth: 1,
+                            accessible: false,
+                            schedule: "summer",
+                            notes: "Inside Bushwick Playground.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b021",
+                    borough: "Brooklyn",
+                    name: "Commodore Barry Pool",
+                    street: "Flushing Avenue between Navy Street and North Elliot Place",
+                    zip: 11201,
+                    phone: "(718) 243-2593",
+                    betweens: "Flushing Avenue between Navy Street and North Elliot Place",
+                    variants: [
+                        {
+                            poolId: "b021a"
+                            indoor: false,
+                            desc: "Outdoor Intermediate Pool"
+                            length: 75,
+                            width: 60,
+                            depth: 3,
+                            accessible: true,
+                            schedule: "summer",
+                            notes: "Inside Commodore Barry Park.",
+                        },
+                        {
+                            poolId: "b021b"
+                            indoor: false,
+                            desc: "Outdoor Wading Pool"
+                            length: 24,
+                            width: 24,
+                            depth: 1,
+                            accessible: false,
+                            schedule: "summer",
+                            notes: "Inside Commodore Barry Park.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b248",
+                    borough: "Brooklyn",
+                    name: "David Fox/PS 251 Pool",
+                    street: "5321 Avenue H",
+                    zip: 11234,
+                    phone: "(718) 531-2437",
+                    betweens: "East 54th Street and Avenue H",
+                    variants: [
+                        {
+                            poolId: "b248a"
+                            indoor: false,
+                            desc: "Outdoor Mini Pool"
+                            length: 40,
+                            width: 20,
+                            depth: 3,
+                            accessible: false,
+                            schedule: "summer",
+                            notes: "Inside Fox Playground.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b145",
+                    borough: "Brooklyn",
+                    name: "Douglass and DeGraw Pool",
+                    street: "250 Douglass Street",
+                    zip: 11217,
+                    phone: "(718) 625-3268",
+                    betweens: "Douglass Street, between Third Avenue and Nevins Street",
+                    variants: [
+                        {
+                            poolId: "b145a"
+                            indoor: false,
+                            desc: "Outdoor Intermediate Pool"
+                            length: 75,
+                            width: 60,
+                            depth: 3,
+                            accessible: true,
+                            schedule: "summer",
+                            notes: "Inside Thomas Greene Playground.",
+                        },
+                      {
+                            poolId: "b145b"
+                            indoor: false,
+                            desc: "Outdoor Wading Pool"
+                            length: 24,
+                            width: 24,
+                            depth: 1,
+                            accessible: false,
+                            schedule: "summer",
+                            notes: "Inside Thomas Greene Playground.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b236",
+                    borough: "Brooklyn",
+                    name: "Glenwood Houses Pool",
+                    street: "5816 Farragut Road",
+                    zip: 11234,
+                    phone: "(718) 531-2480",
+                    betweens: "Farragut Road between East 58th and East 59th Streets",
+                    variants: [
+                        {
+                            poolId: "b236a"
+                            indoor: false,
+                            desc: "Outdoor Mini Pool"
+                            length: 40,
+                            width: 20,
+                            depth: 3,
+                            accessible: false,
+                            schedule: "summer",
+                            notes: "Inside Glenwood Playground.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b260",
+                    borough: "Brooklyn",
+                    name: "Howard Pool",
+                    street: "1596 East New York Avenue",
+                    zip: 11212,
+                    phone: "(718) 385-1023",
+                    betweens: "East New York Avenue and Reverend R.D. Brown Place",
+                    variants: [
+                        {
+                            poolId: "b260a"
+                            indoor: false,
+                            desc: "Outdoor Intermediate Pool"
+                            length: 75,
+                            width: 60,
+                            depth: 3,
+                            accessible: true,
+                            schedule: "summer",
+                            notes: "Inside Howard Playground.",
+                        },
+                        {
+                            poolId: "b260a"
+                            indoor: false,
+                            desc: "Outdoor Wading Pool"
+                            length: 30,
+                            width: 20,
+                            depth: 1,
+                            accessible: false,
+                            schedule: "summer",
+                            notes: "Inside Howard Playground.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b269",
+                    borough: "Brooklyn",
+                    name: "Jesse Owens Pool",
+                    street: "1014 Lafayette Avenue",
+                    zip: 11221,
+                    phone: "(718) 452-0519",
+                    betweens: "Lafayette Avenue between Stuyvesant Avenue and Malcomb X Boulevard",
+                    variants: [
+                        {
+                            poolId: "b269a"
+                            indoor: false,
+                            desc: "Outdoor Mini Pool"
+                            length: 40,
+                            width: 20,
+                            depth: 3,
+                            accessible: false,
+                            schedule: "summer",
+                            notes: "Inside Jesse Owens Playground.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b351",
+                    borough: "Brooklyn",
+                    name: "Kosciuszko Pool",
+                    street: "670 Marcy Avenue",
+                    zip: 11216,
+                    phone: "(718) 622-5271",
+                    betweens: "Marcy Avenue between DeKalb Avenue and Kosciuszko Street",
+                    variants: [
+                        {
+                            poolId: "b351a"
+                            indoor: false,
+                            desc: "Outdoor Olympic Pool"
+                            length: 230,
+                            width: 100,
+                            depth: 4,
+                            accessible: true,
+                            schedule: "summer",
+                            notes: null,
+                        },
+                        {
+                            poolId: "b351b"
+                            indoor: false,
+                            desc: "Outdoor Wading Pool"
+                            length: 42,
+                            width: 52,
+                            depth: 1.5,
+                            accessible: false,
+                            schedule: "summer",
+                            notes: null,
+                        },
+                    ],
+                },
+                {
+                    locId: "b329",
+                    borough: "Brooklyn",
+                    name: "Lindower Park Pool",
+                    street: "Mill Avenue between Strickland Avenue and East 60th Place",
+                    zip: 11234,
+                    phone: "(718) 531-4852",
+                    betweens: "Mill Avenue between Strickland Avenue and East 60th Place",
+                    variants: [
+                        {
+                            poolId: "b329a"
+                            indoor: false,
+                            desc: "Outdoor Mini Pool"
+                            length: 40,
+                            width: 20,
+                            depth: 3,
+                            accessible: false,
+                            schedule: "summer",
+                            notes: "Inside XXXXXXXX.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b058",
+                    borough: "Brooklyn",
+                    name: "McCarren Park Pool",
+                    street: "776 Lorimer Street",
+                    zip: 11222,
+                    phone: "311",
+                    betweens: "Lorimer Street between Bayard Street and Driggs Avenue",
+                    variants: [
+                        {
+                            poolId: "b058a"
+                            indoor: false,
+                            desc: "Outdoor Olympic Pool"
+                            length: 329,
+                            width: 151,
+                            depth: 4.6,
+                            accessible: true,
+                            schedule: "summer",
+                            notes: "Inside McCarren Park.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b253",
+                    borough: "Brooklyn",
+                    name: "PS 20 Playground Pool",
+                    street: "225 Adelphi Street",
+                    zip: 11205,
+                    phone: "(718) 625-6101",
+                    betweens: "Adelphi Street between Willoughby and DeKalb Avenues",
+                    variants: [
+                        {
+                            poolId: "b253a"
+                            indoor: false,
+                            desc: "Outdoor Mini Pool"
+                            length: 40,
+                            width: 20,
+                            depth: 3,
+                            accessible: false,
+                            schedule: "summer",
+                            notes: "Inside Albert J. Parham Playground.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b126",
+                    borough: "Brooklyn",
+                    name: "Red Hook Pool",
+                    street: "155 Bay Street",
+                    zip: 11231,
+                    phone: "(718) 722-3211",
+                    betweens: "Bay Street between Henry and Clinton Streets",
+                    variants: [
+                        {
+                            poolId: "b126a"
+                            indoor: false,
+                            desc: "Outdoor Olympic Pool"
+                            length: 330,
+                            width: 130,
+                            depth: 4,
+                            accessible: true,
+                            schedule: "summer",
+                            notes: "Inside Red Hook Recreation Area.",
+                        },
+                        {
+                            poolId: "b126a"
+                            indoor: false,
+                            desc: "Outdoor Wading Pool"
+                            length: 50,
+                            width: 25,
+                            depth: 1,
+                            accessible: true,
+                            schedule: "summer",
+                            notes: "Inside Red Hook Recreation Area.",
+                        },
+                    ],
+                },
+                {
+                    locId: "b087",
+                    borough: "Brooklyn",
+                    name: "Sunset Park Pool",
+                    street: "Seventh Avenue between 41st and 44th Streets",
+                    zip: 11232,
+                    phone: "(718) 972-2180",
+                    betweens: "Seventh Avenue between 41st and 44th Streets",
+                    variants: [
+                        {
+                            poolId: "b087a"
+                            indoor: false,
+                            desc: "Outdoor Olympic Pool"
+                            length: 259,
+                            width: 162,
+                            depth: 3.5,
+                            accessible: true,
+                            schedule: "summer",
+                            notes: "Inside Sunset Park.",
+                        },
+                    ],
+                },
+
+            ],
+        }
+    }
+};
+</script>
