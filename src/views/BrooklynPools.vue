@@ -16,47 +16,47 @@ export default {
     },
     data() {
         return {
-            [
+            pools: [
                 {
-                    locId: "b270"
+                    locId: "b270",
                     borough: "Brooklyn",
                     name: "Brownsville Pool",
                     street: "1555 Linden Boulevard",
                     zip: 11212,
-                    phone: "(718) 485-4633"
-                    betweens: "Linden Boulevard and Christopher Avenue"
+                    phone: "(718) 485-4633",
+                    betweens: "Linden Boulevard and Christopher Avenue",
                     variants: [
                         {
-                            poolId: "b270a"
+                            poolId: "b270a",
                             indoor: true,
-                            desc: "Intermediate Pool"
+                            desc: "Intermediate Pool",
                             length: 75,
                             width: 30,
                             depth: 8,
                             accessible: true,
-                            schedule: "https://www.nycgovparks.org/facilities/recreationcenters/B270/schedule#Pool",
+                            schedule: "B270/schedule#Pool",
                             notes: "Closed for emergency maintenance.",
                         },
                     ],
                 },
                 {
-                    locId: "b085"
+                    locId: "b085",
                     borough: "Brooklyn",
                     name: "Metropolitan Pool",
                     street: "261 Bedford Avenue",
                     zip: 11211,
-                    phone: "(718) 599-5707"
-                    betweens: "Bedford and Metropolitan Avenues"
+                    phone: "(718) 599-5707",
+                    betweens: "Bedford and Metropolitan Avenues",
                     variants: [
                         {
-                            poolId: "b085a"
+                            poolId: "b085a",
                             indoor: true,
-                            desc: "Intermediate Pool"
+                            desc: "Intermediate Pool",
                             length: 75,
                             width: 30,
                             depth: null,
                             accessible: true,
-                            schedule: "https://www.nycgovparks.org/facilities/recreationcenters/B085/schedule#Pool",
+                            schedule: "B085/schedule#Pool",
                             notes: "Depth of pool not stated.",
                         },
                     ],
@@ -68,10 +68,11 @@ export default {
                     street: "694 Thomas S. Boyland Street",
                     zip: 11212,
                     phone: "(718) 257-1635/6",
-                    betweens: "Thomas S. Boyland Street between Livonia and Dumont Avenues",
+                    betweens:
+                        "Thomas S. Boyland Street between Livonia and Dumont Avenues",
                     variants: [
                         {
-                            poolId: "b008a"
+                            poolId: "b008a",
                             indoor: false,
                             desc: "Outdoor Olympic Pool",
                             length: 330,
@@ -93,7 +94,7 @@ export default {
                     betweens: "Flushing Avenue and Beaver Street",
                     variants: [
                         {
-                            poolId: "b310a"
+                            poolId: "b310a",
                             indoor: false,
                             desc: "Outdoor Intermediate Pool",
                             length: 75,
@@ -104,7 +105,7 @@ export default {
                             notes: "Inside Bushwick Playground.",
                         },
                         {
-                            poolId: "b310b"
+                            poolId: "b310b",
                             indoor: false,
                             desc: "Outdoor Wading Pool",
                             length: 30,
@@ -123,12 +124,13 @@ export default {
                     street: "Flushing Avenue between Navy Street and North Elliot Place",
                     zip: 11201,
                     phone: "(718) 243-2593",
-                    betweens: "Flushing Avenue between Navy Street and North Elliot Place",
+                    betweens:
+                        "Flushing Avenue between Navy Street and North Elliot Place",
                     variants: [
                         {
-                            poolId: "b021a"
+                            poolId: "b021a",
                             indoor: false,
-                            desc: "Outdoor Intermediate Pool"
+                            desc: "Outdoor Intermediate Pool",
                             length: 75,
                             width: 60,
                             depth: 3,
@@ -137,9 +139,9 @@ export default {
                             notes: "Inside Commodore Barry Park.",
                         },
                         {
-                            poolId: "b021b"
+                            poolId: "b021b",
                             indoor: false,
-                            desc: "Outdoor Wading Pool"
+                            desc: "Outdoor Wading Pool",
                             length: 24,
                             width: 24,
                             depth: 1,
@@ -159,9 +161,9 @@ export default {
                     betweens: "East 54th Street and Avenue H",
                     variants: [
                         {
-                            poolId: "b248a"
+                            poolId: "b248a",
                             indoor: false,
-                            desc: "Outdoor Mini Pool"
+                            desc: "Outdoor Mini Pool",
                             length: 40,
                             width: 20,
                             depth: 3,
@@ -178,12 +180,13 @@ export default {
                     street: "250 Douglass Street",
                     zip: 11217,
                     phone: "(718) 625-3268",
-                    betweens: "Douglass Street, between Third Avenue and Nevins Street",
+                    betweens:
+                        "Douglass Street, between Third Avenue and Nevins Street",
                     variants: [
                         {
-                            poolId: "b145a"
+                            poolId: "b145a",
                             indoor: false,
-                            desc: "Outdoor Intermediate Pool"
+                            desc: "Outdoor Intermediate Pool",
                             length: 75,
                             width: 60,
                             depth: 3,
@@ -191,10 +194,10 @@ export default {
                             schedule: "summer",
                             notes: "Inside Thomas Greene Playground.",
                         },
-                      {
-                            poolId: "b145b"
+                        {
+                            poolId: "b145b",
                             indoor: false,
-                            desc: "Outdoor Wading Pool"
+                            desc: "Outdoor Wading Pool",
                             length: 24,
                             width: 24,
                             depth: 1,
@@ -211,12 +214,13 @@ export default {
                     street: "5816 Farragut Road",
                     zip: 11234,
                     phone: "(718) 531-2480",
-                    betweens: "Farragut Road between East 58th and East 59th Streets",
+                    betweens:
+                        "Farragut Road between East 58th and East 59th Streets",
                     variants: [
                         {
-                            poolId: "b236a"
+                            poolId: "b236a",
                             indoor: false,
-                            desc: "Outdoor Mini Pool"
+                            desc: "Outdoor Mini Pool",
                             length: 40,
                             width: 20,
                             depth: 3,
@@ -233,12 +237,13 @@ export default {
                     street: "1596 East New York Avenue",
                     zip: 11212,
                     phone: "(718) 385-1023",
-                    betweens: "East New York Avenue and Reverend R.D. Brown Place",
+                    betweens:
+                        "East New York Avenue and Reverend R.D. Brown Place",
                     variants: [
                         {
-                            poolId: "b260a"
+                            poolId: "b260a",
                             indoor: false,
-                            desc: "Outdoor Intermediate Pool"
+                            desc: "Outdoor Intermediate Pool",
                             length: 75,
                             width: 60,
                             depth: 3,
@@ -247,9 +252,9 @@ export default {
                             notes: "Inside Howard Playground.",
                         },
                         {
-                            poolId: "b260a"
+                            poolId: "b260a",
                             indoor: false,
-                            desc: "Outdoor Wading Pool"
+                            desc: "Outdoor Wading Pool",
                             length: 30,
                             width: 20,
                             depth: 1,
@@ -266,12 +271,13 @@ export default {
                     street: "1014 Lafayette Avenue",
                     zip: 11221,
                     phone: "(718) 452-0519",
-                    betweens: "Lafayette Avenue between Stuyvesant Avenue and Malcomb X Boulevard",
+                    betweens:
+                        "Lafayette Avenue between Stuyvesant Avenue and Malcomb X Boulevard",
                     variants: [
                         {
-                            poolId: "b269a"
+                            poolId: "b269a",
                             indoor: false,
-                            desc: "Outdoor Mini Pool"
+                            desc: "Outdoor Mini Pool",
                             length: 40,
                             width: 20,
                             depth: 3,
@@ -288,12 +294,13 @@ export default {
                     street: "670 Marcy Avenue",
                     zip: 11216,
                     phone: "(718) 622-5271",
-                    betweens: "Marcy Avenue between DeKalb Avenue and Kosciuszko Street",
+                    betweens:
+                        "Marcy Avenue between DeKalb Avenue and Kosciuszko Street",
                     variants: [
                         {
-                            poolId: "b351a"
+                            poolId: "b351a",
                             indoor: false,
-                            desc: "Outdoor Olympic Pool"
+                            desc: "Outdoor Olympic Pool",
                             length: 230,
                             width: 100,
                             depth: 4,
@@ -302,9 +309,9 @@ export default {
                             notes: null,
                         },
                         {
-                            poolId: "b351b"
+                            poolId: "b351b",
                             indoor: false,
-                            desc: "Outdoor Wading Pool"
+                            desc: "Outdoor Wading Pool",
                             length: 42,
                             width: 52,
                             depth: 1.5,
@@ -321,18 +328,19 @@ export default {
                     street: "Mill Avenue between Strickland Avenue and East 60th Place",
                     zip: 11234,
                     phone: "(718) 531-4852",
-                    betweens: "Mill Avenue between Strickland Avenue and East 60th Place",
+                    betweens:
+                        "Mill Avenue between Strickland Avenue and East 60th Place",
                     variants: [
                         {
-                            poolId: "b329a"
+                            poolId: "b329a",
                             indoor: false,
-                            desc: "Outdoor Mini Pool"
+                            desc: "Outdoor Mini Pool",
                             length: 40,
                             width: 20,
                             depth: 3,
                             accessible: false,
                             schedule: "summer",
-                            notes: "Inside XXXXXXXX.",
+                            notes: "Inside Lindower Park.",
                         },
                     ],
                 },
@@ -343,12 +351,13 @@ export default {
                     street: "776 Lorimer Street",
                     zip: 11222,
                     phone: "311",
-                    betweens: "Lorimer Street between Bayard Street and Driggs Avenue",
+                    betweens:
+                        "Lorimer Street between Bayard Street and Driggs Avenue",
                     variants: [
                         {
-                            poolId: "b058a"
+                            poolId: "b058a",
                             indoor: false,
-                            desc: "Outdoor Olympic Pool"
+                            desc: "Outdoor Olympic Pool",
                             length: 329,
                             width: 151,
                             depth: 4.6,
@@ -365,12 +374,13 @@ export default {
                     street: "225 Adelphi Street",
                     zip: 11205,
                     phone: "(718) 625-6101",
-                    betweens: "Adelphi Street between Willoughby and DeKalb Avenues",
+                    betweens:
+                        "Adelphi Street between Willoughby and DeKalb Avenues",
                     variants: [
                         {
-                            poolId: "b253a"
+                            poolId: "b253a",
                             indoor: false,
-                            desc: "Outdoor Mini Pool"
+                            desc: "Outdoor Mini Pool",
                             length: 40,
                             width: 20,
                             depth: 3,
@@ -390,9 +400,9 @@ export default {
                     betweens: "Bay Street between Henry and Clinton Streets",
                     variants: [
                         {
-                            poolId: "b126a"
+                            poolId: "b126a",
                             indoor: false,
-                            desc: "Outdoor Olympic Pool"
+                            desc: "Outdoor Olympic Pool",
                             length: 330,
                             width: 130,
                             depth: 4,
@@ -401,9 +411,9 @@ export default {
                             notes: "Inside Red Hook Recreation Area.",
                         },
                         {
-                            poolId: "b126a"
+                            poolId: "b126a",
                             indoor: false,
-                            desc: "Outdoor Wading Pool"
+                            desc: "Outdoor Wading Pool",
                             length: 50,
                             width: 25,
                             depth: 1,
@@ -423,9 +433,9 @@ export default {
                     betweens: "Seventh Avenue between 41st and 44th Streets",
                     variants: [
                         {
-                            poolId: "b087a"
+                            poolId: "b087a",
                             indoor: false,
-                            desc: "Outdoor Olympic Pool"
+                            desc: "Outdoor Olympic Pool",
                             length: 259,
                             width: 162,
                             depth: 3.5,
@@ -435,9 +445,8 @@ export default {
                         },
                     ],
                 },
-
             ],
-        }
-    }
+        };
+    },
 };
 </script>

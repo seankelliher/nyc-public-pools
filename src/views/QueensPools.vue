@@ -16,53 +16,54 @@ export default {
     },
     data() {
         return {
-            [
+            pools: [
                 {
-                    locId: "q099"
+                    locId: "q099",
                     borough: "Queens",
                     name: "Flushing Meadows Corona Park Pool",
                     street: "131-04 Meridian Road",
                     zip: 11368,
-                    phone: "(718) 271-7572"
-                    betweens: "Meridian Road between Avenues of Enterprise and Research"
+                    phone: "(718) 271-7572",
+                    betweens:
+                        "Meridian Road between Avenues of Enterprise and Research",
                     variants: [
                         {
-                            poolId: "q099a"
+                            poolId: "q099a",
                             indoor: true,
-                            desc: "Olympic Pool"
+                            desc: "Olympic Pool",
                             length: 164,
                             width: 82,
                             depth: 7.5,
                             accessible: true,
-                            schedule: "https://www.nycgovparks.org/facilities/recreationcenters/Q099/schedule#Pool",
+                            schedule: "Q099/schedule#Pool",
                             notes: "Closed due to pandemic. Pool has diving section, 12.75 feet deep.",
                         },
                     ],
                 },
                 {
-                    locId: "q448"
+                    locId: "q448",
                     borough: "Queens",
                     name: "Roy Wilkins Pool",
                     street: "Baisley Boulevard and 177th Street",
                     zip: 11425,
-                    phone: "xxxxxx"
-                    betweens: "Baisley Boulevard and 177th Street"
+                    phone: "(718) 276-4630",
+                    betweens: "Baisley Boulevard and 177th Street",
                     variants: [
                         {
-                            poolId: "q448a"
+                            poolId: "q448a",
                             indoor: true,
-                            desc: "Intermediate Pool"
+                            desc: "Intermediate Pool",
                             length: 75,
                             width: 30,
                             depth: 9,
                             accessible: true,
-                            schedule: "https://www.nycgovparks.org/facilities/recreationcenters/Q448/schedule#Pool",
+                            schedule: "Q448/schedule#Pool",
                             notes: "Inside Roy Wilkins Park.",
                         },
                     ],
                 },
                 {
-                    locId: "q004"
+                    locId: "q004",
                     borough: "Queens",
                     name: "Astoria Pool",
                     street: "19th Street between 23rd Terrace and 23rd Drive",
@@ -71,9 +72,9 @@ export default {
                     betweens: "19th Street between 23rd Terrace and 23rd Drive",
                     variants: [
                         {
-                            poolId: "q004a"
+                            poolId: "q004a",
                             indoor: false,
-                            desc: "Outdoor Olympic Pool"
+                            desc: "Outdoor Olympic Pool",
                             length: 330,
                             width: 165,
                             depth: 4,
@@ -84,7 +85,7 @@ export default {
                     ],
                 },
                 {
-                    locId: "q441"
+                    locId: "q441",
                     borough: "Queens",
                     name: "Fisher Pool",
                     street: "99th Street and 32nd Avenue",
@@ -93,9 +94,9 @@ export default {
                     betweens: "99th Street and 32nd Avenue",
                     variants: [
                         {
-                            poolId: "q441a"
+                            poolId: "q441a",
                             indoor: false,
-                            desc: "Outdoor Intermediate Pool"
+                            desc: "Outdoor Intermediate Pool",
                             length: 75,
                             width: 60,
                             depth: 3.5,
@@ -104,9 +105,9 @@ export default {
                             notes: null,
                         },
                         {
-                            poolId: "q441b"
+                            poolId: "q441b",
                             indoor: false,
-                            desc: "Outdoor Wading Pool"
+                            desc: "Outdoor Wading Pool",
                             length: 20,
                             width: 20,
                             depth: 1,
@@ -117,7 +118,7 @@ export default {
                     ],
                 },
                 {
-                    locId: "q458"
+                    locId: "q458",
                     borough: "Queens",
                     name: "Fort Totten Pool",
                     street: "338 Story Road",
@@ -126,9 +127,9 @@ export default {
                     betweens: "Story Road between Shore Road and Pratt Avenue",
                     variants: [
                         {
-                            poolId: "q458a"
+                            poolId: "q458a",
                             indoor: false,
-                            desc: "Outdoor Intermediate Pool"
+                            desc: "Outdoor Intermediate Pool",
                             length: 75,
                             width: 40,
                             depth: 4,
@@ -137,9 +138,9 @@ export default {
                             notes: "Inside Fort Totten Park.",
                         },
                         {
-                            poolId: "q458b"
+                            poolId: "q458b",
                             indoor: false,
-                            desc: "Outdoor Diving Pool"
+                            desc: "Outdoor Diving Pool",
                             length: 35,
                             width: 35,
                             depth: 10.5,
@@ -148,9 +149,9 @@ export default {
                             notes: "Inside Fort Totten Park.",
                         },
                         {
-                            poolId: "q458c"
+                            poolId: "q458c",
                             indoor: false,
-                            desc: "Outdoor Wading Pool"
+                            desc: "Outdoor Wading Pool",
                             length: 20,
                             width: 20,
                             depth: 1.5,
@@ -161,7 +162,7 @@ export default {
                     ],
                 },
                 {
-                    locId: "q121"
+                    locId: "q121",
                     borough: "Queens",
                     name: "Liberty Pool",
                     street: "173rd Street and 106th Avenue",
@@ -170,9 +171,9 @@ export default {
                     betweens: "173rd Street and 106th Avenue",
                     variants: [
                         {
-                            poolId: "q121a"
+                            poolId: "q121a",
                             indoor: false,
-                            desc: "Outdoor Intermediate Pool"
+                            desc: "Outdoor Intermediate Pool",
                             length: 75,
                             width: 60,
                             depth: 3,
@@ -181,9 +182,9 @@ export default {
                             notes: "Inside Detective Keith L Williams Park",
                         },
                         {
-                            poolId: "q121b"
+                            poolId: "q121b",
                             indoor: false,
-                            desc: "Outdoor Wading Pool"
+                            desc: "Outdoor Wading Pool",
                             length: 20,
                             width: 20,
                             depth: 1,
@@ -194,7 +195,7 @@ export default {
                     ],
                 },
                 {
-                    locId: "q364"
+                    locId: "q364",
                     borough: "Queens",
                     name: "Marie Curie Park Pool",
                     street: "209-57A 46th Avenue",
@@ -203,9 +204,9 @@ export default {
                     betweens: "46th Avenue between 211th and Oceania Streets",
                     variants: [
                         {
-                            poolId: "q364a"
+                            poolId: "q364a",
                             indoor: false,
-                            desc: "Outdoor Mini Pool"
+                            desc: "Outdoor Mini Pool",
                             length: 40,
                             width: 20,
                             depth: 3,
@@ -216,7 +217,7 @@ export default {
                     ],
                 },
                 {
-                    locId: "q327"
+                    locId: "q327",
                     borough: "Queens",
                     name: "PS 186 Playground Pool",
                     street: "252-12 72nd Avenue",
@@ -225,9 +226,9 @@ export default {
                     betweens: "72nd Avenue and Little Neck Parkway",
                     variants: [
                         {
-                            poolId: "q327a"
+                            poolId: "q327a",
                             indoor: false,
-                            desc: "Outdoor Mini Pool"
+                            desc: "Outdoor Mini Pool",
                             length: 40,
                             width: 20,
                             depth: 3,
@@ -238,7 +239,7 @@ export default {
                     ],
                 },
                 {
-                    locId: "q031"
+                    locId: "q031",
                     borough: "Queens",
                     name: "Windmuller Pool",
                     street: "39th Drive between 52nd and 54th Streets",
@@ -247,9 +248,9 @@ export default {
                     betweens: "39th Drive between 52nd and 54th Streets",
                     variants: [
                         {
-                            poolId: "q031a"
+                            poolId: "q031a",
                             indoor: false,
-                            desc: "Outdoor Mini Pool"
+                            desc: "Outdoor Mini Pool",
                             length: 40,
                             width: 20,
                             depth: 3,
@@ -260,7 +261,7 @@ export default {
                     ],
                 },
             ],
-        }
-    }
+        };
+    },
 };
 </script>

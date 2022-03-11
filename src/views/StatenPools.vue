@@ -16,9 +16,9 @@ export default {
     },
     data() {
         return {
-            [
+            pools: [
                 {
-                    locId: "r008"
+                    locId: "r008",
                     borough: "Staten Island",
                     name: "Faber Pool",
                     street: "2175 Richmond Terrace",
@@ -27,9 +27,9 @@ export default {
                     betweens: "Richmond Terrace and North Street",
                     variants: [
                         {
-                            poolId: "r008a"
+                            poolId: "r008a",
                             indoor: false,
-                            desc: "Outdoor Intermediate Pool"
+                            desc: "Outdoor Intermediate Pool",
                             length: 140,
                             width: 76,
                             depth: 5,
@@ -40,7 +40,7 @@ export default {
                     ],
                 },
                 {
-                    locId: "r067"
+                    locId: "r067",
                     borough: "Staten Island",
                     name: "General Douglas Pool",
                     street: "Jefferson Street and Seaver Avenue",
@@ -49,9 +49,9 @@ export default {
                     betweens: "Jefferson Street and Seaver Avenue",
                     variants: [
                         {
-                            poolId: "r067a"
+                            poolId: "r067a",
                             indoor: false,
-                            desc: "Outdoor Mini Pool"
+                            desc: "Outdoor Mini Pool",
                             length: 40,
                             width: 20,
                             depth: 3,
@@ -62,7 +62,7 @@ export default {
                     ],
                 },
                 {
-                    locId: "r043"
+                    locId: "r043",
                     borough: "Staten Island",
                     name: "Lyons Pool",
                     street: "6 Victory Boulevard",
@@ -71,9 +71,9 @@ export default {
                     betweens: "Victory Boulevard and Pier 6",
                     variants: [
                         {
-                            poolId: "r043a"
+                            poolId: "r043a",
                             indoor: false,
-                            desc: "Outdoor Olympic Pool"
+                            desc: "Outdoor Olympic Pool",
                             length: 165,
                             width: 100,
                             depth: 3.5,
@@ -82,9 +82,9 @@ export default {
                             notes: null,
                         },
                         {
-                            poolId: "r043b"
+                            poolId: "r043b",
                             indoor: false,
-                            desc: "Outdoor Wading Pool"
+                            desc: "Outdoor Wading Pool",
                             length: null,
                             width: null,
                             depth: null,
@@ -93,9 +93,9 @@ export default {
                             notes: "No pool dimensions available.",
                         },
                         {
-                            poolId: "r043c"
+                            poolId: "r043c",
                             indoor: false,
-                            desc: "Outdoor Diving Pool"
+                            desc: "Outdoor Diving Pool",
                             length: null,
                             width: null,
                             depth: null,
@@ -106,7 +106,7 @@ export default {
                     ],
                 },
                 {
-                    locId: "r061"
+                    locId: "r061",
                     borough: "Staten Island",
                     name: "Maggie Howard Pool",
                     street: "Tompkins Avenue and Hill Street",
@@ -115,9 +115,9 @@ export default {
                     betweens: "Tompkins Avenue and Hill Street",
                     variants: [
                         {
-                            poolId: "r061a"
+                            poolId: "r061a",
                             indoor: false,
-                            desc: "Outdoor Mini Pool"
+                            desc: "Outdoor Mini Pool",
                             length: 40,
                             width: 20,
                             depth: 3,
@@ -128,7 +128,7 @@ export default {
                     ],
                 },
                 {
-                    locId: "r063"
+                    locId: "r063",
                     borough: "Staten Island",
                     name: "PS 46 Playground Pool",
                     street: "Kramer Street and Parkinson Avenue",
@@ -137,9 +137,9 @@ export default {
                     betweens: "Kramer Street and Parkinson Avenue",
                     variants: [
                         {
-                            poolId: "r063a"
+                            poolId: "r063a",
                             indoor: false,
-                            desc: "Outdoor Mini Pool"
+                            desc: "Outdoor Mini Pool",
                             length: 40,
                             width: 20,
                             depth: 3,
@@ -150,7 +150,7 @@ export default {
                     ],
                 },
                 {
-                    locId: "r110"
+                    locId: "r110",
                     borough: "Staten Island",
                     name: "Tottenville Pool",
                     street: "Hylan Boulevard and Joline Avenue",
@@ -159,9 +159,9 @@ export default {
                     betweens: "Hylan Boulevard and Joline Avenue",
                     variants: [
                         {
-                            poolId: "r110a"
+                            poolId: "r110a",
                             indoor: false,
-                            desc: "Outdoor Intermediate Pool"
+                            desc: "Outdoor Intermediate Pool",
                             length: 75,
                             width: 60,
                             depth: 3.5,
@@ -170,9 +170,9 @@ export default {
                             notes: null,
                         },
                         {
-                            poolId: "r110b"
+                            poolId: "r110b",
                             indoor: false,
-                            desc: "Outdoor Wading Pool"
+                            desc: "Outdoor Wading Pool",
                             length: 24,
                             width: 24,
                             depth: 1.5,
@@ -183,18 +183,19 @@ export default {
                     ],
                 },
                 {
-                    locId: "r109"
+                    locId: "r109",
                     borough: "Staten Island",
                     name: "West Brighton Pool",
                     street: "899 Henderson Avenue",
                     zip: 10310,
                     phone: "(718) 816-5019",
-                    betweens: "Henderson Avenue between Alaska Street and Broadway",
+                    betweens:
+                        "Henderson Avenue between Alaska Street and Broadway",
                     variants: [
                         {
-                            poolId: "r109a"
+                            poolId: "r109a",
                             indoor: false,
-                            desc: "Outdoor Intermediate Pool"
+                            desc: "Outdoor Intermediate Pool",
                             length: 75,
                             width: 60,
                             depth: 3.5,
@@ -203,9 +204,9 @@ export default {
                             notes: "Inside CPL. Thompson Park.",
                         },
                         {
-                            poolId: "r109b"
+                            poolId: "r109b",
                             indoor: false,
-                            desc: "Outdoor Wading Pool"
+                            desc: "Outdoor Wading Pool",
                             length: 24,
                             width: 24,
                             depth: 1.5,
@@ -214,9 +215,9 @@ export default {
                             notes: "Inside CPL. Thompson Park.",
                         },
                     ],
-                },     
+                },
             ],
-        }
-    }
+        };
+    },
 };
 </script>
