@@ -1,11 +1,6 @@
 <template>
     <section>
-        <!--<img alt="Vue logo" src="../assets/logo.png" />-->
-        <BoroughName name="the Bronx" />
-        <FeesSchedule />
-        <!--<div class="pool" v-for="(pool, index) in pools" v-bind:key="index">
-            <p>{{ pool.name }}</p>
-        </div>-->
+        <BoroughName name="Bronx" />
         <PoolCard v-bind:pools="pools" />
     </section>
 </template>
