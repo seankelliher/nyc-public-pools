@@ -1,18 +1,25 @@
 <template>
-    <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png" />
-        <HelloWorld msg="Welcome to Your Vue.js App" />
-    </div>
+    <section>
+        <!--<img alt="Vue logo" src="../assets/logo.png" />-->
+        <BoroughName name="Staten Island" />
+        <FeesSchedule />
+        <!--<div class="pool" v-for="(pool, index) in pools" v-bind:key="index">
+            <p>{{ pool.name }}</p>
+        </div>-->
+        <PoolCard v-bind:pools="pools" />
+    </section>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import BoroughName from "@/components/BoroughName.vue";
+import PoolCard from "@/components/PoolCard.vue";
 
 export default {
-    name: "StatenPools",
+    name: "BrooklynPools",
     components: {
-        HelloWorld,
+        BoroughName,
+        PoolCard,
     },
     data() {
         return {

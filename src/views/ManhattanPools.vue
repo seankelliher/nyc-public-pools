@@ -1,18 +1,25 @@
 <template>
-    <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png" />
-        <HelloWorld msg="Welcome to Your Vue.js App" />
-    </div>
+    <section>
+        <!--<img alt="Vue logo" src="../assets/logo.png" />-->
+        <BoroughName name="Manhattan" />
+        <FeesSchedule />
+        <!--<div class="pool" v-for="(pool, index) in pools" v-bind:key="index">
+            <p>{{ pool.name }}</p>
+        </div>-->
+        <PoolCard v-bind:pools="pools" />
+    </section>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import BoroughName from "@/components/BoroughName.vue";
+import PoolCard from "@/components/PoolCard.vue";
 
 export default {
-    name: "ManhattanPools",
+    name: "BrooklynPools",
     components: {
-        HelloWorld,
+        BoroughName,
+        PoolCard,
     },
     data() {
         return {
@@ -29,7 +36,7 @@ export default {
                         {
                             poolId: "m164a",
                             indoor: true,
-                            desc: "Intermediate Pool",
+                            desc: "Indoor Intermediate Pool",
                             length: 66,
                             width: 26,
                             depth: 8,
@@ -73,7 +80,7 @@ export default {
                         {
                             poolId: "m260a",
                             indoor: true,
-                            desc: "Intermediate Pool",
+                            desc: "Indoor Intermediate Pool",
                             length: 75,
                             width: 43,
                             depth: 10,
@@ -96,7 +103,7 @@ export default {
                         {
                             poolId: "m063a",
                             indoor: true,
-                            desc: "Intermediate Pool",
+                            desc: "Indoor Intermediate Pool",
                             length: 60,
                             width: 35,
                             depth: 8,
@@ -119,7 +126,7 @@ export default {
                         {
                             poolId: "m131a",
                             indoor: true,
-                            desc: "Intermediate Pool",
+                            desc: "Indoor Intermediate Pool",
                             length: 75,
                             width: 35,
                             depth: 9,
@@ -142,7 +149,7 @@ export default {
                         {
                             poolId: "m130a",
                             indoor: true,
-                            desc: "Intermediate Pool",
+                            desc: "Indoor Intermediate Pool",
                             length: 54,
                             width: 50,
                             depth: 12,
@@ -164,7 +171,7 @@ export default {
                         {
                             poolId: "m103a",
                             indoor: true,
-                            desc: "Intermediate Pool",
+                            desc: "Indoor Intermediate Pool",
                             length: 70,
                             width: 21,
                             depth: 8,

@@ -1,18 +1,25 @@
 <template>
-    <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png" />
-        <HelloWorld msg="Welcome to Your Vue.js App" />
-    </div>
+    <section>
+        <!--<img alt="Vue logo" src="../assets/logo.png" />-->
+        <BoroughName name="Queens" />
+        <FeesSchedule />
+        <!--<div class="pool" v-for="(pool, index) in pools" v-bind:key="index">
+            <p>{{ pool.name }}</p>
+        </div>-->
+        <PoolCard v-bind:pools="pools" />
+    </section>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import BoroughName from "@/components/BoroughName.vue";
+import PoolCard from "@/components/PoolCard.vue";
 
 export default {
-    name: "QueensPools",
+    name: "BrooklynPools",
     components: {
-        HelloWorld,
+        BoroughName,
+        PoolCard,
     },
     data() {
         return {
@@ -30,7 +37,7 @@ export default {
                         {
                             poolId: "q099a",
                             indoor: true,
-                            desc: "Olympic Pool",
+                            desc: "Indoor Olympic Pool",
                             length: 164,
                             width: 82,
                             depth: 7.5,
@@ -52,7 +59,7 @@ export default {
                         {
                             poolId: "q448a",
                             indoor: true,
-                            desc: "Intermediate Pool",
+                            desc: "Indoor Intermediate Pool",
                             length: 75,
                             width: 30,
                             depth: 9,
