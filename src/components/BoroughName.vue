@@ -1,14 +1,14 @@
 <template>
     <div class="borough">
         <h2>{{ name }}</h2>
-        <p>
+        <!--<p>
             Year-round indoor and summer outdoor public swimming pools in
             <span v-if="name === 'Bronx'">the</span>
             {{ name }}.
             <span class="highlight">
                 Pool dimensions: L x W x D (in feet).
             </span>
-        </p>
+        </p>-->
     </div>
 </template>
 
