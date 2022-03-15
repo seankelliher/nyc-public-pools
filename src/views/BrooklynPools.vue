@@ -1,6 +1,11 @@
 <template>
     <section>
         <BoroughName name="Brooklyn" />
+        <PoolPhoto
+            src="betsy-head-pool"
+            alt="swimmers at the Betsy Head Pool, sunny summer day"
+            caption="Betsy Head Pool in Brooklyn. Photo: NYC Parks."
+        />
         <PoolCard v-bind:pools="pools" />
     </section>
 </template>
@@ -8,12 +13,14 @@
 <script>
 // @ is an alias to /src
 import BoroughName from "@/components/BoroughName.vue";
+import PoolPhoto from "@/components/PoolPhoto.vue";
 import PoolCard from "@/components/PoolCard.vue";
 
 export default {
     name: "BrooklynPools",
     components: {
         BoroughName,
+        PoolPhoto,
         PoolCard,
     },
     data() {

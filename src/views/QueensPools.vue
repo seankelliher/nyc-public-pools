@@ -1,19 +1,25 @@
 <template>
     <section>
         <BoroughName name="Queens" />
+        <PoolPhoto
+            src="flushing-meadows-corona-pool"
+            alt="Flushing Meadows Corona Park Pool, without swimmers"
+            caption="Flushing Meadows Corona Park Pool in Queens. Photo: NYC Parks."
+        />
         <PoolCard v-bind:pools="pools" />
     </section>
 </template>
-
 <script>
 // @ is an alias to /src
 import BoroughName from "@/components/BoroughName.vue";
+import PoolPhoto from "@/components/PoolPhoto.vue";
 import PoolCard from "@/components/PoolCard.vue";
 
 export default {
     name: "BrooklynPools",
     components: {
         BoroughName,
+        PoolPhoto,
         PoolCard,
     },
     data() {
