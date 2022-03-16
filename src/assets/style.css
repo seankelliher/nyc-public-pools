@@ -96,7 +96,7 @@ section {
     flex: initial; /*flex: 0 1 auto*/
 }
 
-.highlight {
+.highlight { /*NOT BEING USED*/
     color: #048abf; /*light to medium blue*/
 }
 
@@ -139,6 +139,14 @@ li {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
+    position: relative;
+}
+
+/*positions handicapped icon at end of pool dimensions line.*/
+span {
+    position: absolute;
+    top: 0;
+    right: auto;
 }
 
 p {
