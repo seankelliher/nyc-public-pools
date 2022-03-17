@@ -1,18 +1,21 @@
 <template>
-    <HeaderNav />
+    <HeaderPart />
+    <NavPart />
     <router-view />
     <FooterPart />
 </template>
 
 <script>
 // @ is an alias to /src
-import HeaderNav from "@/components/HeaderNav.vue";
+import HeaderPart from "@/components/HeaderPart.vue";
+import NavPart from "@/components/NavPart.vue";
 import FooterPart from "@/components/FooterPart.vue";
 
 export default {
     name: "App",
     components: {
-        HeaderNav,
+        HeaderPart,
+        NavPart,
         FooterPart,
     },
 };
