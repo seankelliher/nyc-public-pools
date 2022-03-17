@@ -6,7 +6,9 @@
             alt="swimmers at the McCarren Park Pool, sunny summer day"
             caption="McCarren Park Pool in Brooklyn. Photo: NYC Parks."
         />
-        <FeesSchedule />
+        <ParksSummary />
+        <IndoorSummary />
+        <OutdoorSummary />
     </section>
 </template>
 
@@ -14,14 +16,18 @@
 // @ is an alias to /src
 import BoroughName from "@/components/BoroughName.vue";
 import PoolPhoto from "@/components/PoolPhoto.vue";
-import FeesSchedule from "@/components/FeesSchedule.vue";
+import ParksSummary from "@/components/ParksSummary.vue";
+import IndoorSummary from "@/components/IndoorSummary.vue";
+import OutdoorSummary from "@/components/OutdoorSummary.vue";
 
 export default {
     name: "HomeView",
     components: {
         BoroughName,
         PoolPhoto,
-        FeesSchedule,
+        ParksSummary,
+        IndoorSummary,
+        OutdoorSummary,
     },
 };
 </script>
