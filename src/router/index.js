@@ -5,6 +5,7 @@ import BrooklynPools from "../views/BrooklynPools.vue";
 import ManhattanPools from "../views/ManhattanPools.vue";
 import QueensPools from "../views/QueensPools.vue";
 import StatenPools from "../views/StatenPools.vue";
+import SiteLog from "../views/SiteLog.vue";
 import NotFound from "../views/NotFound.vue";
 import NProgress from "nprogress";
 
@@ -42,6 +43,11 @@ const routes = [
         path: "/staten-island",
         name: "StatenPools",
         component: StatenPools,
+    },
+    {
+        path: "/site-log",
+        name: "SiteLog",
+        component: SiteLog,
     },
     {
         path: "/:catchAll(.*)",
