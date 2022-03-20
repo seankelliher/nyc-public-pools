@@ -1,12 +1,11 @@
 <template>
-    <h3>Indoor &amp; Outdoor Pools</h3>
+    <!--<h3>Indoor &amp; Outdoor Pools</h3>-->
     <div class="pool" v-for="(pool, index) in pools" :key="index">
         <h3>{{ pool.name }}</h3>
         <p>
             {{ pool.street }}<br />
             {{ pool.borough }}, NY {{ pool.zip }}<br />
-            Telephone: {{ pool.phone }}<br />
-            Cross Streets: {{ pool.betweens }}
+            Telephone: {{ pool.phone }}
         </p>
         <ul>
             <li v-if="pool.variants[0]">
@@ -40,6 +39,13 @@
                 </span>
             </li>
         </ul>
+        <p class="link-look" @click="pool.visible = !pool.visible">notes</p>
+        <Transition>
+            <p v-show="pool.visible">
+                The cross streets for this pool are {{ pool.betweens }}.
+                {{ pool.notes }}
+            </p>
+        </Transition>
     </div>
 </template>
 
@@ -52,5 +58,20 @@ export default {
             required: true,
         },
     },
+    data() {
+        return {
+            visible: false,
+        };
+    },
 };
 </script>
+
+<style scoped>
+.link-look {
+    color: #1f41a6; /*navy blue*/
+}
+
+.link-look:hover {
+    cursor: pointer;
+}
+</style>
