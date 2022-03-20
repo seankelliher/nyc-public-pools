@@ -1,7 +1,10 @@
 <template>
     <footer>
-        <h3>Questions</h3>
-        <p>Content coming soon.</p>
+        <h3>Report a problem</h3>
+        <p>
+            If you see incorrect information, please report it using our
+            <a href="site-log">site log</a>.
+        </p>
     </footer>
 </template>
 
