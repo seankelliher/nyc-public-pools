@@ -39,12 +39,22 @@
                 </span>
             </li>
         </ul>
-        <p class="link-look" @click="pool.visible = !pool.visible">notes</p>
+        <p class="link-like" @click="pool.visible = !pool.visible">NOTES</p>
         <Transition>
-            <p v-show="pool.visible">
-                The cross streets for this pool are {{ pool.betweens }}.
-                {{ pool.notes }}
-            </p>
+            <ul v-show="pool.visible">
+                <li>
+                    The cross streets for this location are {{ pool.betweens }}.
+                </li>
+                <li v-if="pool.notes">{{ pool.notes }}</li>
+                <li v-if="pool.indoorSchedule">
+                    Indoor pool schedule is at
+                    <a
+                        :href="`https://www.nycgovparks.org/facilities/recreationcenters/${pool.indoorSchedule}`"
+                        target="_blank"
+                        >NYC Parks</a
+                    >.
+                </li>
+            </ul>
         </Transition>
     </div>
 </template>
@@ -65,13 +75,3 @@ export default {
     },
 };
 </script>
-
-<style scoped>
-.link-look {
-    color: #1f41a6; /*navy blue*/
-}
-
-.link-look:hover {
-    cursor: pointer;
-}
-</style>
