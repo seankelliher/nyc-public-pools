@@ -33,41 +33,56 @@ nav {
     align-items: flex-start; /*cross axis*/
 }
 
-button {
-    background: #1f41a6; /*navy blue*/
+button.nav {
+    /*background: #1f41a6; navy blue*/
     background: #082640; /*very dark blue*/
     border: none;
     border-radius: 50%;
     flex: initial; /*flex: 0 1 auto*/
 }
 
-button a {
+button.nav a {
     color: #fff;
     text-decoration: none;
 }
 
-button a.router-link-exact-active {
+button.nav a.router-link-exact-active {
     color: #f2e750; /*yellow*/
 }
 
 @media all and (min-width: 300px) {
-    button {
+    button.nav {
         width: 64px;
         height:  64px;
     }
 }
 
 /*@media all and (min-width: 400px) {
-    button {
+    button.nav {
         width: 22%;
     }
 }
 
 @media all and (min-width: 500px) {
-    button {
+    button.nav{
         width: 20%;
     }
 }*/
+
+button.regular {
+    margin-bottom: 1.5em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    background: #8a93a6; /*slate grey*/
+    /*background: #f2cb05; gold*/
+    border: 1px solid #eee; /*grey 200*/
+    border-radius: 6px;
+    flex: initial; /*flex: 0 1 auto*/
+}
+
+button.regular:hover {
+    cursor: pointer;
+}
 
 section {
     width: 90%;
@@ -100,6 +115,17 @@ section {
     color: #048abf; /*light to medium blue*/
 }
 
+/*Styles for <Transition>*/
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
+}
+
 footer {
     width: 80%;
     margin: 0 5%;
@@ -129,10 +155,16 @@ figcaption {
     color: #616161; /*grey 700*/
 }
 
-button {
+button.nav {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.8;
     font-weight: 600;
+}
+
+button.regular {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
 }
 
 li {
@@ -164,12 +196,11 @@ footer p {
 }
 
 p a {
-    color: #1976d2; /*blue 700*/
+    color: #1f41a6; /*navy blue*/
     text-decoration: none;
 }
-
 p a:hover {
-    color: #1976d2; /*blue 700*/
+    color: #1f41a6; /*navy blue*/
     text-decoration: underline;
 }
 
@@ -201,8 +232,12 @@ footer h3 {
         font-size: .75em; /*12px*/
     }
 
-    button {
+    button.nav {
         font-size: .8125em; /*13px*/
+    }
+
+    button.regular {
+        font-size: .75em; /*12px*/
     }
 
     li {
@@ -214,17 +249,16 @@ footer h3 {
     }
 
     h1 {
-        font-size: 1.2em; /*16px*/
+        font-size: 1.2em; /*19.2px*/
     }
 
     h2 {
-        font-size: 1em; /*15px*/
+        font-size: 1em; /*16px*/
     }
 
     h3 {
         font-size: .9375em; /*15px*/
     }
-
 }
 
 @media all and (min-width: 400px) {
@@ -232,8 +266,12 @@ footer h3 {
         font-size: .8125em; /*13px*/
     }
 
-    button {
+    button.nav {
         font-size: .875em; /*14px*/
+    }
+
+    button.regular {
+        font-size: .8125em; /*13px*/
     }
 
     li {
@@ -245,17 +283,16 @@ footer h3 {
     } 
 
     h1 {
-        font-size: 1.4em; /*19.2px*/
+        font-size: 1.4em; /*22.4px*/
     }
 
     h2 {
-        font-size: 1.2em; /*16px*/
+        font-size: 1.2em; /*19.2px*/
     }
 
     h3 {
         font-size: 1em; /*16px*/
     }
-
 }
 
 @media all and (min-width: 500px) {
@@ -263,7 +300,11 @@ footer h3 {
         font-size: .875em; /*14px*/
     }
 
-    button {
+    button.nav {
+        font-size: .875em; /*14px*/
+    }
+
+    button.regular {
         font-size: .875em; /*14px*/
     }
 
@@ -272,21 +313,20 @@ footer h3 {
     }
 
     p {
-        font-size: 1em; /*15px*/
+        font-size: 1em; /*16px*/
     }
 
     h1 {
-        font-size: 1.6em; /*22.4px*/
+        font-size: 1.6em; /*25.6px*/
     }
 
     h2 {
-        font-size: 1.4em; /*19.2px*/
+        font-size: 1.4em; /*22.4px*/
     }
 
     h3 {
         font-size: 1.1em; /*17.6px*/
     }
-
 }
 
 @media all and (min-width: 600px) {
@@ -294,8 +334,12 @@ footer h3 {
         font-size: .9375em; /*15px*/
     }
 
-    button {
+    button.nav {
         font-size: 1em; /*16px*/
+    }
+
+    button.regular {
+        font-size: .9375em; /*15px*/
     }
 
     li {
@@ -307,11 +351,11 @@ footer h3 {
     }
 
     h1 {
-        font-size: 1.8em; /*25.6px*/
+        font-size: 1.8em; /*28.8px*/
     }
 
     h2 {
-        font-size: 1.6em; /*22.4px*/
+        font-size: 1.6em; /*25.6px*/
     }
 
     h3 {
