@@ -6,6 +6,7 @@
             alt="swimmers at the Hamilton Fish Pool, sunny summer day"
             caption="Hamilton Fish Pool in Manhattan. Photo: NYC Parks."
         />
+        <FeesSchedules />
         <PoolCard v-bind:pools="pools" />
     </section>
 </template>
@@ -14,6 +15,7 @@
 // @ is an alias to /src
 import BoroughName from "@/components/BoroughName.vue";
 import PoolPhoto from "@/components/PoolPhoto.vue";
+import FeesSchedules from "@/components/FeesSchedules.vue";
 import PoolCard from "@/components/PoolCard.vue";
 
 export default {
@@ -21,6 +23,7 @@ export default {
     components: {
         BoroughName,
         PoolPhoto,
+        FeesSchedules,
         PoolCard,
     },
     data() {
@@ -34,6 +37,8 @@ export default {
                     zip: 10010,
                     phone: "(212) 447-2020",
                     betweens: "Asser Levy Place and East 23rd Street",
+                    notes: null,
+                    indoorSchedule: "M164/schedule#Pool",
                     variants: [
                         {
                             poolId: "m164a",
@@ -43,8 +48,6 @@ export default {
                             width: 26,
                             depth: 8,
                             accessible: true,
-                            schedule: "M164/schedule#Pool",
-                            notes: null,
                         },
                         {
                             poolId: "m164b",
@@ -54,8 +57,6 @@ export default {
                             width: 45,
                             depth: 4,
                             accessible: true,
-                            schedule: "summer",
-                            notes: null,
                         },
                         {
                             poolId: "m164c",
@@ -65,8 +66,6 @@ export default {
                             width: 25,
                             depth: 1.5,
                             accessible: false,
-                            schedule: "summer",
-                            notes: null,
                         },
                     ],
                 },
@@ -78,6 +77,8 @@ export default {
                     zip: 10001,
                     phone: "(212) 255-3705",
                     betweens: "West 25th Street between 9th and 10th Avenues",
+                    notes: null,
+                    indoorSchedule: "M260/schedule#Pool",
                     variants: [
                         {
                             poolId: "m260a",
@@ -87,8 +88,6 @@ export default {
                             width: 43,
                             depth: 10,
                             accessible: true,
-                            schedule: "M260/schedule#Pool",
-                            notes: null,
                         },
                     ],
                 },
@@ -101,6 +100,8 @@ export default {
                     phone: "(212) 397-3159",
                     betweens:
                         "West 60th Street between West End and Amsterdam Avenues",
+                    notes: null,
+                    indoorSchedule: "M063/schedule#Pool",
                     variants: [
                         {
                             poolId: "m063a",
@@ -110,8 +111,6 @@ export default {
                             width: 35,
                             depth: 8,
                             accessible: true,
-                            schedule: "M063/schedule#Pool",
-                            notes: null,
                         },
                     ],
                 },
@@ -124,6 +123,8 @@ export default {
                     phone: "(212) 234-9603",
                     betweens:
                         "East 134th Street between Fifth and Lenox Avenues",
+                    notes: "The pool is currently closed for renovation.",
+                    indoorSchedule: "M131/schedule#Pool",
                     variants: [
                         {
                             poolId: "m131a",
@@ -133,8 +134,6 @@ export default {
                             width: 35,
                             depth: 9,
                             accessible: true,
-                            schedule: "M131/schedule#Pool",
-                            notes: "Currently closed for renovation. Check schedule link for updates.",
                         },
                     ],
                 },
@@ -147,6 +146,8 @@ export default {
                     phone: "(212) 754-5411",
                     betweens:
                         "East 54th Street between First and Second Avenues",
+                    notes: "The pool is currently closed for emergency maintenance.",
+                    indoorSchedule: "M130/schedule#Pool",
                     variants: [
                         {
                             poolId: "m130a",
@@ -156,8 +157,6 @@ export default {
                             width: 50,
                             depth: 12,
                             accessible: true,
-                            schedule: "M130/schedule#Pool",
-                            notes: "Currently closed for emergency maintenance.",
                         },
                     ],
                 },
@@ -169,6 +168,8 @@ export default {
                     zip: 10014,
                     phone: "(212) 242-5228",
                     betweens: "Clarkson Street and Seventh Avenue South",
+                    notes: "The Indoor Intermediate Pool is closed for renovation.",
+                    indoorSchedule: "M103/schedule#Pool",
                     variants: [
                         {
                             poolId: "m103a",
@@ -178,8 +179,6 @@ export default {
                             width: 21,
                             depth: 8,
                             accessible: true,
-                            schedule: "M103/schedule#Pool",
-                            notes: "Closed for renovation.",
                         },
                         {
                             poolId: "m103b",
@@ -189,8 +188,6 @@ export default {
                             width: 50,
                             depth: 9,
                             accessible: true,
-                            schedule: "summer",
-                            notes: null,
                         },
                         {
                             poolId: "m103c",
@@ -200,8 +197,6 @@ export default {
                             width: 47,
                             depth: 9,
                             accessible: false,
-                            schedule: "summer",
-                            notes: null,
                         },
                     ],
                 },
@@ -213,6 +208,8 @@ export default {
                     zip: 10037,
                     phone: "(212) 491-1714",
                     betweens: "East 135th Street and Fifth Avenue",
+                    notes: "The pool is inside Abraham Lincoln Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m193a",
@@ -222,8 +219,6 @@ export default {
                             width: 20,
                             depth: 3,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Abraham Lincoln Playground.",
                         },
                     ],
                 },
@@ -235,6 +230,8 @@ export default {
                     zip: 10003,
                     phone: "(212) 677-4481",
                     betweens: "East 10th Street between Avenues C and D",
+                    notes: "The pool is inside Dry Dock Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m270a",
@@ -244,8 +241,6 @@ export default {
                             width: 60,
                             depth: 3,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Dry Dock Playground.",
                         },
                         {
                             poolId: "m270b",
@@ -255,8 +250,6 @@ export default {
                             width: 20,
                             depth: 1.5,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Dry Dock Playground.",
                         },
                     ],
                 },
@@ -268,6 +261,8 @@ export default {
                     zip: 10025,
                     phone: "(212) 316-3241",
                     betweens: "Amsterdam Avenue between 100th & 102nd Streets",
+                    notes: "The pool is inside Frederick Douglass Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m220a",
@@ -277,8 +272,6 @@ export default {
                             width: 20,
                             depth: 3,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Frederick Douglass Playground.",
                         },
                     ],
                 },
@@ -291,6 +284,8 @@ export default {
                     phone: "(212) 387-7691",
                     betweens:
                         "Pitt Street between East Houston and Stanton Streets",
+                    notes: "The pool is inside Hamilton Fish Park.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m033a",
@@ -300,8 +295,6 @@ export default {
                             width: 98,
                             depth: 2.5,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Hamilton Fish Park.",
                         },
                         {
                             poolId: "m033b",
@@ -311,8 +304,6 @@ export default {
                             width: 98,
                             depth: 2.5,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Hamilton Fish Park.",
                         },
                     ],
                 },
@@ -324,6 +315,8 @@ export default {
                     zip: 10033,
                     phone: "(212) 927-2400",
                     betweens: "Amsterdam Avenue and West 173rd Street",
+                    notes: "The pool is inside Highbridge Park.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m037a",
@@ -333,8 +326,6 @@ export default {
                             width: 162,
                             depth: 10.5,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Highbridge Park.",
                         },
                         {
                             poolId: "m037b",
@@ -344,8 +335,6 @@ export default {
                             width: 92,
                             depth: 2,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Highbridge Park.",
                         },
                     ],
                 },
@@ -357,6 +346,8 @@ export default {
                     zip: 10039,
                     phone: "(212) 234-9606",
                     betweens: "Bradhurst Avenue and West 146th Street",
+                    notes: "The pool is inside Jackie Robinson Park.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m014a",
@@ -366,8 +357,6 @@ export default {
                             width: 82,
                             depth: 3.5,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Jackie Robinson Park.",
                         },
                     ],
                 },
@@ -380,6 +369,8 @@ export default {
                     phone: "(212) 794-6566",
                     betweens:
                         "Cherokee Place between East 77th and East 78th Streets",
+                    notes: "The pool is inside John Jay Park.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m045a",
@@ -389,8 +380,6 @@ export default {
                             width: 49,
                             depth: 4,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside John Jay Park.",
                         },
                         {
                             poolId: "m045b",
@@ -400,8 +389,6 @@ export default {
                             width: 40,
                             depth: 8,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside John Jay Park.",
                         },
                     ],
                 },
@@ -413,6 +400,8 @@ export default {
                     zip: 10029,
                     phone: "(212-534-7639)",
                     betweens: "Park Drive Loop, North end of Central Park",
+                    notes: "The pool is inside Central Park.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m010a",
@@ -422,8 +411,6 @@ export default {
                             width: 190,
                             depth: 3.75,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Central Park.",
                         },
                         {
                             poolId: "m010b",
@@ -433,8 +420,6 @@ export default {
                             width: 14.5,
                             depth: 1.25,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Central Park.",
                         },
                     ],
                 },
@@ -447,6 +432,8 @@ export default {
                     phone: "(212) 410-2818",
                     betweens:
                         "West 124th Street betwwen Mount Morris Park West and Madison Avenue",
+                    notes: "The pool is inside Marcus Garvey Park.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m058a",
@@ -456,8 +443,6 @@ export default {
                             width: 75,
                             depth: 4,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Marcus Garvey Park.",
                         },
                     ],
                 },
@@ -470,6 +455,8 @@ export default {
                     phone: "(212) 662-6191",
                     betweens:
                         "Amsterdam Avenue between West 128th and West 129th Street",
+                    notes: "The pool is inside Sheltering Arms Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m190a",
@@ -479,8 +466,6 @@ export default {
                             width: 60,
                             depth: 3.5,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Sheltering Arms Playground.",
                         },
                         {
                             poolId: "m190b",
@@ -490,8 +475,6 @@ export default {
                             width: 20,
                             depth: 1.5,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Sheltering Arms Playground.",
                         },
                     ],
                 },
@@ -504,6 +487,8 @@ export default {
                     phone: "(212) 860-1372",
                     betweens:
                         "First Avenue between East 111th and East 114th Streets",
+                    notes: "The pool is inside Thomas Jefferson Park.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m047a",
@@ -513,8 +498,6 @@ export default {
                             width: 97,
                             depth: 4,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Thomas Jefferson Park.",
                         },
                         {
                             poolId: "m047a",
@@ -524,8 +507,6 @@ export default {
                             width: 97,
                             depth: 1.5,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Thomas Jefferson Park.",
                         },
                     ],
                 },
@@ -537,6 +518,8 @@ export default {
                     zip: 10009,
                     phone: "(212) 387-6784",
                     betweens: "Avenue A between East 7th and East 10th Streets",
+                    notes: "The pool is inside Tompkins Square.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m088a",
@@ -546,8 +529,6 @@ export default {
                             width: 20,
                             depth: 3,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Tompkins Square.",
                         },
                     ],
                 },
@@ -560,6 +541,8 @@ export default {
                     phone: "(212) 343-0959",
                     betweens:
                         "Thompson Street between Spring and Prince Streets",
+                    notes: "The pool is inside Vesuvio Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m069a",
@@ -569,8 +552,6 @@ export default {
                             width: 20,
                             depth: 3,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Vesuvio Playground.",
                         },
                     ],
                 },
@@ -583,6 +564,8 @@ export default {
                     phone: "(212) 534-4238",
                     betweens:
                         "East 124th Street between First and Second Avenues",
+                    notes: "The pool is inside the Wagner Houses.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "m273a",
@@ -592,8 +575,6 @@ export default {
                             width: 60,
                             depth: 3.5,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside the Wagner Houses.",
                         },
                         {
                             poolId: "m273a",
@@ -603,8 +584,6 @@ export default {
                             width: 24,
                             depth: 9,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside the Wagner Houses.",
                         },
                     ],
                 },

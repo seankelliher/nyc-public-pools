@@ -6,6 +6,7 @@
             alt="swimmers at the Betsy Head Pool, sunny summer day"
             caption="Betsy Head Pool in Brooklyn. Photo: NYC Parks."
         />
+        <FeesSchedules />
         <PoolCard v-bind:pools="pools" />
     </section>
 </template>
@@ -14,6 +15,7 @@
 // @ is an alias to /src
 import BoroughName from "@/components/BoroughName.vue";
 import PoolPhoto from "@/components/PoolPhoto.vue";
+import FeesSchedules from "@/components/FeesSchedules.vue";
 import PoolCard from "@/components/PoolCard.vue";
 
 export default {
@@ -21,6 +23,7 @@ export default {
     components: {
         BoroughName,
         PoolPhoto,
+        FeesSchedules,
         PoolCard,
     },
     data() {
@@ -34,6 +37,8 @@ export default {
                     zip: 11212,
                     phone: "(718) 485-4633",
                     betweens: "Linden Boulevard and Christopher Avenue",
+                    notes: "The pool is closed for emergency maintenance.",
+                    indoorSchedule: "B270/schedule#Pool",
                     variants: [
                         {
                             poolId: "b270a",
@@ -43,8 +48,6 @@ export default {
                             width: 30,
                             depth: 8,
                             accessible: true,
-                            schedule: "B270/schedule#Pool",
-                            notes: "Closed for emergency maintenance.",
                         },
                     ],
                 },
@@ -56,6 +59,8 @@ export default {
                     zip: 11211,
                     phone: "(718) 599-5707",
                     betweens: "Bedford and Metropolitan Avenues",
+                    notes: "The pool depth is not stated.",
+                    indoorSchedule: "B085/schedule#Pool",
                     variants: [
                         {
                             poolId: "b085a",
@@ -65,8 +70,6 @@ export default {
                             width: 30,
                             depth: null,
                             accessible: true,
-                            schedule: "B085/schedule#Pool",
-                            notes: "Depth of pool not stated.",
                         },
                     ],
                 },
@@ -79,6 +82,8 @@ export default {
                     phone: "(718) 257-1635/6",
                     betweens:
                         "Thomas S. Boyland Street between Livonia and Dumont Avenues",
+                    notes: "The pool is inside Betsy Head Park.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b008a",
@@ -88,8 +93,6 @@ export default {
                             width: 165,
                             depth: 4.25,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Betsy Head Park.",
                         },
                     ],
                 },
@@ -101,6 +104,8 @@ export default {
                     zip: 11206,
                     phone: "(718) 452-2116",
                     betweens: "Flushing Avenue and Beaver Street",
+                    notes: "The pool is inside Bushwick Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b310a",
@@ -110,8 +115,6 @@ export default {
                             width: 60,
                             depth: 3,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Bushwick Playground.",
                         },
                         {
                             poolId: "b310b",
@@ -121,8 +124,6 @@ export default {
                             width: 20,
                             depth: 1,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Bushwick Playground.",
                         },
                     ],
                 },
@@ -135,6 +136,8 @@ export default {
                     phone: "(718) 243-2593",
                     betweens:
                         "Flushing Avenue between Navy Street and North Elliot Place",
+                    notes: "The pool is inside Commodore Barry Park.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b021a",
@@ -144,8 +147,6 @@ export default {
                             width: 60,
                             depth: 3,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Commodore Barry Park.",
                         },
                         {
                             poolId: "b021b",
@@ -155,8 +156,6 @@ export default {
                             width: 24,
                             depth: 1,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Commodore Barry Park.",
                         },
                     ],
                 },
@@ -168,6 +167,8 @@ export default {
                     zip: 11234,
                     phone: "(718) 531-2437",
                     betweens: "East 54th Street and Avenue H",
+                    notes: "The pool is inside Fox Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b248a",
@@ -177,8 +178,6 @@ export default {
                             width: 20,
                             depth: 3,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Fox Playground.",
                         },
                     ],
                 },
@@ -191,6 +190,8 @@ export default {
                     phone: "(718) 625-3268",
                     betweens:
                         "Douglass Street, between Third Avenue and Nevins Street",
+                    notes: "The pool is inside Thomas Greene Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b145a",
@@ -200,8 +201,6 @@ export default {
                             width: 60,
                             depth: 3,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Thomas Greene Playground.",
                         },
                         {
                             poolId: "b145b",
@@ -211,8 +210,6 @@ export default {
                             width: 24,
                             depth: 1,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Thomas Greene Playground.",
                         },
                     ],
                 },
@@ -225,6 +222,8 @@ export default {
                     phone: "(718) 531-2480",
                     betweens:
                         "Farragut Road between East 58th and East 59th Streets",
+                    notes: "The pool is inside Glenwood Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b236a",
@@ -234,8 +233,6 @@ export default {
                             width: 20,
                             depth: 3,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Glenwood Playground.",
                         },
                     ],
                 },
@@ -248,6 +245,8 @@ export default {
                     phone: "(718) 385-1023",
                     betweens:
                         "East New York Avenue and Reverend R.D. Brown Place",
+                    notes: "The pool is inside Howard Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b260a",
@@ -257,8 +256,6 @@ export default {
                             width: 60,
                             depth: 3,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Howard Playground.",
                         },
                         {
                             poolId: "b260a",
@@ -268,8 +265,6 @@ export default {
                             width: 20,
                             depth: 1,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Howard Playground.",
                         },
                     ],
                 },
@@ -282,6 +277,8 @@ export default {
                     phone: "(718) 452-0519",
                     betweens:
                         "Lafayette Avenue between Stuyvesant Avenue and Malcomb X Boulevard",
+                    notes: "The pool is inside Jesse Owens Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b269a",
@@ -291,8 +288,6 @@ export default {
                             width: 20,
                             depth: 3,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Jesse Owens Playground.",
                         },
                     ],
                 },
@@ -305,6 +300,8 @@ export default {
                     phone: "(718) 622-5271",
                     betweens:
                         "Marcy Avenue between DeKalb Avenue and Kosciuszko Street",
+                    notes: null,
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b351a",
@@ -314,8 +311,6 @@ export default {
                             width: 100,
                             depth: 4,
                             accessible: true,
-                            schedule: "summer",
-                            notes: null,
                         },
                         {
                             poolId: "b351b",
@@ -325,8 +320,6 @@ export default {
                             width: 52,
                             depth: 1.5,
                             accessible: false,
-                            schedule: "summer",
-                            notes: null,
                         },
                     ],
                 },
@@ -339,6 +332,8 @@ export default {
                     phone: "(718) 531-4852",
                     betweens:
                         "Mill Avenue between Strickland Avenue and East 60th Place",
+                    notes: "The pool is inside Lindower Park.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b329a",
@@ -348,8 +343,6 @@ export default {
                             width: 20,
                             depth: 3,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Lindower Park.",
                         },
                     ],
                 },
@@ -362,6 +355,8 @@ export default {
                     phone: "311",
                     betweens:
                         "Lorimer Street between Bayard Street and Driggs Avenue",
+                    notes: "The pool is inside McCarren Park.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b058a",
@@ -371,8 +366,6 @@ export default {
                             width: 151,
                             depth: 4.6,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside McCarren Park.",
                         },
                     ],
                 },
@@ -385,6 +378,8 @@ export default {
                     phone: "(718) 625-6101",
                     betweens:
                         "Adelphi Street between Willoughby and DeKalb Avenues",
+                    notes: "The pool is inside Albert J. Parham Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b253a",
@@ -394,8 +389,6 @@ export default {
                             width: 20,
                             depth: 3,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Albert J. Parham Playground.",
                         },
                     ],
                 },
@@ -407,6 +400,8 @@ export default {
                     zip: 11231,
                     phone: "(718) 722-3211",
                     betweens: "Bay Street between Henry and Clinton Streets",
+                    notes: "The pool is inside Red Hook Recreation Area.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b126a",
@@ -416,8 +411,6 @@ export default {
                             width: 130,
                             depth: 4,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Red Hook Recreation Area.",
                         },
                         {
                             poolId: "b126a",
@@ -427,8 +420,6 @@ export default {
                             width: 25,
                             depth: 1,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Red Hook Recreation Area.",
                         },
                     ],
                 },
@@ -440,6 +431,8 @@ export default {
                     zip: 11232,
                     phone: "(718) 972-2180",
                     betweens: "Seventh Avenue between 41st and 44th Streets",
+                    notes: "The pool is inside Sunset Park.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "b087a",
@@ -449,8 +442,6 @@ export default {
                             width: 162,
                             depth: 3.5,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Sunset Park.",
                         },
                     ],
                 },

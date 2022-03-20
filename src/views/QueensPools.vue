@@ -6,6 +6,7 @@
             alt="Flushing Meadows Corona Park Pool, without swimmers"
             caption="Flushing Meadows Corona Park Pool in Queens. Photo: NYC Parks."
         />
+        <FeesSchedules />
         <PoolCard v-bind:pools="pools" />
     </section>
 </template>
@@ -13,6 +14,7 @@
 // @ is an alias to /src
 import BoroughName from "@/components/BoroughName.vue";
 import PoolPhoto from "@/components/PoolPhoto.vue";
+import FeesSchedules from "@/components/FeesSchedules.vue";
 import PoolCard from "@/components/PoolCard.vue";
 
 export default {
@@ -20,6 +22,7 @@ export default {
     components: {
         BoroughName,
         PoolPhoto,
+        FeesSchedules,
         PoolCard,
     },
     data() {
@@ -34,6 +37,8 @@ export default {
                     phone: "(718) 271-7572",
                     betweens:
                         "Meridian Road between Avenues of Enterprise and Research",
+                    notes: "The pool has a diving section, 12.75 feet deep.",
+                    indoorSchedule: "Q099/schedule#Pool",
                     variants: [
                         {
                             poolId: "q099a",
@@ -43,8 +48,6 @@ export default {
                             width: 82,
                             depth: 7.5,
                             accessible: true,
-                            schedule: "Q099/schedule#Pool",
-                            notes: "Closed due to pandemic. Pool has diving section, 12.75 feet deep.",
                         },
                     ],
                 },
@@ -56,6 +59,8 @@ export default {
                     zip: 11425,
                     phone: "(718) 276-4630",
                     betweens: "Baisley Boulevard and 177th Street",
+                    notes: "The pool is inside Roy Wilkins Park.",
+                    indoorSchedule: "Q448/schedule#Pool",
                     variants: [
                         {
                             poolId: "q448a",
@@ -65,8 +70,6 @@ export default {
                             width: 30,
                             depth: 9,
                             accessible: true,
-                            schedule: "Q448/schedule#Pool",
-                            notes: "Inside Roy Wilkins Park.",
                         },
                     ],
                 },
@@ -78,6 +81,8 @@ export default {
                     zip: 11105,
                     phone: "(718) 626-8620",
                     betweens: "19th Street between 23rd Terrace and 23rd Drive",
+                    notes: "The pool is inside Astoria Park.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "q004a",
@@ -87,8 +92,6 @@ export default {
                             width: 165,
                             depth: 4,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Astoria Park.",
                         },
                     ],
                 },
@@ -100,6 +103,8 @@ export default {
                     zip: 11369,
                     phone: "(718) 779-8356",
                     betweens: "99th Street and 32nd Avenue",
+                    notes: null,
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "q441a",
@@ -109,8 +114,6 @@ export default {
                             width: 60,
                             depth: 3.5,
                             accessible: true,
-                            schedule: "summer",
-                            notes: null,
                         },
                         {
                             poolId: "q441b",
@@ -120,8 +123,6 @@ export default {
                             width: 20,
                             depth: 1,
                             accessible: false,
-                            schedule: "summer",
-                            notes: null,
                         },
                     ],
                 },
@@ -133,6 +134,8 @@ export default {
                     zip: 11359,
                     phone: "(718) 224-4031",
                     betweens: "Story Road between Shore Road and Pratt Avenue",
+                    notes: "The pool is inside Fort Totten Park. The Outdoor Wading Pool is round.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "q458a",
@@ -142,8 +145,6 @@ export default {
                             width: 40,
                             depth: 4,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Fort Totten Park.",
                         },
                         {
                             poolId: "q458b",
@@ -153,8 +154,6 @@ export default {
                             width: 35,
                             depth: 10.5,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Fort Totten Park.",
                         },
                         {
                             poolId: "q458c",
@@ -164,8 +163,6 @@ export default {
                             width: 20,
                             depth: 1.5,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Fort Totten Park. Pool is round",
                         },
                     ],
                 },
@@ -177,6 +174,8 @@ export default {
                     zip: 11433,
                     phone: "(718) 657-4995",
                     betweens: "173rd Street and 106th Avenue",
+                    notes: "The pool is inside Detective Keith L Williams Park",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "q121a",
@@ -186,8 +185,6 @@ export default {
                             width: 60,
                             depth: 3,
                             accessible: true,
-                            schedule: "summer",
-                            notes: "Inside Detective Keith L Williams Park",
                         },
                         {
                             poolId: "q121b",
@@ -197,8 +194,6 @@ export default {
                             width: 20,
                             depth: 1,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Detective Keith L Williams Park",
                         },
                     ],
                 },
@@ -210,6 +205,8 @@ export default {
                     zip: 11361,
                     phone: "(718) 423-0762",
                     betweens: "46th Avenue between 211th and Oceania Streets",
+                    notes: "The pool is inside Marie Curie Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "q364a",
@@ -219,8 +216,6 @@ export default {
                             width: 20,
                             depth: 3,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Marie Curie Playground.",
                         },
                     ],
                 },
@@ -232,6 +227,8 @@ export default {
                     zip: 11426,
                     phone: "(718) 347-2945",
                     betweens: "72nd Avenue and Little Neck Parkway",
+                    notes: "The pool is inside Castlewood Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "q327a",
@@ -241,8 +238,6 @@ export default {
                             width: 20,
                             depth: 3,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Castlewood Playground.",
                         },
                     ],
                 },
@@ -254,6 +249,8 @@ export default {
                     zip: 11377,
                     phone: "(718) 651-8247",
                     betweens: "39th Drive between 52nd and 54th Streets",
+                    notes: "The pool is inside Lawrence Virgilio Playground.",
+                    indoorSchedule: null,
                     variants: [
                         {
                             poolId: "q031a",
@@ -263,8 +260,6 @@ export default {
                             width: 20,
                             depth: 3,
                             accessible: false,
-                            schedule: "summer",
-                            notes: "Inside Lawrence Virgilio Playground.",
                         },
                     ],
                 },
