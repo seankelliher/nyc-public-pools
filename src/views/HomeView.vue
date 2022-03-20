@@ -6,6 +6,7 @@
             alt="swimmers at the McCarren Park Pool, sunny summer day"
             caption="McCarren Park Pool in Brooklyn. Photo: NYC Parks."
         />
+        <h3>Pools in All Five Boroughs</h3>
         <ParksSummary />
         <IndoorSummary />
         <OutdoorSummary />
