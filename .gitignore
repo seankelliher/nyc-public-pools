@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # Prettier JS config file
 .prettierrc.js
+
+# db.json test file
+db.json
