@@ -1,9 +1,8 @@
 <template>
     <footer>
-        <h3>Report a problem</h3>
         <p>
-            If you see incorrect information, please report it using our
-            <a href="site-log">site log</a>.
+            If you see an error or have an idea to make this site better,
+            <a href="ideas-errors-form">please tell us</a>.
         </p>
     </footer>
 </template>
