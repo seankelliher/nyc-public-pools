@@ -1,5 +1,5 @@
 <template>
-    <div class="borough">
+    <div class="fees-sched">
         <h3>Indoor &amp; Outdoor Pools</h3>
         <button class="regular" @click="visible = !visible">
             fees &amp; schedules
