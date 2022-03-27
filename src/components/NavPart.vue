@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <button class="nav"><router-link to="/">Home</router-link></button>
+        <!--<button class="nav"><router-link to="/">Home</router-link></button>-->
         <button class="nav"><router-link to="/bronx">BX</router-link></button>
         <button class="nav">
             <router-link to="/brooklyn">BK</router-link>
