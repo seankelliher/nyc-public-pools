@@ -1,5 +1,5 @@
 <template>
-    <div class="borough">
+    <div class="page-title">
         <h2>{{ name }}</h2>
         <!--<p>
             Year-round indoor and summer outdoor public swimming pools in
