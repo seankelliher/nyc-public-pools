@@ -12,7 +12,7 @@
                 {{ pool.variants[0].desc }}: {{ pool.variants[0].length }}L x
                 {{ pool.variants[0].width }}W x {{ pool.variants[0].depth }}D
                 feet.
-                <span v-if="pool.variants[0].accessible">
+                <span class="accessible" v-if="pool.variants[0].accessible">
                     <img
                         src="@/assets/images/accessible-forward-black-24dp.svg"
                     />
@@ -22,7 +22,7 @@
                 {{ pool.variants[1].desc }}: {{ pool.variants[1].length }}L x
                 {{ pool.variants[1].width }}W x {{ pool.variants[1].depth }}D
                 feet.
-                <span v-if="pool.variants[1].accessible">
+                <span class="accessible" v-if="pool.variants[1].accessible">
                     <img
                         src="@/assets/images/accessible-forward-black-24dp.svg"
                     />
@@ -32,14 +32,14 @@
                 {{ pool.variants[2].desc }}: {{ pool.variants[2].length }}L x
                 {{ pool.variants[2].width }}W x {{ pool.variants[2].depth }}D
                 feet.
-                <span v-if="pool.variants[2].accessible">
+                <span class="accessible" v-if="pool.variants[2].accessible">
                     <img
                         src="@/assets/images/accessible-forward-black-24dp.svg"
                     />
                 </span>
             </li>
         </ul>
-        <p class="link-like" @click="pool.visible = !pool.visible">NOTES</p>
+        <p class="link-like" @click="pool.visible = !pool.visible">Notes</p>
         <Transition>
             <ul v-show="pool.visible">
                 <li>
