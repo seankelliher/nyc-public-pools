@@ -1,5 +1,5 @@
 <template>
-    <div class="pool">
+    <div class="summary">
         <h3>Indoor Pools</h3>
         <p>
             Indoor public pools are <strong>open year-round</strong> and located

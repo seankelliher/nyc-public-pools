@@ -1,5 +1,5 @@
 <template>
-    <div class="pool">
+    <div class="summary">
         <h3>About NYC Parks</h3>
         <p>
             The New York City Department of Parks and Recreation operates pool

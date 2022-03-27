@@ -1,5 +1,5 @@
 <template>
-    <div class="pool">
+    <div class="summary">
         <h3>Outdoor Pools</h3>
         <p>
             Outdoor public pools are <strong>open in summer</strong> and
