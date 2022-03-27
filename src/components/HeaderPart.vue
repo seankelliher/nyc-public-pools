@@ -1,7 +1,6 @@
 <template>
     <header>
-        <h1>Public Swimming Pools in NYC</h1>
-        <!--<p>Public swimming pools wihin the five boroughs of New York City.</p>-->
+        <h1><a href="/">Public Pools in NYC</a></h1>
     </header>
 </template>
 
