@@ -1,12 +1,12 @@
 <template>
     <section>
-        <BoroughName name="Let's Swim" />
+        <BoroughName name="Let's Swim..." />
         <PoolPhoto
             src="mccarren-pool"
             alt="swimmers at the McCarren Park Pool, sunny summer day"
             caption="McCarren Park Pool in Brooklyn. Photo: NYC Parks."
         />
-        <h3>Pools in All Five Boroughs</h3>
+        <!--<h3>...in all five boroughs</h3>-->
         <ParksSummary />
         <IndoorSummary />
         <OutdoorSummary />
