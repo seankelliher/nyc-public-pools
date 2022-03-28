@@ -22,7 +22,7 @@ export default {
     props: {
         label: {
             type: String,
-            default: "",
+            required: true,
         },
         options: {
             type: Array,
@@ -34,7 +34,7 @@ export default {
         },
         modelValue: {
             type: [String, Number],
-            required: true,
+            default: "",
         },
     },
 };
