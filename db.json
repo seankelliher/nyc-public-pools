@@ -8,7 +8,7 @@
             "poolName": "Betsy Head Pool",
             "poolType": "Outdoor Olympic Pool",
             "resident": 1,
-            "description": "The pool is currently closed for renovation.",
+            "description": "The pool is currently closed for renovation."
         },
         {
             "id": 2,
@@ -18,7 +18,7 @@
             "poolName": "Marie Curie Park Pool",
             "poolType": "Outdoor Mini Pool:",
             "resident": 0,
-            "description": "The pool needs more lifeguards in peak hours.",
+            "description": "The pool needs more lifeguards in peak hours."
         },
         {
             "id": 3,
@@ -26,9 +26,9 @@
             "email": "rsanchez33@aol.com",
             "borough": "Manhattan",
             "poolName": "Hansborough Pool",
-            "poolType": "Indoor Intermediate Poo",
+            "poolType": "Indoor Intermediate Pool",
             "resident": 0,
-            "description": "There is no senior lap swimming. It would be nice.",
+            "description": "There is no senior lap swimming. It would be nice."
         },
         {
             "id": 4,
@@ -38,7 +38,7 @@
             "poolName": "Faber Pool",
             "poolType": "Outdoor Intermediate Pool",
             "resident": 1,
-            "description": "The painted lanes are faded and need re-painting.",
+            "description": "The painted lanes are faded and need re-painting."
         }
     ]
 }
