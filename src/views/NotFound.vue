@@ -1,12 +1,17 @@
 <template>
     <section>
-        <h2>404 - Page Not Found</h2>
+        <PageTitle name="404 - Page Not Found" />
         <p>Sorry, the page you are looking for does not exist.</p>
     </section>
 </template>
 
 <script>
+import PageTitle from "@/components/PageTitle.vue";
+
 export default {
     name: "NotFound",
+    components: {
+        PageTitle,
+    },
 };
 </script>

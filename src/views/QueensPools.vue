@@ -1,6 +1,6 @@
 <template>
     <section>
-        <BoroughName name="Queens" />
+        <PageTitle name="Queens" />
         <PoolPhoto
             src="flushing-meadows-corona-pool"
             alt="Flushing Meadows Corona Park Pool, without swimmers"
@@ -11,8 +11,7 @@
     </section>
 </template>
 <script>
-// @ is an alias to /src
-import BoroughName from "@/components/BoroughName.vue";
+import PageTitle from "@/components/PageTitle.vue";
 import PoolPhoto from "@/components/PoolPhoto.vue";
 import FeesSchedules from "@/components/FeesSchedules.vue";
 import PoolCard from "@/components/PoolCard.vue";
@@ -20,7 +19,7 @@ import PoolCard from "@/components/PoolCard.vue";
 export default {
     name: "BrooklynPools",
     components: {
-        BoroughName,
+        PageTitle,
         PoolPhoto,
         FeesSchedules,
         PoolCard,
