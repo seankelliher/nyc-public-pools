@@ -104,6 +104,13 @@ section {
     align-items: flex-start; /*cross axis*/
 }
 
+@media all and (min-width: 600px) {
+    section {
+        border-right: 1px solid #eee; /*grey 200*/
+        border-left: 1px solid #eee; /*grey 200*/
+    }
+}
+
 form {
     width: 90%;
     margin: 0;
@@ -122,15 +129,51 @@ label {
     padding: 0;
 }
 
-input, textarea {
+input[type="text"] {
     width: 80%;
-    margin: 0.5em 10% 0.5em 10%;
+    margin: 0.5em 10%;
     padding: 0;
+}
+
+@media all and (min-width: 300px) {
+    input[type="radio"] {
+        width: 8%;
+        margin: 0.5em 0 0.5em 10%;
+        padding: 0;
+    }
+
+    /*label immediately following "radio" input*/
+    input[type="radio"] + label {
+        width: 82%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media all and (min-width: 400px) {
+    input[type="radio"] {
+        width: 5%;
+        margin: 0.5em 0 0.5em 10%;
+        padding: 0;
+    }
+
+    /*label immediately following "radio" input*/
+    input[type="radio"] + label {
+        width: 85%;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 select {
     width: 50%;
-    margin: 0.5em 10% 0.5em 10%;
+    margin: 0.5em 10%;
+    padding: 0;
+}
+
+textarea {
+    width: 80%;
+    margin: 0.5em 10%;
     padding: 0;
 }
 
@@ -239,7 +282,7 @@ li {
     position: relative;
 }
 
-p, label, input {
+p, label, input, textarea {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.8;
     font-weight: 400;
@@ -331,7 +374,7 @@ h3 {
         font-size: .8125em; /*13px*/
     }
 
-    p, label, input {
+    p, label, input, textarea {
         font-size: .875em; /*14px*/
     }
 
@@ -366,7 +409,7 @@ h3 {
         font-size: .875em; /*14px*/
     }
 
-    p, label, input {
+    p, label, input, textarea {
         font-size: .9375em; /*15px*/
     }
 
@@ -400,7 +443,7 @@ h3 {
         font-size: .875em; /*14px*/
     }
 
-    p, label, input {
+    p, label, input, textarea {
         font-size: 1em; /*16px*/
     }
 
@@ -434,7 +477,7 @@ h3 {
         font-size: 1em; /*16px*/
     }
 
-    p, label, input {
+    p, label, input, textarea {
         font-size: 1.1em; /*17.6px*/
     }
 
