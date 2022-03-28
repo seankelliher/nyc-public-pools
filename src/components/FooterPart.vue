@@ -1,8 +1,9 @@
 <template>
     <footer>
         <p>
-            If you see an error or have an idea to make this site better,
-            <a href="ideas-errors-form">please tell us</a>.
+            Please see our <a href="messages-log">Messages Log</a> for ideas
+            already submitted. Please see our
+            <a href="messages-form">Messages Form</a> to submit new ideas.
         </p>
     </footer>
 </template>
