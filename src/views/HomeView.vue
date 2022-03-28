@@ -1,6 +1,6 @@
 <template>
     <section>
-        <BoroughName name="Let's Swim..." />
+        <PageTitle name="Let's Swim..." />
         <PoolPhoto
             src="mccarren-pool"
             alt="swimmers at the McCarren Park Pool, sunny summer day"
@@ -15,7 +15,7 @@
 
 <script>
 // @ is an alias to /src
-import BoroughName from "@/components/BoroughName.vue";
+import PageTitle from "@/components/PageTitle.vue";
 import PoolPhoto from "@/components/PoolPhoto.vue";
 import ParksSummary from "@/components/ParksSummary.vue";
 import IndoorSummary from "@/components/IndoorSummary.vue";
@@ -24,7 +24,7 @@ import OutdoorSummary from "@/components/OutdoorSummary.vue";
 export default {
     name: "HomeView",
     components: {
-        BoroughName,
+        PageTitle,
         PoolPhoto,
         ParksSummary,
         IndoorSummary,
