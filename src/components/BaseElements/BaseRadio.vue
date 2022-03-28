@@ -28,21 +28,3 @@ export default {
     },
 };
 </script>
-
-<style scoped>
-input {
-    width: 10%;
-    margin: 0;
-    padding: 0;
-    float: left;
-}
-
-label {
-    width: 40%;
-    margin: 0;
-    padding: 0;
-    float: left;
-    font-size: 16;
-    font-weight: 400;
-}
-</style>
