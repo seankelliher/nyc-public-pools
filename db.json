@@ -39,6 +39,16 @@
             "poolType": "Outdoor Intermediate Pool",
             "resident": 1,
             "description": "The painted lanes are faded and need re-painting."
+        },
+        {
+            "id": 5,
+            "name": "Jessica Morales",
+            "email": "jmorales77@aol.com",
+            "borough": "Brooklyn",
+            "poolName": "Betsy Head Pool",
+            "poolType": "Outdoor Olympic Pool",
+            "resident": 1,
+            "description": "Longer season! It's still warm after Labor Day."
         }
     ]
 }
