@@ -15,29 +15,31 @@
         </div>
         <form @submit.prevent="sendForm">
             <BaseInput
-                v-model="message.name"
                 label="Name"
+                v-model="message.name"
                 placeholder="Maria Vargas"
                 type="text"
             />
             <BaseInput
-                v-model="message.emailAddress"
-                label="Email Address"
+                label="Email"
+                v-model="message.email"
                 placeholder="maria123@aol.com"
-                type="text"
+                type="email"
             />
             <BaseSelect
-                :options="boroughs"
-                v-model="message.borough"
                 label="Borough"
+                v-model="message.borough"
+                :options="boroughs"
             />
             <BaseInput
                 label="Pool Name"
+                v-model="message.poolName"
                 placeholder="Asser Levy Pool"
                 type="text"
             />
             <BaseInput
                 label="Pool Type"
+                v-model="message.poolType"
                 placeholder="Outdoor Wading Pool"
                 type="text"
             />
@@ -48,8 +50,8 @@
                 :options="resident"
             />
             <BaseTextArea
-                v-model="message.description"
                 label="Description"
+                v-model="message.description"
                 placeholder="I am writing to..."
                 rows="4"
             />
@@ -91,8 +93,10 @@ export default {
             ],
             message: {
                 name: "",
-                emailAddress: "",
+                email: "",
                 borough: "",
+                poolName: "",
+                poolType: "",
                 resident: 0,
                 description: "",
             },
