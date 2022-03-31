@@ -1,5 +1,5 @@
 <template>
-    <label>{{ label }}</label>
+    <label v-if="label">{{ label }}</label>
     <BaseRadio
         v-for="option in options"
         :key="option.value"
