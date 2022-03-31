@@ -1,16 +1,18 @@
 <template>
-    <label>{{ label }}</label>
+    <label :for="uuid" v-if="label">{{ label }}</label>
     <textarea
         v-bind="$attrs"
         v-bind:placeholder="placeholder"
-        class="field"
         :value="modelValue"
-        @textarea="$emit('update:modelValue', $event.target.value)"
+        @input="$emit('update:modelValue', $event.target.value)"
         v-bind:rows="rows"
+        :id="uuid"
     />
 </template>
 
 <script>
+import UniqueID from "@/features/UniqueID.js";
+
 export default {
     name: "BaseInput",
     props: {
@@ -30,6 +32,12 @@ export default {
             type: String,
             default: "",
         },
+    },
+    setup() {
+        const uuid = UniqueID().getID();
+        return {
+            uuid,
+        };
     },
 };
 </script>

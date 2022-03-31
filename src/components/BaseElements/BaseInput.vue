@@ -1,15 +1,17 @@
 <template>
-    <label>{{ label }}</label>
+    <label :for="uuid" v-if="label">{{ label }}</label>
     <input
         v-bind="$attrs"
-        v-bind:placeholder="placeholder"
-        class="field"
+        :placeholder="placeholder"
         :value="modelValue"
         @input="$emit('update:modelValue', $event.target.value)"
+        :id="uuid"
     />
 </template>
 
 <script>
+import UniqueID from "@/features/UniqueID.js";
+
 export default {
     name: "BaseInput",
     props: {
@@ -25,6 +27,12 @@ export default {
             type: [String, Number],
             default: "",
         },
+    },
+    setup() {
+        const uuid = UniqueID().getID();
+        return {
+            uuid,
+        };
     },
 };
 </script>
