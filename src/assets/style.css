@@ -129,7 +129,7 @@ label {
     padding: 0;
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"] {
     width: 80%;
     margin: 0.5em 10%;
     padding: 0;
