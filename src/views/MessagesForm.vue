@@ -112,10 +112,7 @@ export default {
     methods: {
         sendForm() {
             axios
-                .post(
-                    "https://my-json-server.typicode.com/seankelliher/nyc-public-pools/messages",
-                    this.message
-                )
+                .post("http://localhost:3000/messages", this.message)
                 .then(function (response) {
                     console.log("Response", response);
                 })

@@ -35,9 +35,7 @@ export default {
     },
     created() {
         axios
-            .get(
-                "https://my-json-server.typicode.com/seankelliher/nyc-public-pools/messages"
-            )
+            .get("http://localhost:3000/messages")
             .then((response) => {
                 // JSON responses are automatically parsed.
                 this.messages = response.data;
