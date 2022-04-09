@@ -60,7 +60,7 @@
                 rows="4"
                 :error="errors.description"
             />
-            <button type="submit">Submit</button>
+            <button type="submit" class="regular">Submit</button>
             <div id="sent-msg"><p class="compliment">Message sent!</p></div>
         </form>
     </section>
