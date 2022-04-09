@@ -192,6 +192,33 @@ textarea {
     padding: 0;
 }
 
+/*Animation: fades "message sent" in and out*/
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#sent-msg {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.fade-anim {
+  animation: fadeInOut 4s;
+}
+
 .page-title {
     width: 90%;
     margin: 0;
@@ -338,8 +365,13 @@ span.accessible {
 }
 
 /*makes font red*/
-.highlight {
+.warn {
     color: #f24405; /*red*/
+}
+
+/*makes font green*/
+.compliment {
+    color: #03a65a; /*green*/
 }
 
 h1 {
