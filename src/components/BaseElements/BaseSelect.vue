@@ -13,6 +13,7 @@
             :aria-describeby="error ? `${uuid}-error` : null"
             :aria-invalid="error ? true : null"
         >
+            <option disabled value="">Please select one</option>
             <option
                 v-for="option in options"
                 :value="option"
@@ -28,7 +29,7 @@
             :id="`${uuid}-error`"
             :aria-live="assertive"
         >
-            <p class="highlight">{{ error }}</p>
+            <p class="warn">{{ error }}</p>
         </div>
     </fieldset>
 </template>
