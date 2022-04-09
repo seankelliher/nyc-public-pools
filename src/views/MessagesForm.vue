@@ -7,67 +7,73 @@
                 errors on this site. To see what other have already submitted,
                 check our <a href="messages-log">Messages Log</a>.
             </p>
-            <p>
-                <span class="highlight">
-                    Your email address will not be published.
-                </span>
-            </p>
+            <p><strong>Your email address will not be published.</strong></p>
         </div>
-        <form @submit.prevent="sendForm">
+        <form @submit="submit">
             <BaseInput
                 label="Name"
-                v-model="message.name"
+                v-model="name"
                 placeholder="Maria Vargas"
                 type="text"
+                :error="errors.name"
             />
             <BaseInput
                 label="Email"
-                v-model="message.email"
+                v-model="email"
                 placeholder="maria123@aol.com"
                 type="email"
+                :error="errors.email"
             />
             <BaseSelect
                 label="Borough"
-                v-model="message.borough"
+                v-model="borough"
                 :options="boroughs"
+                :error="errors.borough"
             />
             <BaseInput
                 label="Pool Name"
-                v-model="message.poolName"
+                v-model="poolName"
                 placeholder="Asser Levy Pool"
                 type="text"
+                :error="errors.poolName"
             />
             <BaseInput
                 label="Pool Type"
-                v-model="message.poolType"
+                v-model="poolType"
                 placeholder="Outdoor Wading Pool"
                 type="text"
+                :error="errors.poolType"
             />
             <BaseRadioGroup
                 label="What best describes you?"
-                v-model="message.resident"
+                v-model="resident"
                 name="resident"
-                :options="resident"
+                :options="[
+                    { value: 0, label: 'I am a NYC resident.' },
+                    { value: 1, label: 'I am visiting NYC.' },
+                ]"
             />
             <BaseTextArea
                 label="Description"
-                v-model="message.description"
+                v-model="description"
                 placeholder="I am writing to..."
                 rows="4"
+                :error="errors.description"
             />
             <button type="submit">Submit</button>
         </form>
-        <pre>{{ message }}</pre>
     </section>
 </template>
 
 <script>
-import axios from "axios";
 import PageTitle from "@/components/PageTitle.vue";
 import BaseInput from "@/components/BaseElements/BaseInput.vue";
 import BaseSelect from "@/components/BaseElements/BaseSelect.vue";
 import BaseRadioGroup from "@/components/BaseElements/BaseRadioGroup.vue";
 import BaseTextArea from "@/components/BaseElements/BaseTextArea.vue";
+import { useForm, useField } from "vee-validate";
+import { object, string } from "yup";
+import axios from "axios";
 
 export default {
     name: "MessagesForm",
@@ -81,25 +87,6 @@ export default {
                 "Queens",
                 "Staten Island",
             ],
-            resident: [
-                {
-                    label: "I am a NYC resident.",
-                    value: 0,
-                },
-                {
-                    label: "I am visiting NYC.",
-                    value: 1,
-                },
-            ],
-            message: {
-                name: "",
-                email: "",
-                borough: "",
-                poolName: "",
-                poolType: "",
-                resident: 0,
-                description: "",
-            },
         };
     },
     components: {
@@ -109,17 +96,59 @@ export default {
         BaseRadioGroup,
         BaseTextArea,
     },
-    methods: {
-        sendForm() {
+    setup() {
+        const simpleSchema = object({
+            name: string().required().label("Name"),
+            email: string().required().email().label("Email"),
+            borough: string(),
+            poolName: string(),
+            poolType: string(),
+            description: string().required().label("Description"),
+        });
+
+        useForm({
+            validationSchema: simpleSchema,
+        });
+
+        const { handleSubmit, errors } = useForm({
+            validationSchema: simpleSchema,
+            initialValues: {
+                resident: 0,
+            },
+        });
+
+        const { value: name } = useField("name");
+        const { value: email } = useField("email");
+        const { value: borough } = useField("borough");
+        const { value: poolName } = useField("poolName");
+        const { value: poolType } = useField("poolType");
+        const { value: resident } = useField("resident");
+        const { value: description } = useField("description");
+
+        const submit = handleSubmit((value) => {
+            console.log("submit", value);
             axios
-                .post("http://localhost:3000/messages", this.message)
+                .post("http://localhost:3000/messages", value)
                 .then(function (response) {
                     console.log("Response", response);
                 })
                 .catch(function (err) {
                     console.log("Error", err);
                 });
-        },
+        });
+
+        return {
+            name,
+            email,
+            borough,
+            poolName,
+            poolType,
+            resident,
+            description,
+            errors,
+            handleSubmit,
+            submit,
+        };
     },
 };
 </script>
