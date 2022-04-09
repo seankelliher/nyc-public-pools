@@ -1,24 +1,36 @@
 <template>
-    <label :for="uuid" v-if="label">{{ label }}</label>
-    <select
-        :value="modelValue"
-        v-bind="{
-            ...$attrs,
-            onChange: ($event) => {
-                $emit('update:modelValue', $event.target.value);
-            },
-        }"
-        :id="uuid"
-    >
-        <option
-            v-for="option in options"
-            :value="option"
-            :key="option"
-            :selected="option === modelValue"
+    <fieldset>
+        <legend :for="uuid" v-if="label">{{ label }}</legend>
+        <select
+            v-bind="{
+                ...$attrs,
+                onChange: ($event) => {
+                    $emit('update:modelValue', $event.target.value);
+                },
+            }"
+            :value="modelValue"
+            :id="uuid"
+            :aria-describeby="error ? `${uuid}-error` : null"
+            :aria-invalid="error ? true : null"
         >
-            {{ option }}
-        </option>
-    </select>
+            <option
+                v-for="option in options"
+                :value="option"
+                :key="option"
+                :selected="option === modelValue"
+            >
+                {{ option }}
+            </option>
+        </select>
+        <div
+            v-if="error"
+            class="error-msg"
+            :id="`${uuid}-error`"
+            :aria-live="assertive"
+        >
+            <p class="highlight">{{ error }}</p>
+        </div>
+    </fieldset>
 </template>
 
 <script>
@@ -38,6 +50,10 @@ export default {
         options: {
             type: Array,
             required: true,
+        },
+        error: {
+            type: String,
+            default: "",
         },
     },
     setup() {
