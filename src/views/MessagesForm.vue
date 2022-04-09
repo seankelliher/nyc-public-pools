@@ -125,7 +125,7 @@ export default {
         const { value: resident } = useField("resident");
         const { value: description } = useField("description");
 
-        const submit = handleSubmit((value) => {
+        const submit = handleSubmit((value, { resetForm }) => {
             console.log("submit", value);
             axios
                 .post("http://localhost:3000/messages", value)
@@ -135,6 +135,7 @@ export default {
                 .catch(function (err) {
                     console.log("Error", err);
                 });
+            resetForm();
         });
 
         return {
