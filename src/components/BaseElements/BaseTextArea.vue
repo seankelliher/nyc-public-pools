@@ -1,20 +1,32 @@
 <template>
-    <label :for="uuid" v-if="label">{{ label }}</label>
-    <textarea
-        v-bind="$attrs"
-        v-bind:placeholder="placeholder"
-        :value="modelValue"
-        @input="$emit('update:modelValue', $event.target.value)"
-        v-bind:rows="rows"
-        :id="uuid"
-    />
+    <fieldset>
+        <legend :for="uuid" v-if="label">{{ label }}</legend>
+        <textarea
+            v-bind="$attrs"
+            :placeholder="placeholder"
+            :value="modelValue"
+            @input="$emit('update:modelValue', $event.target.value)"
+            :rows="rows"
+            :id="uuid"
+            :aria-describeby="error ? `${uuid}-error` : null"
+            :aria-invalid="error ? true : null"
+        />
+        <div
+            v-if="error"
+            class="error-msg"
+            :id="`${uuid}-error`"
+            :aria-live="assertive"
+        >
+            <p class="highlight">{{ error }}</p>
+        </div>
+    </fieldset>
 </template>
 
 <script>
 import UniqueID from "@/features/UniqueID.js";
 
 export default {
-    name: "BaseInput",
+    name: "BaseTextArea",
     props: {
         label: {
             type: String,
@@ -29,6 +41,10 @@ export default {
             default: "",
         },
         rows: {
+            type: String,
+            default: "",
+        },
+        error: {
             type: String,
             default: "",
         },
