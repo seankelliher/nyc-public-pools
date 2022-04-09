@@ -17,7 +17,7 @@
             :id="`${uuid}-error`"
             :aria-live="assertive"
         >
-            <p class="highlight">{{ error }}</p>
+            <p class="warn">{{ error }}</p>
         </div>
     </fieldset>
 </template>
