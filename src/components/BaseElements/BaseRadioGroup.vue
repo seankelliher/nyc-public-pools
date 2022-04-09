@@ -1,14 +1,16 @@
 <template>
-    <label v-if="label">{{ label }}</label>
-    <BaseRadio
-        v-for="option in options"
-        :key="option.value"
-        :label="option.label"
-        :value="option.value"
-        :modelValue="modelValue"
-        :name="name"
-        @update:modelValue="$emit('update:modelValue', $event)"
-    />
+    <fieldset>
+        <legend v-if="label">{{ label }}</legend>
+        <BaseRadio
+            v-for="option in options"
+            :key="option.value"
+            :label="option.label"
+            :value="option.value"
+            :modelValue="modelValue"
+            :name="name"
+            @update:modelValue="$emit('update:modelValue', $event)"
+        />
+    </fieldset>
 </template>
 
 <script>
