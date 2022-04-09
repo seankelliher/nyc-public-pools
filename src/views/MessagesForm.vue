@@ -61,6 +61,7 @@
                 :error="errors.description"
             />
             <button type="submit">Submit</button>
+            <div id="sent-msg"><p class="compliment">Message sent!</p></div>
         </form>
     </section>
 </template>
@@ -100,7 +101,7 @@ export default {
         const simpleSchema = object({
             name: string().required().label("Name"),
             email: string().required().email().label("Email"),
-            borough: string(),
+            borough: string().required().label("Borough"),
             poolName: string(),
             poolType: string(),
             description: string().required().label("Description"),
@@ -135,6 +136,16 @@ export default {
                 .catch(function (err) {
                     console.log("Error", err);
                 });
+
+            function addRemoveAnimation() {
+                const sent = document.getElementById("sent-msg");
+                sent.classList.add("fade-anim");
+                setTimeout(() => {
+                    sent.classList.remove("fade-anim");
+                }, 5000);
+            }
+
+            addRemoveAnimation();
             resetForm();
         });
 
