@@ -123,57 +123,72 @@ form {
     align-items: flex-start; /*cross axis*/
 }
 
-label {
-    width: 90%;
-    margin: 1em 10% 0 10%;
+fieldset {
+    width: 100%;
+    margin: 1em 0;
+    padding: 0;
+    border: none;
+}
+
+legend {
+    width: 100%;
+    margin: 0.5em 0;
+    padding: 0;
+}
+
+.error-msg {
+    width: 100%;
+    margin: 1em 0;
     padding: 0;
 }
 
 input[type="text"], input[type="email"] {
-    width: 80%;
-    margin: 0.5em 10%;
+    width: 100%;
+    margin: 0.5em 0;
     padding: 0;
 }
 
 @media all and (min-width: 300px) {
     input[type="radio"] {
         width: 8%;
-        margin: 0.5em 0 0.5em 10%;
+        margin: 0.5em 0;
         padding: 0;
     }
 
     /*label immediately following "radio" input*/
     input[type="radio"] + label {
-        width: 82%;
+        width: 92%;
         margin: 0;
         padding: 0;
+        display: inline-flex;
     }
 }
 
 @media all and (min-width: 400px) {
     input[type="radio"] {
         width: 5%;
-        margin: 0.5em 0 0.5em 10%;
+        margin: 0.5em 0;
         padding: 0;
     }
 
     /*label immediately following "radio" input*/
     input[type="radio"] + label {
-        width: 85%;
+        width: 95%;
         margin: 0;
         padding: 0;
+        display: inline-flex;
     }
 }
 
 select {
-    width: 50%;
-    margin: 0.5em 10%;
+    width: 70%;
+    margin: 0.5em 30% 0.5em 0;
     padding: 0;
 }
 
 textarea {
-    width: 80%;
-    margin: 0.5em 10%;
+    width: 100%;
+    margin: 0.5em 0;
     padding: 0;
 }
 
@@ -282,7 +297,7 @@ li {
     position: relative;
 }
 
-p, label, input, textarea {
+p, legend, label, input, textarea {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.8;
     font-weight: 400;
@@ -323,7 +338,7 @@ span.accessible {
 }
 
 /*makes font red*/
-span.highlight {
+.highlight {
     color: #f24405; /*red*/
 }
 
@@ -374,7 +389,7 @@ h3 {
         font-size: .8125em; /*13px*/
     }
 
-    p, label, input, textarea {
+    p, legend, label, input, textarea {
         font-size: .875em; /*14px*/
     }
 
@@ -409,7 +424,7 @@ h3 {
         font-size: .875em; /*14px*/
     }
 
-    p, label, input, textarea {
+    p, legend, label, input, textarea {
         font-size: .9375em; /*15px*/
     }
 
@@ -443,7 +458,7 @@ h3 {
         font-size: .875em; /*14px*/
     }
 
-    p, label, input, textarea {
+    p, legend, label, input, textarea {
         font-size: 1em; /*16px*/
     }
 
@@ -477,7 +492,7 @@ h3 {
         font-size: 1em; /*16px*/
     }
 
-    p, label, input, textarea {
+    p, legend, label, input, textarea {
         font-size: 1.1em; /*17.6px*/
     }
 
