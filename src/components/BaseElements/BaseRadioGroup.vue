@@ -1,5 +1,5 @@
 <template>
-    <fieldset>
+    <div class="entry">
         <label v-if="label">{{ label }}</label>
         <BaseRadio
             v-for="option in options"
@@ -10,7 +10,7 @@
             :name="name"
             @update:modelValue="$emit('update:modelValue', $event)"
         />
-    </fieldset>
+    </div>
 </template>
 
 <script>

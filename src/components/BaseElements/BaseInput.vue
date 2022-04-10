@@ -1,5 +1,5 @@
 <template>
-    <fieldset>
+    <div class="entry">
         <label :for="uuid" v-if="label">{{ label }}</label>
         <input
             v-bind="$attrs"
@@ -18,7 +18,7 @@
         >
             <p class="warn">{{ error }}</p>
         </div>
-    </fieldset>
+    </div>
 </template>
 
 <script>

@@ -123,7 +123,7 @@ form {
     align-items: flex-start; /*cross axis*/
 }
 
-fieldset {
+.entry {
     width: 100%;
     margin: 1em 0;
     padding: 0;
