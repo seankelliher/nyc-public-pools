@@ -130,10 +130,11 @@ fieldset {
     border: none;
 }
 
-legend {
+label {
     width: 100%;
     margin: 0.5em 0;
     padding: 0;
+    display: inline-flex;
 }
 
 .error-msg {
@@ -324,7 +325,7 @@ li {
     position: relative;
 }
 
-p, legend, label, input, textarea {
+p, label, input, textarea {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.8;
     font-weight: 400;
@@ -421,7 +422,7 @@ h3 {
         font-size: .8125em; /*13px*/
     }
 
-    p, legend, label, input, textarea {
+    p, label, input, textarea {
         font-size: .875em; /*14px*/
     }
 
@@ -456,7 +457,7 @@ h3 {
         font-size: .875em; /*14px*/
     }
 
-    p, legend, label, input, textarea {
+    p, label, input, textarea {
         font-size: .9375em; /*15px*/
     }
 
@@ -490,7 +491,7 @@ h3 {
         font-size: .875em; /*14px*/
     }
 
-    p, legend, label, input, textarea {
+    p, label, input, textarea {
         font-size: 1em; /*16px*/
     }
 
@@ -524,7 +525,7 @@ h3 {
         font-size: 1em; /*16px*/
     }
 
-    p, legend, label, input, textarea {
+    p, label, input, textarea {
         font-size: 1.1em; /*17.6px*/
     }
 

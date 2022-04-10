@@ -1,6 +1,6 @@
 <template>
     <fieldset>
-        <legend v-if="label">{{ label }}</legend>
+        <label v-if="label">{{ label }}</label>
         <BaseRadio
             v-for="option in options"
             :key="option.value"

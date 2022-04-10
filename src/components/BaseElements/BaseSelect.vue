@@ -1,6 +1,6 @@
 <template>
     <fieldset>
-        <legend :for="uuid" v-if="label">{{ label }}</legend>
+        <label :for="uuid" v-if="label">{{ label }}</label>
         <select
             v-bind="{
                 ...$attrs,
