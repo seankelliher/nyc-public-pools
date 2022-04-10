@@ -91,6 +91,20 @@ button.regular:hover {
     cursor: pointer;
 }
 
+button.notes {
+    margin-bottom: 1.5em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    background: none;
+    border: 1px solid #eee; /*grey 200*/
+    border-radius: 6px;
+    flex: initial; /*flex: 0 1 auto*/
+}
+
+button.notes:hover {
+    cursor: pointer;
+}
+
 section {
     width: 100%;
     margin: 0;
@@ -312,6 +326,13 @@ button.regular {
     color: #fff;
 }
 
+button.notes {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #0e4996; /*dark blue*/
+}
+
 li {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -408,7 +429,7 @@ h3 {
         font-size: .8125em; /*13px*/
     }
 
-    button.regular {
+    button.regular, button.notes {
         font-size: .75em; /*12px*/
     }
 
@@ -443,7 +464,7 @@ h3 {
         font-size: .875em; /*14px*/
     }
 
-    button.regular {
+    button.regular, button.notes {
         font-size: .8125em; /*13px*/
     }
 
@@ -473,7 +494,7 @@ h3 {
         font-size: .875em; /*14px*/
     }
 
-    button.regular {
+    button.regular, button.notes {
         font-size: .875em; /*14px*/
     }
 
@@ -503,7 +524,7 @@ h3 {
         font-size: 1em; /*16px*/
     }
 
-    button.regular {
+    button.regular, button.notes {
         font-size: .9375em; /*15px*/
     }
 
