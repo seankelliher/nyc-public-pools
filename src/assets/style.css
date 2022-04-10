@@ -17,7 +17,6 @@ header {
     width: 90%;
     margin: 0;
     padding: 0.5em 5%;
-    background: #2e83f2; /*lavender blue*/
     background: #0e4996; /*dark blue*/
     flex: initial; /*flex: 0 1 auto*/
 }
@@ -35,7 +34,6 @@ nav {
 }
 
 button.nav {
-    background: #2e83f2; /*lavender blue*/
     background: #0e4996; /*dark blue*/
     border: none;
     border-radius: 50%;
@@ -83,7 +81,7 @@ button.regular {
     margin-bottom: 1.5em;
     padding-left: 0.75em;
     padding-right: 0.75em;
-    background: #2e83f2; /*lavender blue*/
+    background: #0e4996; /*dark blue*/
     border: none;
     border-radius: 6px;
     flex: initial; /*flex: 0 1 auto*/
@@ -115,7 +113,7 @@ form {
     width: 90%;
     margin: 0;
     padding: 1em 5%;
-    border: 1px solid #f2ece4; /*oatmeal*/
+    border: 1px solid #eee; /*grey 200*/
     flex: initial; /*flex: 0 1 auto*/
     display: flex;
     flex-flow: row wrap;
@@ -224,10 +222,7 @@ textarea {
     width: 90%;
     margin: 0;
     padding: 0 5%;
-    background: #ffe30b; /*bright yellow*/
-    background: #ffc963;
-    background: #0e4996; /*dark blue*/
-    background: #ffc963; /*light brown*/
+    background: #ffc963; /*light gold*/
     flex: initial; /*flex: 0 1 auto*/
 }
 
@@ -273,8 +268,7 @@ footer {
     width: 90%;
     margin: 0;
     padding: 1em 5%;
-    background: #ffe30b; /*bright yellow*/
-    background: #ffc963; /*light brown*/
+    background: #ffc963; /*light gold*/
     flex: initial; /*flex: 0 1 auto*/
 }
 
@@ -339,21 +333,21 @@ seems to make no difference. Adding "optgroup" has no effect either.*/
 }
 
 p a, li a {
-    color: #2e83f2; /*lavender blue*/
+    color: #0e4996; /*dark blue*/
     text-decoration: none;
 }
 p a:hover, li a:hover {
-    color: #2e83f2; /*lavender blue*/
+    color: #0e4996; /*dark blue*/
     text-decoration: underline;
     cursor: pointer;
 }
 
 p.link-like {
-    color: #2e83f2; /*lavender blue*/
+    color: #0e4996; /*dark blue*/
 }
 
 p.link-like:hover {
-    color: #2e83f2; /*lavender blue*/
+    color: #0e4996; /*dark blue*/
     text-decoration: underline;
     cursor: pointer;
 }
@@ -367,12 +361,12 @@ span.accessible {
 
 /*makes font red*/
 .warn {
-    color: #f24405; /*red*/
+    color: #d90416; /*dark red*/
 }
 
 /*makes font green*/
 .compliment {
-    color: #03a65a; /*green*/
+    color: #277332; /*dark green*/
 }
 
 h1 {
@@ -461,10 +455,6 @@ h3 {
         font-size: .9375em; /*15px*/
     }
 
-    /*h1 {
-        font-size: 1.4em; 22.4px
-    }*/
-
     h2 {
         font-size: 1.2em; /*19.2px*/
     }
@@ -495,10 +485,6 @@ h3 {
         font-size: 1em; /*16px*/
     }
 
-    /*h1 {
-        font-size: 1.6em; 25.6px
-    }*/
-
     h2 {
         font-size: 1.4em; /*22.4px*/
     }
@@ -528,10 +514,6 @@ h3 {
     p, label, input, textarea {
         font-size: 1.1em; /*17.6px*/
     }
-
-    /*h1 {
-        font-size: 1.8em; 28.8px
-    }*/
 
     h2 {
         font-size: 1.6em; /*25.6px*/
