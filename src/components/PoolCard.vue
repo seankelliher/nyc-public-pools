@@ -39,7 +39,9 @@
                 </span>
             </li>
         </ul>
-        <p class="link-like" @click="pool.visible = !pool.visible">Notes</p>
+        <button class="notes" @click="pool.visible = !pool.visible">
+            Notes
+        </button>
         <Transition>
             <ul v-show="pool.visible">
                 <li>
