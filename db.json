@@ -59,6 +59,16 @@
       "poolType": "Outdoor Olympic",
       "description": "Pool should open earlier, around 6AM.",
       "id": 6
+    },
+    {
+      "resident": 0,
+      "name": "Dolce Vasquez",
+      "email": "dvasquez@aol.com",
+      "borough": "Manhattan",
+      "poolName": "Highbridge Pool",
+      "poolType": "Outdoor Olympic Pool",
+      "description": "Lifeguards do not pay attention.",
+      "id": 7
     }
   ]
 }
