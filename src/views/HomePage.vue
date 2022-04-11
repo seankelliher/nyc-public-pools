@@ -22,7 +22,7 @@ import IndoorSummary from "@/components/IndoorSummary.vue";
 import OutdoorSummary from "@/components/OutdoorSummary.vue";
 
 export default {
-    name: "HomeView",
+    name: "HomePage",
     components: {
         PageTitle,
         PoolPhoto,

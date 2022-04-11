@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import HomePage from "../views/HomePage.vue";
 import BronxPools from "../views/BronxPools.vue";
 import BrooklynPools from "../views/BrooklynPools.vue";
 import ManhattanPools from "../views/ManhattanPools.vue";
@@ -14,11 +14,11 @@ const routes = [
     {
         path: "/",
         name: "home",
-        component: HomeView,
+        component: HomePage,
         // route level code-splitting
         // this generates a separate chunk (home.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        //component: () => import("../views/HomeView.vue"),
+        //component: () => import("../views/HomePage.vue"),
     },
     {
         path: "/bronx",
