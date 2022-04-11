@@ -116,6 +116,13 @@ section {
     align-items: flex-start; /*cross axis*/
 }
 
+@media all and (min-width: 300px) {
+    section {
+        border-right: none;
+        border-left: none;
+    }
+}
+
 @media all and (min-width: 600px) {
     section {
         border-right: 1px solid #eee; /*grey 200*/
