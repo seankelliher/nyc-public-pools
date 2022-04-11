@@ -1,10 +1,9 @@
 <template>
     <footer>
-        <p>
-            Please see our <a href="messages-log">Messages Log</a> for ideas
-            already submitted. Please see our
-            <a href="messages-form">Messages Form</a> to submit new ideas.
-        </p>
+        <ul>
+            <li>Send us a <a href="messages-form">message</a>.</li>
+            <li>View past messages in our <a href="messages-log">log</a>.</li>
+        </ul>
     </footer>
 </template>
 
