@@ -2,6 +2,13 @@ body {
     margin: 0;
 }
 
+/*img becomes no larger than actual size.*/
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 #app {
     width: 100%;
     max-width: 600px;
@@ -13,6 +20,7 @@ body {
     align-items: flex-start; /*cross axis*/
 }
 
+/*MAIN SEMANTIC ELEMENTS ARE BELOW*/
 header {
     width: 90%;
     margin: 0;
@@ -33,6 +41,53 @@ nav {
     align-items: flex-start; /*cross axis*/
 }
 
+section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial; /*flex: 0 1 auto*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; /*main axis*/
+    align-items: flex-start; /*cross axis*/
+}
+
+@media all and (min-width: 300px) {
+    section {
+        border-right: none;
+        border-left: none;
+    }
+}
+
+@media all and (min-width: 600px) {
+    section {
+        border-right: 1px solid #eee; /*grey 200*/
+        border-left: 1px solid #eee; /*grey 200*/
+    }
+}
+
+figure {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+figcaption {
+    width: 90%;
+    margin: 0.5em 0;
+    padding: 0 5%;
+}
+
+footer {
+    width: 90%;
+    margin: 0;
+    padding: 1em 5%;
+    background: #ffc963; /*light gold*/
+    flex: initial; /*flex: 0 1 auto*/
+}
+
+/*BUTTON ELEMENTS ARE BELOW*/
+/*button for nav: BK, BX, MN, QN, SI*/
 button.nav {
     background: #0e4996; /*dark blue*/
     border: none;
@@ -77,6 +132,7 @@ button.nav a.router-link-exact-active {
     }
 }
 
+/*button for "fees and schedules"*/
 button.regular {
     margin-bottom: 1.5em;
     padding-left: 0.75em;
@@ -91,6 +147,7 @@ button.regular:hover {
     cursor: pointer;
 }
 
+/*button for "notes"*/
 button.notes {
     margin-bottom: 1.5em;
     padding-left: 0.75em;
@@ -105,31 +162,7 @@ button.notes:hover {
     cursor: pointer;
 }
 
-section {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    flex: initial; /*flex: 0 1 auto*/
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between; /*main axis*/
-    align-items: flex-start; /*cross axis*/
-}
-
-@media all and (min-width: 300px) {
-    section {
-        border-right: none;
-        border-left: none;
-    }
-}
-
-@media all and (min-width: 600px) {
-    section {
-        border-right: 1px solid #eee; /*grey 200*/
-        border-left: 1px solid #eee; /*grey 200*/
-    }
-}
-
+/*FORM AND RELATED ELEMENTS ARE BELOW*/
 form {
     width: 90%;
     margin: 0;
@@ -212,7 +245,14 @@ textarea {
     padding: 0;
 }
 
-/*Animation: fades "message sent" in and out*/
+#sent-msg {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+/*animation: fades "message sent" in and out*/
 @keyframes fadeInOut {
     0% {
         opacity: 0;
@@ -228,17 +268,11 @@ textarea {
     }
 }
 
-#sent-msg {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    opacity: 0;
-}
-
 .fade-anim {
   animation: fadeInOut 4s;
 }
 
+/*VARIOUS "CLASS" ELEMENTS ARE BELOW*/
 .page-title {
     width: 90%;
     margin: 0;
@@ -274,7 +308,8 @@ textarea {
     border: none;
 }
 
-/*Styles for <Transition>*/
+/*makes "notes" section fade in/out when "notes" button is toggled*/
+/*used with Vue's <transition />*/
 .v-enter-active,
 .v-leave-active {
     transition: opacity 0.5s ease;
@@ -285,118 +320,7 @@ textarea {
     opacity: 0;
 }
 
-footer {
-    width: 90%;
-    margin: 0;
-    padding: 1em 5%;
-    background: #ffc963; /*light gold*/
-    flex: initial; /*flex: 0 1 auto*/
-}
-
-figure {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-figcaption {
-    width: 90%;
-    margin: 0.5em 0;
-    padding: 0 5%;
-}
-
-/*Image becomes no larger than actual size.*/
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/*FONTS and thie media queries below*/
-figcaption {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    color: #616161; /*grey 700*/
-}
-
-button.nav {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.8;
-    font-weight: 600;
-}
-
-button.regular {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    color: #fff;
-}
-
-button.notes {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    color: #0e4996; /*dark blue*/
-}
-
-li {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    position: relative;
-}
-
-p, label, input, textarea {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.8;
-    font-weight: 400;
-}
-
-/*Note: Setting font styles for "select" or "option" in pull-down menus
-seems to make no difference. Adding "optgroup" has no effect either.*/
-
-.pool p {
-    line-height: 1.5;
-}
-
-p a, li a {
-    color: #0e4996; /*dark blue*/
-    text-decoration: none;
-}
-p a:hover, li a:hover {
-    color: #0e4996; /*dark blue*/
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-p.link-like {
-    color: #0e4996; /*dark blue*/
-}
-
-p.link-like:hover {
-    color: #0e4996; /*dark blue*/
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-/*positions handicapped icon at end of pool dimensions line.*/
-span.accessible {
-    position: absolute;
-    bottom: 0;
-    right: auto;
-}
-
-/*makes font red*/
-.warn {
-    color: #d90416; /*dark red*/
-}
-
-/*makes font green*/
-.compliment {
-    color: #277332; /*dark green*/
-}
-
+/*FONTS STYLES ARE BELOW*/
 h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.2;
@@ -427,27 +351,80 @@ h3 {
     font-weight: 600;
 }
 
+button.nav {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+button.regular {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #fff;
+}
+
+button.notes {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #0e4996; /*dark blue*/
+}
+
+figcaption {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #616161; /*grey 700*/
+}
+
+p, label, input, textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+li {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    position: relative;
+}
+
+p a, li a {
+    color: #0e4996; /*dark blue*/
+    text-decoration: none;
+}
+
+p a:hover, li a:hover {
+    color: #0e4996; /*dark blue*/
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+p.link-like {
+    color: #0e4996; /*dark blue*/
+}
+
+p.link-like:hover {
+    color: #0e4996; /*dark blue*/
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.pool p {
+    line-height: 1.5;
+}
+
+/*positions handicapped icon at end of pool dimensions line.*/
+span.accessible {
+    position: absolute;
+    bottom: 0;
+    right: auto;
+}
+
+/*FONTS MEDIA QUERIES ARE BELOW*/
 @media all and (min-width: 300px) {
-    figcaption {
-        font-size: .75em; /*12px*/
-    }
-
-    button.nav {
-        font-size: .8125em; /*13px*/
-    }
-
-    button.regular, button.notes {
-        font-size: .75em; /*12px*/
-    }
-
-    li {
-        font-size: .8125em; /*13px*/
-    }
-
-    p, label, input, textarea {
-        font-size: .875em; /*14px*/
-    }
-
     h1 {
         /*font-size: 1.2em; 19.2px*/
         font-size: 1em;
@@ -460,29 +437,30 @@ h3 {
     h3 {
         font-size: .9375em; /*15px*/
     }
-}
-
-@media all and (min-width: 400px) {
-    figcaption {
-        font-size: .8125em; /*13px*/
-    }
 
     button.nav {
-        font-size: .875em; /*14px*/
+        font-size: .8125em; /*13px*/
     }
 
     button.regular, button.notes {
-        font-size: .8125em; /*13px*/
+        font-size: .75em; /*12px*/
     }
 
-    li {
-        font-size: .875em; /*14px*/
+    figcaption {
+        font-size: .75em; /*12px*/
     }
 
     p, label, input, textarea {
-        font-size: .9375em; /*15px*/
+        font-size: .875em; /*14px*/
     }
 
+
+    li {
+        font-size: .8125em; /*13px*/
+    }
+}
+
+@media all and (min-width: 400px) {
     h2 {
         font-size: 1.2em; /*19.2px*/
     }
@@ -490,29 +468,29 @@ h3 {
     h3 {
         font-size: 1em; /*16px*/
     }
-}
-
-@media all and (min-width: 500px) {
-    figcaption {
-        font-size: .875em; /*14px*/
-    }
 
     button.nav {
         font-size: .875em; /*14px*/
     }
 
     button.regular, button.notes {
-        font-size: .875em; /*14px*/
+        font-size: .8125em; /*13px*/
+    }
+
+    figcaption {
+        font-size: .8125em; /*13px*/
+    }
+
+    p, label, input, textarea {
+        font-size: .9375em; /*15px*/
     }
 
     li {
         font-size: .875em; /*14px*/
     }
+}
 
-    p, label, input, textarea {
-        font-size: 1em; /*16px*/
-    }
-
+@media all and (min-width: 500px) {
     h2 {
         font-size: 1.4em; /*22.4px*/
     }
@@ -520,11 +498,35 @@ h3 {
     h3 {
         font-size: 1.1em; /*17.6px*/
     }
+
+    button.nav {
+        font-size: .875em; /*14px*/
+    }
+
+    button.regular, button.notes {
+        font-size: .875em; /*14px*/
+    }
+
+    figcaption {
+        font-size: .875em; /*14px*/
+    }
+
+    p, label, input, textarea {
+        font-size: 1em; /*16px*/
+    }
+
+    li {
+        font-size: .875em; /*14px*/
+    }
 }
 
 @media all and (min-width: 600px) {
-    figcaption {
-        font-size: .9375em; /*15px*/
+    h2 {
+        font-size: 1.6em; /*25.6px*/
+    }
+
+    h3 {
+        font-size: 1.2em; /*19.2px*/
     }
 
     button.nav {
@@ -535,19 +537,29 @@ h3 {
         font-size: .9375em; /*15px*/
     }
 
-    li {
-        font-size: 1em; /*16px*/
+    figcaption {
+        font-size: .9375em; /*15px*/
     }
 
     p, label, input, textarea {
         font-size: 1.1em; /*17.6px*/
     }
 
-    h2 {
-        font-size: 1.6em; /*25.6px*/
-    }
-
-    h3 {
-        font-size: 1.2em; /*19.2px*/
+    li {
+        font-size: 1em; /*16px*/
     }
 }
+
+/*VARIOUS "CLASSES" FOR FONTS ARE BELOW*/
+/*makes font red*/
+.warn {
+    color: #d90416; /*dark red*/
+}
+
+/*makes font green*/
+.compliment {
+    color: #277332; /*dark green*/
+}
+
+/*Note: Setting font styles for "select" or "option" in the form's pull-down
+menu seems to make no difference. Adding "optgroup" has no effect either.*/
