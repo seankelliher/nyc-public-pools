@@ -2,7 +2,10 @@
     <footer>
         <ul>
             <li>Send us a <a href="messages-form">message</a>.</li>
-            <li>View past messages in our <a href="messages-log">log</a>.</li>
+            <li>
+                View what others are saying in our
+                <a href="messages-log">Messages Log</a>.
+            </li>
         </ul>
     </footer>
 </template>
