@@ -3,7 +3,7 @@
         <PageTitle name="Messages Log" />
         <div class="pool" v-for="(message, index) in messages" :key="index">
             <p>
-                <strong>{{ message.poolName }}</strong>
+                <strong>{{ message.poolName }}</strong> ({{ message.borough }})
                 <br />
                 {{ message.poolType }}<br />
                 <em>{{ message.description }}</em>
