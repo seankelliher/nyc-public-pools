@@ -3,10 +3,6 @@
 
 Information on public swimming pools in New York City.
 
-## Project Status
-
-App is completed and currently being tested.
-
 ## Project Screen Shots
 
 * Homepage.
