@@ -23,10 +23,3 @@ export default {
     },
 };
 </script>
-
-<style scoped>
-p {
-    line-height: 1.2;
-    margin-top: 0;
-}
-</style>
