@@ -412,6 +412,11 @@ p.link-like:hover {
     cursor: pointer;
 }
 
+.fees-sched p {
+    line-height: 1.5;
+    margin-top: 0;
+}
+
 .pool p {
     line-height: 1.5;
 }
