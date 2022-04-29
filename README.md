@@ -38,7 +38,7 @@ Customize configuration:
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-For this project, I also used [JSON Server](https://www.npmjs.com/package/json-server) as a database. Install the package from NPM. In your repo, use the command `json-server --watch db.json` to activate the database.
+For this project, I also used [JSON Server](https://www.npmjs.com/package/json-server) as a local database. To use JSON Server, install the package from NPM, globally is fine. In your repo, the command `npm run start` will both "compile and hot-reload for development" AND activate the JSON Server.
 
 ## Reflection
 
