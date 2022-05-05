@@ -1,9 +1,11 @@
 <template>
     <HeaderPart />
     <NavPart />
-    <Transition name="fade" mode="out-in">
-        <router-view />
-    </Transition>
+    <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+            <component :is="Component" />
+        </transition>
+    </router-view>
     <FooterPart />
 </template>
 
