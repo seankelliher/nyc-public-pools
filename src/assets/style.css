@@ -310,7 +310,7 @@ textarea {
 
 /*makes "notes" section fade in/out when "notes" button is toggled*/
 /*used with Vue's <transition />*/
-.v-enter-active,
+/*.v-enter-active,
 .v-leave-active {
     transition: opacity 0.5s ease;
 }
@@ -318,22 +318,25 @@ textarea {
 .v-enter-from,
 .v-leave-to {
     opacity: 0;
-}
+}*/
 
 /*TRANSITIONS ARE BELOW*/
-/*creates a fade transition when mving from page to page*/
-/*does not work if migrating bakc to homepage*/
+/*creates a fade transition between pages pages*/
+/*no fade if going to homepage*/
 .fade-enter-from {
-    opacity: 0;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 0.5s ease-out;
+    opacity: 0.8;
 }
 
 .fade-leave-to {
-    opacity: 0;
+    opacity: 1;
+}
+
+.fade-enter-active {
+    transition: opacity 0.5s ease;
+}
+
+.fade-leave-active {
+    transition: opacity 0.5s ease;
 }
 
 /*FONTS STYLES ARE BELOW*/
