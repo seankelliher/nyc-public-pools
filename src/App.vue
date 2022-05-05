@@ -1,7 +1,9 @@
 <template>
     <HeaderPart />
     <NavPart />
-    <router-view />
+    <Transition name="fade" mode="out-in">
+        <router-view />
+    </Transition>
     <FooterPart />
 </template>
 

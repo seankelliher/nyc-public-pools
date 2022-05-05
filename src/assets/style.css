@@ -320,6 +320,22 @@ textarea {
     opacity: 0;
 }
 
+/*TRANSITIONS ARE BELOW*/
+/*creates a fade transition when mving from page to page*/
+/*does not work if migrating bakc to homepage*/
+.fade-enter-from {
+    opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease-out;
+}
+
+.fade-leave-to {
+    opacity: 0;
+}
+
 /*FONTS STYLES ARE BELOW*/
 h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
