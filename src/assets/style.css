@@ -132,7 +132,7 @@ button.nav a.router-link-exact-active {
     }
 }
 
-/*button for "fees and schedules"*/
+/*button for "fees and schedules" and "message sent!"*/
 button.regular {
     margin-bottom: 1.5em;
     padding-left: 0.75em;
@@ -245,31 +245,10 @@ textarea {
     padding: 0;
 }
 
-#sent-msg {
-    width: 100%;
-    margin: 0;
+#flash-msg-form {
+    margin: 0 1em;
     padding: 0;
-    opacity: 0;
-}
-
-/*animation: fades "message sent" in and out*/
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.fade-anim {
-  animation: fadeInOut 4s;
+    display: none;
 }
 
 /*VARIOUS "CLASS" ELEMENTS ARE BELOW*/
@@ -308,21 +287,8 @@ textarea {
     border: none;
 }
 
-/*makes "notes" section fade in/out when "notes" button is toggled*/
-/*used with Vue's <transition />*/
-/*.v-enter-active,
-.v-leave-active {
-    transition: opacity 0.5s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-    opacity: 0;
-}*/
-
 /*TRANSITIONS ARE BELOW*/
-/*creates a fade for page transitions*/
-/*no fade if going to homepage*/
+/*fades pages when going from page to page (does not work going to homepage)*/
 .fade-enter-from {
     opacity: 0.8;
 }
@@ -351,6 +317,31 @@ textarea {
 .slide-fade-leave-active {
     transition: all 1s ease-out;
 }
+
+/*ANIMATIONS ARE BELOW*/
+/*flashes form's "message sent!" text*/
+@keyframes flashMessage {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.flash-msg {
+  animation: flashMessage 4s ease-in-out 100ms 1 normal both;
+}
+
+/*Shorthand Notes: [animation-name] [animation-duration] [animation-timing-function]
+[animation-delay] [animation-iteration-count] [animation-direction]
+animation-fill-mode*/
 
 /*FONTS STYLES ARE BELOW*/
 h1 {
@@ -461,6 +452,12 @@ span.accessible {
     right: auto;
 }
 
+span.flash {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
 /*FONTS MEDIA QUERIES ARE BELOW*/
 @media all and (min-width: 300px) {
     h1 {
@@ -492,9 +489,12 @@ span.accessible {
         font-size: .875em; /*14px*/
     }
 
-
     li {
         font-size: .8125em; /*13px*/
+    }
+
+    span.flash {
+        font-size: .75em; /*12px*/
     }
 }
 
@@ -526,6 +526,10 @@ span.accessible {
     li {
         font-size: .875em; /*14px*/
     }
+
+    span.flash {
+        font-size: .8125em; /*13px*/
+    }
 }
 
 @media all and (min-width: 500px) {
@@ -554,6 +558,10 @@ span.accessible {
     }
 
     li {
+        font-size: .875em; /*14px*/
+    }
+
+    span.flash {
         font-size: .875em; /*14px*/
     }
 }
@@ -585,6 +593,10 @@ span.accessible {
 
     li {
         font-size: 1em; /*16px*/
+    }
+
+    span.flash {
+        font-size: .9375em; /*15px*/
     }
 }
 
