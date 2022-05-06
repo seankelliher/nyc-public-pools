@@ -1,11 +1,11 @@
 <template>
     <div class="fees-sched">
         <h3>Indoor &amp; Outdoor Pools</h3>
-        <button class="regular" @click="visible = !visible">
+        <button class="regular" @click="show = !show">
             fees &amp; schedules
         </button>
-        <Transition>
-            <p v-show="visible">
+        <Transition name="slide-fade">
+            <p v-show="show">
                 See our <a href="/">homepage</a> for information on pool fees
                 &amp; schedules.
             </p>
@@ -18,7 +18,7 @@ export default {
     name: "FeesSchedules",
     data() {
         return {
-            visible: false,
+            show: false,
         };
     },
 };
