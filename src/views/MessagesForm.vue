@@ -61,7 +61,9 @@
                 :error="errors.description"
             />
             <button type="submit" class="regular">Submit</button>
-            <div id="sent-msg"><p class="compliment">Message sent!</p></div>
+            <span id="flash-msg-form" class="flash compliment">
+                Message sent!
+            </span>
         </form>
     </section>
 </template>
@@ -137,15 +139,17 @@ export default {
                     console.log("Error", err);
                 });
 
-            function addRemoveAnimation() {
-                const sent = document.getElementById("sent-msg");
-                sent.classList.add("fade-anim");
+            function addRemoveFlash() {
+                const sent = document.getElementById("flash-msg-form");
+                sent.classList.add("flash-msg");
+                sent.style.display = "inline";
                 setTimeout(() => {
-                    sent.classList.remove("fade-anim");
+                    sent.style.display = "none";
+                    sent.classList.remove("flash-msg");
                 }, 5000);
             }
 
-            addRemoveAnimation();
+            addRemoveFlash();
             resetForm();
         });
 
