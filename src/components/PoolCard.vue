@@ -39,11 +39,9 @@
                 </span>
             </li>
         </ul>
-        <button class="notes" @click="pool.visible = !pool.visible">
-            Notes
-        </button>
-        <Transition>
-            <ul v-show="pool.visible">
+        <button class="notes" @click="pool.show = !pool.show">Notes</button>
+        <Transition name="slide-fade">
+            <ul v-show="pool.show">
                 <li>
                     The cross streets for this location are {{ pool.betweens }}.
                 </li>
@@ -72,7 +70,7 @@ export default {
     },
     data() {
         return {
-            visible: false,
+            show: false,
         };
     },
 };
