@@ -1,6 +1,8 @@
 <template>
     <div class="page-title">
-        <h2>{{ name }}</h2>
+        <Transition name="slide-h-fade" appear>
+            <h2>{{ name }}</h2>
+        </Transition>
         <!--<p>
             Year-round indoor and summer outdoor public swimming pools in
             <span v-if="name === 'Bronx'">the</span>

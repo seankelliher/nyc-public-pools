@@ -4,7 +4,7 @@
         <button class="regular" @click="show = !show">
             fees &amp; schedules
         </button>
-        <Transition name="slide-fade">
+        <Transition name="slide-v-fade">
             <p v-show="show">
                 See our <a href="/">homepage</a> for information on pool fees
                 &amp; schedules.
