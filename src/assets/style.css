@@ -93,6 +93,7 @@ button.nav {
     border: none;
     border-radius: 50%;
     flex: initial; /*flex: 0 1 auto*/
+    cursor: pointer;
 }
 
 button.nav a {
