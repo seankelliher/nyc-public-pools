@@ -40,7 +40,7 @@
             </li>
         </ul>
         <button class="notes" @click="pool.show = !pool.show">Notes</button>
-        <Transition name="slide-v-fade">
+        <Transition name="slide-down-fade-in-out">
             <ul v-show="pool.show">
                 <li>
                     The cross streets for this location are {{ pool.betweens }}.

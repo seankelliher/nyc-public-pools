@@ -289,35 +289,36 @@ textarea {
 }
 
 /*TRANSITIONS ARE BELOW*/
-/*fades/slides horizontally "page title"*/
-.slide-h-fade-enter-from {
+/*Content fades in and slides left*/
+/*Used on PageTitle*/
+.fade-in-slide-left-enter-from {
     opacity: 0;
     transform: translateX(10px);
 }
 
-.slide-h-fade-leave-to {
-    opacity: 0;
+.fade-in-slide-left-enter-enter-to {
+    opacity: 1;
     transform: translateX(0);
 }
 
-.slide-h-fade-enter-active,
-.slide-h-fade-leave-active {
+.fade-in-slide-left-enter-active {
     transition: all 1s ease-out;
 }
 
-/*fades/slides vertically "fees & schedules" and "notes"*/
-.slide-v-fade-enter-from {
+/*Content slides down and fades in, later fades out*/
+/*Used on FeesSchedule and PoolCard*/
+.slide-down-fade-in-out-enter-from {
     opacity: 0;
     transform: translateY(-10px);
 }
 
-.slide-v-fade-leave-to {
+.slide-down-fade-in-out-leave-to {
     opacity: 0;
     transform: translateY(0);
 }
 
-.slide-v-fade-enter-active,
-.slide-v-fade-leave-active {
+.slide-down-fade-in-out-enter-active,
+.slide-down-fade-in-out-leave-active {
     transition: all 1s ease-out;
 }
 
