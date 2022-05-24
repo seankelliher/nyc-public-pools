@@ -5,7 +5,7 @@
             v-bind="$attrs"
             :placeholder="placeholder"
             :value="modelValue"
-            @input="$emit('update:modelValue', $event.target.value)"
+            @change="$emit('update:modelValue', $event.target.value)"
             :id="uuid"
             :aria-describeby="error ? `${uuid}-error` : null"
             :aria-invalid="error ? true : null"
