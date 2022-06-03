@@ -76,7 +76,6 @@ import BaseRadioGroup from "@/components/BaseElements/BaseRadioGroup.vue";
 import BaseTextArea from "@/components/BaseElements/BaseTextArea.vue";
 import { useForm, useField } from "vee-validate";
 import { object, string } from "yup";
-import axios from "axios";
 
 export default {
     name: "MessagesForm",
@@ -129,9 +128,15 @@ export default {
         const { value: description } = useField("description");
 
         const submit = handleSubmit((value, { resetForm }) => {
-            console.log("submit", value);
-            axios
-                .post("http://localhost:3000/messages", value)
+            const options = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(value),
+            };
+
+            fetch("http://localhost:3000/messages", options)
                 .then(function (response) {
                     console.log("Response", response);
                 })
