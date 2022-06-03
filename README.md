@@ -46,7 +46,7 @@ I wanted to build an application where users can explore public swimming pools i
 
 The largest technical challenges were creating and validating the form for users to submit messages. I needed to learn vee-validate and yup, and I wanted to use vee-validate's more flexible Composition API over its less flexible, but easier to use, Components. 
 
-I also needed a way to simulate a "real world" database so I could house and retrieve messages during development. I used JSON Server, which also required some time to learn and get running. I used Axios to transfer data between the form and JSON Server. Axios worked well, but I also wondered if writing my own "fetch" API would have been fine too.
+I also needed a way to simulate a "real world" database so I could house and retrieve messages during development. I used JSON Server, which also required some time to learn and get running. I used Axios to transfer data between the form and JSON Server. Axios worked well, but I also wondered if writing my own "fetch" API would have been fine too. UPDATE: I removed Axios and rewrote the server calls using "fetch" - same functionality, one less dependency to worry about.
 
 Lastly, I wanted to make sure the application met accessibility requirements for visually-impaired users with screen readers. ARIA guidelines, to me anyway, were frequently vague and inconclusive: "better no ARIA than bad ARIA" and you can use ARIA, but maybe semantic HTML5 elements are better! The "Accessibility" feature in Firefox's Developer Tools was invaluable in making me feel more confident that I was meeting accessibility standards.
 
