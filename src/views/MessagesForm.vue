@@ -137,10 +137,10 @@ export default {
             };
 
             fetch("http://localhost:3000/messages", options)
-                .then(function (response) {
+                .then((response) => {
                     console.log("Response", response);
                 })
-                .catch(function (err) {
+                .catch((err) => {
                     console.log("Error", err);
                 });
 
