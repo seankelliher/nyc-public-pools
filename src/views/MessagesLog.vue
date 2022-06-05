@@ -10,11 +10,7 @@
                 <br />- submitted by {{ message.name }}.
             </p>
         </div>
-        <div class="summary" v-if="errors && errors.length">
-            <p v-for="(error, index) in errors" :key="index">
-                {{ error.message }}
-            </p>
-        </div>
+        <p id="flash-msg-form">placeholder</p>
     </section>
 </template>
 
@@ -26,20 +22,36 @@ export default {
     data() {
         return {
             messages: [],
-            errors: [],
         };
     },
     components: {
         PageTitle,
     },
     created() {
+        function addRemoveFlash(txt, color) {
+            const sent = document.getElementById("flash-msg-form");
+            sent.classList.add("flash-msg");
+            sent.style.display = "block"; //CHECK! MAYBE REVISE!
+            sent.textContent = txt;
+            sent.classList.add(color);
+        }
+
         fetch("http://localhost:3000/messages")
-            .then((response) => response.json())
+            .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    return Promise.reject(response.status);
+                }
+            })
             .then((data) => {
                 this.messages = data;
             })
-            .catch((e) => {
-                this.errors.push(e);
+            .catch((err) => {
+                addRemoveFlash(
+                    `Server error ${err}. Please try again later.`,
+                    "warn"
+                );
             });
     },
 };

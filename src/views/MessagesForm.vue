@@ -61,9 +61,7 @@
                 :error="errors.description"
             />
             <button type="submit" class="regular">Submit</button>
-            <span id="flash-msg-form" class="flash compliment">
-                Message sent!
-            </span>
+            <span id="flash-msg-form" class="flash">placeholder</span>
         </form>
     </section>
 </template>
@@ -136,25 +134,28 @@ export default {
                 body: JSON.stringify(value),
             };
 
-            fetch("http://localhost:3000/messages", options)
-                .then((response) => {
-                    console.log("Response", response);
-                })
-                .catch((err) => {
-                    console.log("Error", err);
-                });
-
-            function addRemoveFlash() {
+            function addRemoveFlash(txt, color) {
                 const sent = document.getElementById("flash-msg-form");
                 sent.classList.add("flash-msg");
-                sent.style.display = "inline";
-                setTimeout(() => {
-                    sent.style.display = "none";
-                    sent.classList.remove("flash-msg");
-                }, 5000);
+                sent.style.display = "inline"; //CHECK! MAYBE REVISE!
+                sent.textContent = txt;
+                sent.classList.add(color);
             }
 
-            addRemoveFlash();
+            fetch("http://localhost:3000/messages", options)
+                .then((response) => {
+                    if (response.ok) {
+                        addRemoveFlash("Message sent!", "compliment");
+                    } else {
+                        return Promise.reject(response.status);
+                    }
+                })
+                .catch((err) => {
+                    addRemoveFlash(
+                        `Server error ${err}. Please try again later.`,
+                        "warn"
+                    );
+                });
             resetForm();
         });
 
