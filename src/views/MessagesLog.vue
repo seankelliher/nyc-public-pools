@@ -28,10 +28,10 @@ export default {
         PageTitle,
     },
     created() {
-        function addRemoveFlash(txt, color) {
+        function addRemoveFlash(txt, color, structure) {
             const sent = document.getElementById("flash-msg-form");
             sent.classList.add("flash-msg");
-            sent.style.display = "block"; //CHECK! MAYBE REVISE!
+            sent.style.display = structure;
             sent.textContent = txt;
             sent.classList.add(color);
         }
@@ -50,7 +50,8 @@ export default {
             .catch((err) => {
                 addRemoveFlash(
                     `Server error ${err}. Please try again later.`,
-                    "warn"
+                    "warn",
+                    "block"
                 );
             });
     },

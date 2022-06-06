@@ -134,18 +134,18 @@ export default {
                 body: JSON.stringify(value),
             };
 
-            function addRemoveFlash(txt, color) {
+            function addRemoveFlash(txt, color, structure) {
                 const sent = document.getElementById("flash-msg-form");
                 sent.classList.add("flash-msg");
-                sent.style.display = "inline"; //CHECK! MAYBE REVISE!
+                sent.style.display = structure;
                 sent.textContent = txt;
                 sent.classList.add(color);
             }
 
-            fetch("http://localhost:3000/messages", options)
+            fetch("http://localhost:3000/messags", options)
                 .then((response) => {
                     if (response.ok) {
-                        addRemoveFlash("Message sent!", "compliment");
+                        addRemoveFlash("Message sent!", "compliment", "inline");
                     } else {
                         return Promise.reject(response.status);
                     }
@@ -153,7 +153,8 @@ export default {
                 .catch((err) => {
                     addRemoveFlash(
                         `Server error ${err}. Please try again later.`,
-                        "warn"
+                        "warn",
+                        "inline"
                     );
                 });
             resetForm();
