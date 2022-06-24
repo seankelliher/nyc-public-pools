@@ -1,6 +1,9 @@
 <template>
     <figure>
-        <img :src="require(`@/assets/images/${src}.jpg`)" :alt="alt" />
+        <img
+            :src="require(`@/assets/images/${src}.jpg`)"
+            :alt="alt"
+        >
         <figcaption>{{ caption }}</figcaption>
     </figure>
 </template>

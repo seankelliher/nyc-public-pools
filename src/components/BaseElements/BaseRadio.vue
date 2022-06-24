@@ -1,13 +1,18 @@
 <template>
     <input
+        :id="uuid"
         type="radio"
         :checked="modelValue === value"
         :value="value"
         v-bind="$attrs"
         @change="$emit('update:modelValue', value)"
-        :id="uuid"
-    />
-    <label :for="uuid" v-if="label">{{ label }}</label>
+    >
+    <label
+        v-if="label"
+        :for="uuid"
+    >
+        {{ label }}
+    </label>
 </template>
 
 <script>
@@ -29,6 +34,7 @@ export default {
             required: true,
         },
     },
+    emits: ["update:modelValue"],
     setup() {
         const uuid = UniqueID().getID();
         return {

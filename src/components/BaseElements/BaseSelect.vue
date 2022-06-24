@@ -1,6 +1,11 @@
 <template>
     <div class="entry">
-        <label :for="uuid" v-if="label">{{ label }}</label>
+        <label
+            v-if="label"
+            :for="uuid"
+        >
+            {{ label }}
+        </label>
         <select
             v-bind="{
                 ...$attrs,
@@ -8,16 +13,21 @@
                     $emit('update:modelValue', $event.target.value);
                 },
             }"
-            :value="modelValue"
             :id="uuid"
+            :value="modelValue"
             :aria-describeby="error ? `${uuid}-error` : null"
             :aria-invalid="error ? true : null"
         >
-            <option disabled value="">Please select one</option>
+            <option
+                disabled
+                value=""
+            >
+                Please select one
+            </option>
             <option
                 v-for="option in options"
-                :value="option"
                 :key="option"
+                :value="option"
                 :selected="option === modelValue"
             >
                 {{ option }}
@@ -25,11 +35,13 @@
         </select>
         <div
             v-if="error"
-            class="error-msg"
             :id="`${uuid}-error`"
+            class="error-msg"
             :aria-live="assertive"
         >
-            <p class="warn">{{ error }}</p>
+            <p class="warn">
+                {{ error }}
+            </p>
         </div>
     </div>
 </template>
@@ -57,6 +69,7 @@ export default {
             default: "",
         },
     },
+    emits: ["update:modelValue"],
     setup() {
         const uuid = UniqueID().getID();
         return {

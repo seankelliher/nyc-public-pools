@@ -6,9 +6,9 @@
             :key="option.value"
             :label="option.label"
             :value="option.value"
-            :modelValue="modelValue"
+            :model-value="modelValue"
             :name="name"
-            @update:modelValue="$emit('update:modelValue', $event)"
+            @update:model-value="$emit('update:modelValue', $event)"
         />
     </div>
 </template>
@@ -39,5 +39,6 @@ export default {
             default: "",
         },
     },
+    emits: ["update:modelValue"],
 };
 </script>

@@ -1,7 +1,10 @@
 <template>
     <div class="fees-sched">
         <h3>Indoor &amp; Outdoor Pools</h3>
-        <button class="regular" @click="show = !show">
+        <button
+            class="regular"
+            @click="show = !show"
+        >
             fees &amp; schedules
         </button>
         <Transition name="slide-down-fade-in-out">

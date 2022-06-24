@@ -1,23 +1,30 @@
 <template>
     <div class="entry">
-        <label :for="uuid" v-if="label">{{ label }}</label>
+        <label
+            v-if="label"
+            :for="uuid"
+        >
+            {{ label }}
+        </label>
         <textarea
+            :id="uuid"
             v-bind="$attrs"
             :placeholder="placeholder"
             :value="modelValue"
-            @change="$emit('update:modelValue', $event.target.value)"
             :rows="rows"
-            :id="uuid"
             :aria-describeby="error ? `${uuid}-error` : null"
             :aria-invalid="error ? true : null"
+            @change="$emit('update:modelValue', $event.target.value)"
         />
         <div
             v-if="error"
-            class="error-msg"
             :id="`${uuid}-error`"
+            class="error-msg"
             :aria-live="assertive"
         >
-            <p class="warn">{{ error }}</p>
+            <p class="warn">
+                {{ error }}
+            </p>
         </div>
     </div>
 </template>
@@ -49,6 +56,7 @@ export default {
             default: "",
         },
     },
+    emits: ["update:modelValue"],
     setup() {
         const uuid = UniqueID().getID();
         return {
