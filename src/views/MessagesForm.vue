@@ -11,42 +11,42 @@
         </div>
         <form @submit="submit">
             <BaseInput
-                label="Name"
                 v-model="name"
+                label="Name"
                 placeholder="Maria Vargas"
                 type="text"
                 :error="errors.name"
             />
             <BaseInput
-                label="Email"
                 v-model="email"
+                label="Email"
                 placeholder="maria123@aol.com"
                 type="email"
                 :error="errors.email"
             />
             <BaseSelect
-                label="Borough"
                 v-model="borough"
+                label="Borough"
                 :options="boroughs"
                 :error="errors.borough"
             />
             <BaseInput
-                label="Pool Name"
                 v-model="poolName"
+                label="Pool Name"
                 placeholder="Asser Levy Pool"
                 type="text"
                 :error="errors.poolName"
             />
             <BaseInput
-                label="Pool Type"
                 v-model="poolType"
+                label="Pool Type"
                 placeholder="Outdoor Wading Pool"
                 type="text"
                 :error="errors.poolType"
             />
             <BaseRadioGroup
-                label="What best describes you?"
                 v-model="resident"
+                label="What best describes you?"
                 name="resident"
                 :options="[
                     { value: 0, label: 'I am a NYC resident.' },
@@ -54,14 +54,24 @@
                 ]"
             />
             <BaseTextArea
-                label="Description"
                 v-model="description"
+                label="Description"
                 placeholder="I am writing to..."
                 rows="4"
                 :error="errors.description"
             />
-            <button type="submit" class="regular">Submit</button>
-            <span id="flash-msg-form" class="flash">placeholder</span>
+            <button
+                type="submit"
+                class="regular"
+            >
+                Submit
+            </button>
+            <span
+                id="flash-msg-form"
+                class="flash"
+            >
+                placeholder
+            </span>
         </form>
     </section>
 </template>
@@ -77,18 +87,6 @@ import { object, string } from "yup";
 
 export default {
     name: "MessagesForm",
-    data() {
-        return {
-            boroughs: [
-                "All or Multiple",
-                "Bronx",
-                "Brooklyn",
-                "Manhattan",
-                "Queens",
-                "Staten Island",
-            ],
-        };
-    },
     components: {
         PageTitle,
         BaseInput,
@@ -154,7 +152,7 @@ export default {
                     addRemoveFlash(
                         `Server error ${err}. Please try again later.`,
                         "warn",
-                        "inline"
+                        "inline",
                     );
                 });
             resetForm();
@@ -171,6 +169,18 @@ export default {
             errors,
             handleSubmit,
             submit,
+        };
+    },
+    data() {
+        return {
+            boroughs: [
+                "All or Multiple",
+                "Bronx",
+                "Brooklyn",
+                "Manhattan",
+                "Queens",
+                "Staten Island",
+            ],
         };
     },
 };

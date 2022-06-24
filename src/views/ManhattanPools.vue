@@ -7,7 +7,7 @@
             caption="Hamilton Fish Pool in Manhattan. Photo: NYC Parks."
         />
         <FeesSchedules />
-        <PoolCard v-bind:pools="pools" />
+        <PoolCard :pools="pools" />
     </section>
 </template>
 

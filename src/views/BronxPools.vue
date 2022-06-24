@@ -7,7 +7,7 @@
             caption="Haffen Pool in the Bronx. Photo: NYC Parks."
         />
         <FeesSchedules />
-        <PoolCard v-bind:pools="pools" />
+        <PoolCard :pools="pools" />
     </section>
 </template>
 

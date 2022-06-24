@@ -7,7 +7,7 @@
             caption="Flushing Meadows Corona Park Pool in Queens. Photo: NYC Parks."
         />
         <FeesSchedules />
-        <PoolCard v-bind:pools="pools" />
+        <PoolCard :pools="pools" />
     </section>
 </template>
 <script>

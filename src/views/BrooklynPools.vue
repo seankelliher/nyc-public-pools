@@ -7,7 +7,7 @@
             caption="Betsy Head Pool in Brooklyn. Photo: NYC Parks."
         />
         <FeesSchedules />
-        <PoolCard v-bind:pools="pools" />
+        <PoolCard :pools="pools" />
     </section>
 </template>
 

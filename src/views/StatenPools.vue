@@ -7,7 +7,7 @@
             caption="Lyons Pool in Staten Island. Photo: NYC Parks."
         />
         <FeesSchedules />
-        <PoolCard v-bind:pools="pools" />
+        <PoolCard :pools="pools" />
     </section>
 </template>
 

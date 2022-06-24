@@ -1,16 +1,22 @@
 <template>
     <section>
         <PageTitle name="Messages Log" />
-        <div class="pool" v-for="(message, index) in messages" :key="index">
+        <div
+            v-for="(message, index) in messages"
+            :key="index"
+            class="pool"
+        >
             <p>
                 <strong>{{ message.poolName }}</strong> ({{ message.borough }})
-                <br />
-                {{ message.poolType }}<br />
+                <br>
+                {{ message.poolType }}<br>
                 <em>{{ message.description }}</em>
-                <br />- submitted by {{ message.name }}.
+                <br>- submitted by {{ message.name }}.
             </p>
         </div>
-        <p id="flash-msg-form">placeholder</p>
+        <p id="flash-msg-form">
+            placeholder
+        </p>
     </section>
 </template>
 
@@ -19,13 +25,13 @@ import PageTitle from "@/components/PageTitle.vue";
 
 export default {
     name: "MessagesLog",
+    components: {
+        PageTitle,
+    },
     data() {
         return {
             messages: [],
         };
-    },
-    components: {
-        PageTitle,
     },
     created() {
         function addRemoveFlash(txt, color, structure) {
@@ -51,7 +57,7 @@ export default {
                 addRemoveFlash(
                     `Server error ${err}. Please try again later.`,
                     "warn",
-                    "block"
+                    "block",
                 );
             });
     },
