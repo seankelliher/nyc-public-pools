@@ -56,6 +56,5 @@ Lastly, I wanted to make sure the application met accessibility requirements for
 * Pool information from [NYC Parks](https://www.nycgovparks.org/highlights/places-to-go/pools).
 * Design guidance from Google's [Material Design](https://material.io/design) and [Adobe Color](https://color.adobe.com/trends).
 * Form validation with [vee-validate](https://vee-validate.logaretm.com/v4) and [yup](https://www.npmjs.com/package/yup).
-* Data transfer with HTTP client [Axios[(https://axios-http.com/docs/intro).
 * Local server with [JSON Server](https://www.npmjs.com/package/json-server).
 * Shields from [Shields](https://shields.io).
