@@ -2,7 +2,7 @@ body {
     margin: 0;
 }
 
-/*img becomes no larger than actual size.*/
+/* img becomes no larger than actual size. */
 img {
     max-width: 100%;
     height: auto;
@@ -16,40 +16,40 @@ img {
     padding: 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start; /*main axis*/
-    align-items: flex-start; /*cross axis*/
+    justify-content: flex-start; /* main axis */
+    align-items: flex-start; /* cross axis */
 }
 
-/*MAIN SEMANTIC ELEMENTS ARE BELOW*/
+/* MAIN SEMANTIC ELEMENTS ARE BELOW */
 header {
     width: 90%;
     margin: 0;
     padding: 0.5em 5%;
-    background: #0e4996; /*dark blue*/
-    flex: initial; /*flex: 0 1 auto*/
+    background: #0e4996; /* dark blue */
+    flex: initial; /* flex: 0 1 auto */
 }
 
 nav {
     width: 90%;
     margin: 0;
     padding: 1em 5%;
-    background: #f2f2f2; /*grey*/
-    flex: initial; /*flex: 0 1 auto*/
+    background: #f2f2f2; /* grey */
+    flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; /*main axis*/
-    align-items: flex-start; /*cross axis*/
+    justify-content: space-between; /* main axis */
+    align-items: flex-start; /* cross axis */
 }
 
 section {
     width: 100%;
     margin: 0;
     padding: 0;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; /*main axis*/
-    align-items: flex-start; /*cross axis*/
+    justify-content: space-between; /* main axis */
+    align-items: flex-start; /* cross axis */
 }
 
 @media all and (min-width: 300px) {
@@ -61,8 +61,8 @@ section {
 
 @media all and (min-width: 600px) {
     section {
-        border-right: 1px solid #eee; /*grey 200*/
-        border-left: 1px solid #eee; /*grey 200*/
+        border-right: 1px solid #eee; /* grey 200 */
+        border-left: 1px solid #eee; /* grey 200 */
     }
 }
 
@@ -82,17 +82,18 @@ footer {
     width: 90%;
     margin: 0;
     padding: 1em 5%;
-    background: #ffc963; /*light gold*/
-    flex: initial; /*flex: 0 1 auto*/
+    background: #ffc963; /* light gold */
+    flex: initial; /* flex: 0 1 auto */
 }
 
-/*BUTTON ELEMENTS ARE BELOW*/
-/*button for nav: BK, BX, MN, QN, SI*/
+/* BUTTON ELEMENTS ARE BELOW */
+
+/* button for nav: BK, BX, MN, QN, SI */
 button.nav {
-    background: #0e4996; /*dark blue*/
+    background: #0e4996; /* dark blue */
     border: none;
     border-radius: 50%;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
     cursor: pointer;
 }
 
@@ -102,78 +103,78 @@ button.nav a {
 }
 
 button.nav a.router-link-exact-active {
-    color: #f2e750; /*yellow*/
+    color: #f2e750; /* yellow */
 }
 
 @media all and (min-width: 300px) {
     button.nav {
         width: 42px;
-        height:  42px;
+        height: 42px;
     }
 }
 
 @media all and (min-width: 400px) {
     button.nav {
         width: 48px;
-        height:  48px;
+        height: 48px;
     }
 }
 
 @media all and (min-width: 500px) {
-    button.nav{
+    button.nav {
         width: 54px;
-        height:  54px;
+        height: 54px;
     }
 }
 
 @media all and (min-width: 600px) {
-    button.nav{
+    button.nav {
         width: 60px;
-        height:  60px;
+        height: 60px;
     }
 }
 
-/*button for "fees and schedules" and "message sent!"*/
+/* button for "fees and schedules" and "message sent!" */
 button.regular {
     margin-bottom: 1.5em;
     padding-left: 0.75em;
     padding-right: 0.75em;
-    background: #0e4996; /*dark blue*/
+    background: #0e4996; /* dark blue */
     border: none;
     border-radius: 6px;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
 }
 
 button.regular:hover {
     cursor: pointer;
 }
 
-/*button for "notes"*/
+/* button for "notes" */
 button.notes {
     margin-bottom: 1.5em;
     padding-left: 0.75em;
     padding-right: 0.75em;
     background: none;
-    border: 1px solid #eee; /*grey 200*/
+    border: 1px solid #eee; /* grey 200 */
     border-radius: 6px;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
 }
 
 button.notes:hover {
     cursor: pointer;
 }
 
-/*FORM AND RELATED ELEMENTS ARE BELOW*/
+/* FORM AND RELATED ELEMENTS ARE BELOW */
 form {
     width: 90%;
     margin: 0;
     padding: 1em 5%;
-    border: 1px solid #eee; /*grey 200*/
-    flex: initial; /*flex: 0 1 auto*/
+    border: 1px solid #eee; /* grey 200 */
+    flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start; /*main axis*/
-    align-items: flex-start; /*cross axis*/
+    justify-content: flex-start; /* main axis */
+    align-items: flex-start; /* cross axis */
 }
 
 .entry {
@@ -196,7 +197,8 @@ label {
     padding: 0;
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"],
+input[type="email"] {
     width: 100%;
     margin: 0.5em 0;
     padding: 0;
@@ -209,7 +211,7 @@ input[type="text"], input[type="email"] {
         padding: 0;
     }
 
-    /*label immediately following "radio" input*/
+    /* label immediately following "radio" input */
     input[type="radio"] + label {
         width: 92%;
         margin: 0;
@@ -225,7 +227,7 @@ input[type="text"], input[type="email"] {
         padding: 0;
     }
 
-    /*label immediately following "radio" input*/
+    /* label immediately following "radio" input */
     input[type="radio"] + label {
         width: 95%;
         margin: 0;
@@ -252,45 +254,48 @@ textarea {
     display: none;
 }
 
-/*VARIOUS "CLASS" ELEMENTS ARE BELOW*/
+/* VARIOUS "CLASS" ELEMENTS ARE BELOW */
 .page-title {
     width: 90%;
     margin: 0;
     padding: 0 5%;
-    background: #ffc963; /*light gold*/
-    flex: initial; /*flex: 0 1 auto*/
+    background: #ffc963; /* light gold */
+    flex: initial; /* flex: 0 1 auto */
 }
 
 .summary {
     width: 90%;
     margin: 1em 0;
     padding: 0 5%;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
 }
 
 .fees-sched {
     width: 90%;
     margin: 0;
     padding: 0 5%;
-    background: #f2f2f2; /*grey*/
-    flex: initial; /*flex: 0 1 auto*/
+    background: #f2f2f2; /* grey */
+    flex: initial; /* flex: 0 1 auto */
 }
 
 .pool {
     width: 90%;
     margin: 0;
     padding: 1em 5%;
-    border-bottom: 1px solid #eee; /*grey 200*/
-    flex: initial; /*flex: 0 1 auto*/
+    border-bottom: 1px solid #eee; /* grey 200 */
+    flex: initial; /* flex: 0 1 auto */
 }
 
 .pool:last-child {
     border: none;
 }
 
-/*TRANSITIONS ARE BELOW*/
-/*Content fades in and slides left*/
-/*Used on PageTitle*/
+/* TRANSITIONS ARE BELOW */
+
+/* Content fades in and slides left */
+
+/* Used on PageTitle */
+
 .fade-in-slide-left-enter-from {
     opacity: 0;
     transform: translateX(5px);
@@ -305,8 +310,10 @@ textarea {
     transition: all 1s ease-out;
 }
 
-/*Content slides down and fades in, later fades out*/
-/*Used on FeesSchedule and PoolCard*/
+/* Content slides down and fades in, later fades out */
+
+/* Used on FeesSchedule and PoolCard */
+
 .slide-down-fade-in-out-enter-from {
     opacity: 0;
     transform: translateY(-5px);
@@ -322,32 +329,40 @@ textarea {
     transition: all 1s ease-out;
 }
 
-/*ANIMATIONS ARE BELOW*/
-/*flashes form's "message sent!" text*/
-@keyframes flashMessage {
+/* ANIMATIONS ARE BELOW */
+
+/* flashes form's "message sent!" text */
+
+@keyframes FlashMessage {
     0% {
         opacity: 0;
     }
+
     10% {
         opacity: 1;
     }
+
     90% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
 }
 
 .flash-msg {
-  animation: flashMessage 4s ease-in-out 100ms 1 normal both;
+    animation: flashMessage 4s ease-in-out 100ms 1 normal both;
 }
 
-/*Shorthand Notes: [animation-name] [animation-duration] [animation-timing-function]
-[animation-delay] [animation-iteration-count] [animation-direction]
-animation-fill-mode*/
+/* Shorthand Notes: [animation-name] [animation-duration] [animation-timing-function]
 
-/*FONTS STYLES ARE BELOW*/
+[animation-delay] [animation-iteration-count] [animation-direction]
+
+animation-fill-mode */
+
+/* FONTS STYLES ARE BELOW */
+
 h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.2;
@@ -395,7 +410,7 @@ button.notes {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    color: #0e4996; /*dark blue*/
+    color: #0e4996; /* dark blue */
     margin-bottom: 0;
 }
 
@@ -403,10 +418,13 @@ figcaption {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    color: #616161; /*grey 700*/
+    color: #616161; /* grey 700 */
 }
 
-p, label, input, textarea {
+p,
+label,
+input,
+textarea {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.8;
     font-weight: 400;
@@ -419,23 +437,25 @@ li {
     position: relative;
 }
 
-p a, li a {
-    color: #0e4996; /*dark blue*/
+p a,
+li a {
+    color: #0e4996; /* dark blue */
     text-decoration: none;
 }
 
-p a:hover, li a:hover {
-    color: #0e4996; /*dark blue*/
+p a:hover,
+li a:hover {
+    color: #0e4996; /* dark blue */
     text-decoration: underline;
     cursor: pointer;
 }
 
 p.link-like {
-    color: #0e4996; /*dark blue*/
+    color: #0e4996; /* dark blue */
 }
 
 p.link-like:hover {
-    color: #0e4996; /*dark blue*/
+    color: #0e4996; /* dark blue */
     text-decoration: underline;
     cursor: pointer;
 }
@@ -449,7 +469,7 @@ p.link-like:hover {
     line-height: 1.5;
 }
 
-/*positions handicapped icon at end of pool dimensions line.*/
+/* positions handicapped icon at end of pool dimensions line. */
 span.accessible {
     position: absolute;
     bottom: 0;
@@ -462,158 +482,176 @@ span.flash {
     font-weight: 400;
 }
 
-/*FONTS MEDIA QUERIES ARE BELOW*/
+/* FONTS MEDIA QUERIES ARE BELOW */
 @media all and (min-width: 300px) {
     h1 {
-        /*font-size: 1.2em; 19.2px*/
+        /* font-size: 1.2em; 19.2px */
         font-size: 1em;
     }
 
     h2 {
-        font-size: 1em; /*16px*/
+        font-size: 1em; /* 16px */
     }
 
     h3 {
-        font-size: .9375em; /*15px*/
+        font-size: 0.9375em; /* 15px */
     }
 
     button.nav {
-        font-size: .8125em; /*13px*/
+        font-size: 0.8125em; /* 13px */
     }
 
-    button.regular, button.notes {
-        font-size: .75em; /*12px*/
+    button.regular,
+    button.notes {
+        font-size: 0.75em; /* 12px */
     }
 
     figcaption {
-        font-size: .75em; /*12px*/
+        font-size: 0.75em; /* 12px */
     }
 
-    p, label, input, textarea {
-        font-size: .875em; /*14px*/
+    p,
+    label,
+    input,
+    textarea {
+        font-size: 0.875em; /* 14px */
     }
 
     li {
-        font-size: .8125em; /*13px*/
+        font-size: 0.8125em; /* 13px */
     }
 
     span.flash {
-        font-size: .75em; /*12px*/
+        font-size: 0.75em; /* 12px */
     }
 }
 
 @media all and (min-width: 400px) {
     h2 {
-        font-size: 1.2em; /*19.2px*/
+        font-size: 1.2em; /* 19.2px */
     }
 
     h3 {
-        font-size: 1em; /*16px*/
+        font-size: 1em; /* 16px */
     }
 
     button.nav {
-        font-size: .875em; /*14px*/
+        font-size: 0.875em; /* 14px */
     }
 
-    button.regular, button.notes {
-        font-size: .8125em; /*13px*/
+    button.regular,
+    button.notes {
+        font-size: 0.8125em; /* 13px */
     }
 
     figcaption {
-        font-size: .8125em; /*13px*/
+        font-size: 0.8125em; /* 13px */
     }
 
-    p, label, input, textarea {
-        font-size: .9375em; /*15px*/
+    p,
+    label,
+    input,
+    textarea {
+        font-size: 0.9375em; /* 15px */
     }
 
     li {
-        font-size: .875em; /*14px*/
+        font-size: 0.875em; /* 14px */
     }
 
     span.flash {
-        font-size: .8125em; /*13px*/
+        font-size: 0.8125em; /* 13px */
     }
 }
 
 @media all and (min-width: 500px) {
     h2 {
-        font-size: 1.4em; /*22.4px*/
+        font-size: 1.4em; /* 22.4px */
     }
 
     h3 {
-        font-size: 1.1em; /*17.6px*/
+        font-size: 1.1em; /* 17.6px */
     }
 
     button.nav {
-        font-size: .875em; /*14px*/
+        font-size: 0.875em; /* 14px */
     }
 
-    button.regular, button.notes {
-        font-size: .875em; /*14px*/
+    button.regular,
+    button.notes {
+        font-size: 0.875em; /* 14px */
     }
 
     figcaption {
-        font-size: .875em; /*14px*/
+        font-size: 0.875em; /* 14px */
     }
 
-    p, label, input, textarea {
-        font-size: 1em; /*16px*/
+    p,
+    label,
+    input,
+    textarea {
+        font-size: 1em; /* 16px */
     }
 
     li {
-        font-size: .875em; /*14px*/
+        font-size: 0.875em; /* 14px */
     }
 
     span.flash {
-        font-size: .875em; /*14px*/
+        font-size: 0.875em; /* 14px */
     }
 }
 
 @media all and (min-width: 600px) {
     h2 {
-        font-size: 1.6em; /*25.6px*/
+        font-size: 1.6em; /* 25.6px */
     }
 
     h3 {
-        font-size: 1.2em; /*19.2px*/
+        font-size: 1.2em; /* 19.2px */
     }
 
     button.nav {
-        font-size: 1em; /*16px*/
+        font-size: 1em; /* 16px */
     }
 
-    button.regular, button.notes {
-        font-size: .9375em; /*15px*/
+    button.regular,
+    button.notes {
+        font-size: 0.9375em; /* 15px */
     }
 
     figcaption {
-        font-size: .9375em; /*15px*/
+        font-size: 0.9375em; /* 15px */
     }
 
-    p, label, input, textarea {
-        font-size: 1.1em; /*17.6px*/
+    p,
+    label,
+    input,
+    textarea {
+        font-size: 1.1em; /* 17.6px */
     }
 
     li {
-        font-size: 1em; /*16px*/
+        font-size: 1em; /* 16px */
     }
 
     span.flash {
-        font-size: .9375em; /*15px*/
+        font-size: 0.9375em; /* 15px */
     }
 }
 
-/*VARIOUS "CLASSES" FOR FONTS ARE BELOW*/
-/*makes font red*/
+/* VARIOUS "CLASSES" FOR FONTS ARE BELOW */
+
+/* makes font red */
+
 .warn {
-    color: #d90416; /*dark red*/
+    color: #d90416; /* dark red */
 }
 
-/*makes font green*/
+/* makes font green */
 .compliment {
-    color: #277332; /*dark green*/
+    color: #277332; /* dark green */
 }
 
-/*Note: Setting font styles for "select" or "option" in the form's pull-down
-menu seems to make no difference. Adding "optgroup" has no effect either.*/
+/* Note: Setting font styles for "select" or "option" in the form's pull-down
+menu seems to make no difference. Adding "optgroup" has no effect either. */
