@@ -2,7 +2,7 @@ body {
     margin: 0;
 }
 
-/* img becomes no larger than actual size. */
+/* Image becomes no larger than actual size. */
 img {
     max-width: 100%;
     height: auto;
@@ -72,96 +72,12 @@ figure {
     padding: 0;
 }
 
-figcaption {
-    width: 90%;
-    margin: 0.5em 0;
-    padding: 0 5%;
-}
-
 footer {
     width: 90%;
     margin: 0;
     padding: 1em 5%;
     background: #ffc963; /* light gold */
     flex: initial; /* flex: 0 1 auto */
-}
-
-/* BUTTON ELEMENTS ARE BELOW */
-
-/* button for nav: BK, BX, MN, QN, SI */
-button.nav {
-    background: #0e4996; /* dark blue */
-    border: none;
-    border-radius: 50%;
-    flex: initial; /* flex: 0 1 auto */
-    cursor: pointer;
-}
-
-button.nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-button.nav a.router-link-exact-active {
-    color: #f2e750; /* yellow */
-}
-
-@media all and (min-width: 300px) {
-    button.nav {
-        width: 42px;
-        height: 42px;
-    }
-}
-
-@media all and (min-width: 400px) {
-    button.nav {
-        width: 48px;
-        height: 48px;
-    }
-}
-
-@media all and (min-width: 500px) {
-    button.nav {
-        width: 54px;
-        height: 54px;
-    }
-}
-
-@media all and (min-width: 600px) {
-    button.nav {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-/* button for "fees and schedules" and "message sent!" */
-button.regular {
-    margin-bottom: 1.5em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    background: #0e4996; /* dark blue */
-    border: none;
-    border-radius: 6px;
-    flex: initial; /* flex: 0 1 auto */
-}
-
-button.regular:hover {
-    cursor: pointer;
-}
-
-/* button for "notes" */
-button.notes {
-    margin-bottom: 1.5em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    background: none;
-    border: 1px solid #eee; /* grey 200 */
-    border-radius: 6px;
-    flex: initial; /* flex: 0 1 auto */
-}
-
-button.notes:hover {
-    cursor: pointer;
 }
 
 /* FORM AND RELATED ELEMENTS ARE BELOW */
@@ -211,7 +127,7 @@ input[type="email"] {
         padding: 0;
     }
 
-    /* label immediately following "radio" input */
+    /* Label immediately following "radio" input */
     input[type="radio"] + label {
         width: 92%;
         margin: 0;
@@ -227,7 +143,7 @@ input[type="email"] {
         padding: 0;
     }
 
-    /* label immediately following "radio" input */
+    /* Label immediately following "radio" input */
     input[type="radio"] + label {
         width: 95%;
         margin: 0;
@@ -292,10 +208,7 @@ textarea {
 
 /* TRANSITIONS ARE BELOW */
 
-/* Content fades in and slides left */
-
-/* Used on PageTitle */
-
+/* Fades in and slides left - Used on PageTitle */
 .fade-in-slide-left-enter-from {
     opacity: 0;
     transform: translateX(5px);
@@ -310,10 +223,7 @@ textarea {
     transition: all 1s ease-out;
 }
 
-/* Content slides down and fades in, later fades out */
-
-/* Used on FeesSchedule and PoolCard */
-
+/* Slides down/up and fades in/out - Used on FeesSchedule & PoolCard */
 .slide-down-fade-in-out-enter-from {
     opacity: 0;
     transform: translateY(-5px);
@@ -331,9 +241,8 @@ textarea {
 
 /* ANIMATIONS ARE BELOW */
 
-/* flashes form's "message sent!" text */
-
-@keyframes FlashMessage {
+/* Flashes form's "message sent!" text */
+@keyframes flash-message {
     0% {
         opacity: 0;
     }
@@ -356,12 +265,10 @@ textarea {
 }
 
 /* Shorthand Notes: [animation-name] [animation-duration] [animation-timing-function]
-
 [animation-delay] [animation-iteration-count] [animation-direction]
-
 animation-fill-mode */
 
-/* FONTS STYLES ARE BELOW */
+/* FONT & BUTTON STYLES ARE BELOW */
 
 h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -369,16 +276,6 @@ h1 {
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
-}
-
-h1 a {
-    color: #fff;
-    text-decoration: none;
-}
-
-h1 a:hover {
-    color: #fff;
-    text-decoration: none;
 }
 
 h2 {
@@ -393,34 +290,6 @@ h3 {
     font-weight: 600;
 }
 
-button.nav {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.8;
-    font-weight: 600;
-}
-
-button.regular {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    color: #fff;
-}
-
-button.notes {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    color: #0e4996; /* dark blue */
-    margin-bottom: 0;
-}
-
-figcaption {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    color: #616161; /* grey 700 */
-}
-
 p,
 label,
 input,
@@ -430,34 +299,8 @@ textarea {
     font-weight: 400;
 }
 
-li {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    position: relative;
-}
-
-p a,
-li a {
-    color: #0e4996; /* dark blue */
-    text-decoration: none;
-}
-
-p a:hover,
-li a:hover {
-    color: #0e4996; /* dark blue */
-    text-decoration: underline;
-    cursor: pointer;
-}
-
 p.link-like {
     color: #0e4996; /* dark blue */
-}
-
-p.link-like:hover {
-    color: #0e4996; /* dark blue */
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 .fees-sched p {
@@ -469,7 +312,7 @@ p.link-like:hover {
     line-height: 1.5;
 }
 
-/* positions handicapped icon at end of pool dimensions line. */
+/* Positions handicapped icon at end of pool dimensions line. */
 span.accessible {
     position: absolute;
     bottom: 0;
@@ -482,7 +325,123 @@ span.flash {
     font-weight: 400;
 }
 
-/* FONTS MEDIA QUERIES ARE BELOW */
+li {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    position: relative;
+}
+
+figcaption {
+    width: 90%;
+    margin: 0.5em 0;
+    padding: 0 5%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #616161; /* grey 700 */
+}
+
+/* Button for nav: BK, BX, MN, QN, SI */
+button.nav {
+    background: #0e4996; /* dark blue */
+    border: none;
+    border-radius: 50%;
+    flex: initial; /* flex: 0 1 auto */
+    cursor: pointer;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+/* Button for "fees and schedules" and "message sent!" */
+button.regular {
+    margin-bottom: 1.5em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    background: #0e4996; /* dark blue */
+    border: none;
+    border-radius: 6px;
+    flex: initial; /* flex: 0 1 auto */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* Button for "notes" */
+button.notes {
+    margin-bottom: 1.5em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    background: none;
+    border: 1px solid #eee; /* grey 200 */
+    border-radius: 6px;
+    flex: initial; /* flex: 0 1 auto */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #0e4996; /* dark blue */
+}
+
+/* "a href" styles */
+h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p a {
+    color: #0e4996; /* dark blue */
+    text-decoration: none;
+}
+
+li a {
+    color: #0e4996; /* dark blue */
+    text-decoration: none;
+}
+
+button.nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button.nav a.router-link-exact-active {
+    color: #f2e750; /* yellow */
+}
+
+/* Hover styles */
+h1 a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+p a:hover {
+    color: #0e4996; /* dark blue */
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+p.link-like:hover {
+    color: #0e4996; /* dark blue */
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+li a:hover {
+    color: #0e4996; /* dark blue */
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button.regular:hover {
+    cursor: pointer;
+}
+
+button.notes:hover {
+    cursor: pointer;
+}
+
+/* FONT & BUTTON MEDIA QUERIES ARE BELOW */
 @media all and (min-width: 300px) {
     h1 {
         /* font-size: 1.2em; 19.2px */
@@ -497,19 +456,6 @@ span.flash {
         font-size: 0.9375em; /* 15px */
     }
 
-    button.nav {
-        font-size: 0.8125em; /* 13px */
-    }
-
-    button.regular,
-    button.notes {
-        font-size: 0.75em; /* 12px */
-    }
-
-    figcaption {
-        font-size: 0.75em; /* 12px */
-    }
-
     p,
     label,
     input,
@@ -517,11 +463,26 @@ span.flash {
         font-size: 0.875em; /* 14px */
     }
 
+    span.flash {
+        font-size: 0.75em; /* 12px */
+    }
+
     li {
         font-size: 0.8125em; /* 13px */
     }
 
-    span.flash {
+    figcaption {
+        font-size: 0.75em; /* 12px */
+    }
+
+    button.nav {
+        width: 42px;
+        height: 42px;
+        font-size: 0.8125em; /* 13px */
+    }
+
+    button.regular,
+    button.notes {
         font-size: 0.75em; /* 12px */
     }
 }
@@ -535,19 +496,6 @@ span.flash {
         font-size: 1em; /* 16px */
     }
 
-    button.nav {
-        font-size: 0.875em; /* 14px */
-    }
-
-    button.regular,
-    button.notes {
-        font-size: 0.8125em; /* 13px */
-    }
-
-    figcaption {
-        font-size: 0.8125em; /* 13px */
-    }
-
     p,
     label,
     input,
@@ -555,11 +503,26 @@ span.flash {
         font-size: 0.9375em; /* 15px */
     }
 
+    span.flash {
+        font-size: 0.8125em; /* 13px */
+    }
+
     li {
         font-size: 0.875em; /* 14px */
     }
 
-    span.flash {
+    figcaption {
+        font-size: 0.8125em; /* 13px */
+    }
+
+    button.nav {
+        width: 48px;
+        height: 48px;
+        font-size: 0.875em; /* 14px */
+    }
+
+    button.regular,
+    button.notes {
         font-size: 0.8125em; /* 13px */
     }
 }
@@ -573,19 +536,6 @@ span.flash {
         font-size: 1.1em; /* 17.6px */
     }
 
-    button.nav {
-        font-size: 0.875em; /* 14px */
-    }
-
-    button.regular,
-    button.notes {
-        font-size: 0.875em; /* 14px */
-    }
-
-    figcaption {
-        font-size: 0.875em; /* 14px */
-    }
-
     p,
     label,
     input,
@@ -593,11 +543,26 @@ span.flash {
         font-size: 1em; /* 16px */
     }
 
+    span.flash {
+        font-size: 0.875em; /* 14px */
+    }
+
     li {
         font-size: 0.875em; /* 14px */
     }
 
-    span.flash {
+    figcaption {
+        font-size: 0.875em; /* 14px */
+    }
+
+    button.nav {
+        width: 54px;
+        height: 54px;
+        font-size: 0.875em; /* 14px */
+    }
+
+    button.regular,
+    button.notes {
         font-size: 0.875em; /* 14px */
     }
 }
@@ -611,19 +576,6 @@ span.flash {
         font-size: 1.2em; /* 19.2px */
     }
 
-    button.nav {
-        font-size: 1em; /* 16px */
-    }
-
-    button.regular,
-    button.notes {
-        font-size: 0.9375em; /* 15px */
-    }
-
-    figcaption {
-        font-size: 0.9375em; /* 15px */
-    }
-
     p,
     label,
     input,
@@ -631,24 +583,38 @@ span.flash {
         font-size: 1.1em; /* 17.6px */
     }
 
+    span.flash {
+        font-size: 0.9375em; /* 15px */
+    }
+
     li {
         font-size: 1em; /* 16px */
     }
 
-    span.flash {
+    figcaption {
+        font-size: 0.9375em; /* 15px */
+    }
+
+    button.nav {
+        width: 60px;
+        height: 60px;
+        font-size: 1em; /* 16px */
+    }
+
+    button.regular,
+    button.notes {
         font-size: 0.9375em; /* 15px */
     }
 }
 
 /* VARIOUS "CLASSES" FOR FONTS ARE BELOW */
 
-/* makes font red */
-
+/* Makes font red */
 .warn {
     color: #d90416; /* dark red */
 }
 
-/* makes font green */
+/* Makes font green */
 .compliment {
     color: #277332; /* dark green */
 }
