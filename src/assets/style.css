@@ -293,7 +293,7 @@ textarea {
 /*Used on PageTitle*/
 .fade-in-slide-left-enter-from {
     opacity: 0;
-    transform: translateX(10px);
+    transform: translateX(5px);
 }
 
 .fade-in-slide-left-enter-enter-to {
@@ -309,12 +309,12 @@ textarea {
 /*Used on FeesSchedule and PoolCard*/
 .slide-down-fade-in-out-enter-from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .slide-down-fade-in-out-leave-to {
     opacity: 0;
-    transform: translateY(0);
+    transform: translateY(-5px);
 }
 
 .slide-down-fade-in-out-enter-active,
