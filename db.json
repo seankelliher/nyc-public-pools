@@ -51,24 +51,24 @@
             "description": "Longer season! It's still warm after Labor Day."
         },
         {
-            "resident": 0,
+            "id": 6,
             "name": "Eliza Valdez",
             "email": "evaldez@aol.com",
             "borough": "Manhattan",
             "poolName": "Hamilton Fish",
             "poolType": "Outdoor Olympic",
+            "resident": 0,
             "description": "Pool should open earlier, around 6AM.",
-            "id": 6
         },
         {
-            "resident": 0,
+            "id": 7,
             "name": "Dolce Vasquez",
             "email": "dvasquez@aol.com",
             "borough": "Manhattan",
             "poolName": "Highbridge Pool",
             "poolType": "Outdoor Olympic Pool",
+            "resident": 0,
             "description": "Lifeguards do not pay attention.",
-            "id": 7
         }
     ]
 }
