@@ -42,7 +42,7 @@ export default {
             sent.classList.add(color);
         }
 
-        fetch("http://localhost:3000/messages")
+        fetch("http://localhost:4040/")
             .then((response) => {
                 if (response.ok) {
                     return response.json();
@@ -51,7 +51,8 @@ export default {
                 }
             })
             .then((data) => {
-                this.messages = data;
+                this.messages = data.messages;
+                //console.log(data);
             })
             .catch((err) => {
                 addRemoveFlash(

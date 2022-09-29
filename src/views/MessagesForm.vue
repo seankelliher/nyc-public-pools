@@ -140,7 +140,7 @@ export default {
                 sent.classList.add(color);
             }
 
-            fetch("http://localhost:3000/messages", options)
+            fetch("http://localhost:4040/messages", options)
                 .then((response) => {
                     if (response.ok) {
                         addRemoveFlash("Message sent!", "compliment", "inline");
