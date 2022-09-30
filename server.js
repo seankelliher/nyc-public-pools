@@ -48,10 +48,8 @@ MongoClient.connect(uri) // Promises approach.
         // ========================
         // Listen
         // ========================
-        let port = process.env.PORT;
-            if (port == null || port == "") {
-                port = 8000;
-            }
-        app.listen(port);
+        app.listen(process.env.PORT || 4040, () => {
+            console.log(`Server listening on port ${process.env.PORT}`);
+        });
     })
     .catch(error => console.log(error));

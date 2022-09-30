@@ -41,8 +41,8 @@ export default {
             sent.textContent = txt;
             sent.classList.add(color);
         }
-
-        fetch("http://localhost:4040/")
+        // For local development use http://localhost:4040/
+        fetch("/")
             .then((response) => {
                 if (response.ok) {
                     return response.json();

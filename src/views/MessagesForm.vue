@@ -139,8 +139,8 @@ export default {
                 sent.textContent = txt;
                 sent.classList.add(color);
             }
-
-            fetch("http://localhost:4040/messages", options)
+            // For local development use http://localhost:4040/messages
+            fetch("/messages", options)
                 .then((response) => {
                     if (response.ok) {
                         addRemoveFlash("Message sent!", "compliment", "inline");
