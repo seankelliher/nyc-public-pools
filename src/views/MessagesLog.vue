@@ -45,7 +45,8 @@ export default {
         fetch("/")
             .then((response) => {
                 if (response.ok) {
-                    return response.json();
+                    //return response.json();
+                    return response.text();
                 } else {
                     return Promise.reject(response.status);
                 }
