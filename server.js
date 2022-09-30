@@ -9,7 +9,7 @@ const app = express();
 // ========================
 // Link to Database
 // ========================
-const uri = `${process.env.MONGO_URI}`;
+const uri = process.env.MONGO_URI;
 const client = new MongoClient(uri);
 
 MongoClient.connect(uri) // Promises approach.
