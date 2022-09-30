@@ -34,6 +34,7 @@
         "stylelint-config-standard": "^28.0.0"
     },
     "engines": {
-        "node": "16.x"
+        "node": "16.15.0",
+        "npm": "8.19.1"
     }
 }
