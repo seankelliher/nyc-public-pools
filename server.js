@@ -22,10 +22,11 @@ MongoClient.connect(uri) // Promises approach.
         // Middlewares
         // ========================
         //app.set("view engine", "ejs");
-        //app.use(bodyParser.json()); // Without this POST sends empty body to db.
-        app.use(express.json());
-        //app.use(bodyParser.urlencoded({ extended: true }));
-        app.use(express.urlencoded());
+        //app.use(express.static(__dirname + "/dist/")); //added from video tutorial.
+        app.use(bodyParser.json()); // Without this POST sends empty body to db.
+        //app.use(express.json());
+        app.use(bodyParser.urlencoded({ extended: true }));
+        //app.use(express.urlencoded());
 
         // ========================
         // Routes
