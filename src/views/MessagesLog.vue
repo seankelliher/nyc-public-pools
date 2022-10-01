@@ -45,15 +45,14 @@ export default {
         fetch("/")
             .then((response) => {
                 if (response.ok) {
-                    const dataJson = JSON.stringify(response);
-                    return dataJson.json();
+                    console.log(response.text());
+                    return response.text();
                 } else {
                     return Promise.reject(response.status);
                 }
             })
             .then((data) => {
                 this.messages = data.messages;
-                //console.log(data);
             })
             .catch((err) => {
                 addRemoveFlash(
