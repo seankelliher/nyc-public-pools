@@ -45,13 +45,13 @@ export default {
         var responseClone; // 1
         fetch("/")
             .then((response) => {
-                if (response.ok) {
-                    responseClone = response.clone(); // 2
-                    return response.json();
+                //if (response.ok) {
+                responseClone = response.clone(); // 2
+                return response.json();
 
-                } else {
-                    return Promise.reject(response.status);
-                }
+                //} else {
+                //return Promise.reject(response.status);
+                //}
             })
             .then((rejectionReason) => {
                 console.log('Error parsing JSON from response:', rejectionReason, responseClone); // 4
