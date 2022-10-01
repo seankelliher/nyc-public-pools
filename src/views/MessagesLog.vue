@@ -45,9 +45,8 @@ export default {
         fetch("/")
             .then((response) => {
                 if (response.ok) {
-                    console.log(response.text());
-                    return response.text();
-
+                    const dataJson = JSON.stringify(response);
+                    return dataJson.json();
                 } else {
                     return Promise.reject(response.status);
                 }
