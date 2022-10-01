@@ -45,7 +45,7 @@ export default {
         fetch("/")
             .then((response) => {
                 if (response.ok) {
-                    console.log(responsetext());
+                    console.log(response.text());
                     return response.text();
 
                 } else {
