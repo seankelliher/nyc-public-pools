@@ -2,7 +2,7 @@
 // Packages
 // ========================
 const express = require("express");
-const bodyParser = require("body-parser");
+//const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 const app = express();
 
@@ -23,13 +23,13 @@ MongoClient.connect(uri) // Promises approach.
         // ========================
         //app.set("view engine", "ejs");
         app.use(express.static(__dirname + "/dist/")); //for Heroku deploy.
-        app.get(/.*/, function(req, res) { //solces SAP links problem on Heroku.
+        app.get(/.*/, function(req, res) { //solves SAP links problem on Heroku.
             res.sendFile(__dirname + "/dist/index.html");
         });
-        app.use(bodyParser.json()); // Without this POST sends empty body to db.
-        //app.use(express.json());
-        app.use(bodyParser.urlencoded({ extended: true }));
-        //app.use(express.urlencoded());
+        //app.use(bodyParser.json()); // Without this POST sends empty body to db.
+        app.use(express.json());
+        //app.use(bodyParser.urlencoded({ extended: true }));
+        app.use(express.urlencoded());
 
         // ========================
         // Routes
