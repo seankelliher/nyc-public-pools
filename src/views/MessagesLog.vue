@@ -42,19 +42,24 @@ export default {
             sent.classList.add(color);
         }
         // For local development use http://localhost:4040/
+        var responseClone; // 1
         fetch("/")
             .then((response) => {
                 if (response.ok) {
-                    console.log(response);
-                    return response;
-                    //return response.json();
+                    responseClone = response.clone(); // 2
+                    return response.json();
 
                 } else {
                     return Promise.reject(response.status);
                 }
             })
-            .then((data) => {
-                this.messages = data.messages;
+            .then((rejectionReason) => {
+                console.log('Error parsing JSON from response:', rejectionReason, responseClone); // 4
+                responseClone.text() // 5
+                    .then(function (bodyText) {
+                        console.log('Received the following instead of valid JSON:', bodyText); // 6
+                    });
+                //this.messages = data.messages;
                 //console.log(data);
             })
             .catch((err) => {
