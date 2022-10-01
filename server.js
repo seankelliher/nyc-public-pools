@@ -22,7 +22,7 @@ MongoClient.connect(uri) // Promises approach.
         // Middlewares
         // ========================
         //app.set("view engine", "ejs");
-        app.use(express.static(__dirname + "/dist/")); //for Heroku deploy.
+        //app.use(express.static(__dirname + "/dist/")); //for Heroku deploy.
 
         //app.get(/.*/, function(req, res) {
             //res.sendFile(__dirname + "/dist/index.html");
