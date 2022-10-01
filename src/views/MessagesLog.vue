@@ -42,7 +42,7 @@ export default {
             sent.classList.add(color);
         }
         // For local development use http://localhost:4040/
-        fetch("/")
+        fetch("/log")
             .then((response) => {
                 if (response.ok) {
                     return response.json();

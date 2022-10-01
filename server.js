@@ -21,12 +21,8 @@ MongoClient.connect(uri) // Promises approach.
         // ========================
         // Middlewares
         // ========================
-        //app.set("view engine", "ejs");
-        //app.use(express.static(__dirname + "/dist/")); //for Heroku deploy.
+        app.use(express.static(__dirname + "/dist/")); //for Heroku deploy.
 
-        //app.get(/.*/, function(req, res) {
-            //res.sendFile(__dirname + "/dist/index.html");
-        //});
         //app.use(bodyParser.json()); // Without this POST sends empty body to db.
         app.use(express.json());
         //app.use(bodyParser.urlencoded({ extended: true }));
@@ -35,13 +31,17 @@ MongoClient.connect(uri) // Promises approach.
         // ========================
         // Routes
         // ========================
-        app.get("/", (req, res) => {
+        app.get("/log", (req, res) => {
             db.collection("messages").find().toArray()
                 .then(results => {
                     //res.render("index.ejs", { messages: results });
                     res.send({ messages: results });
                 })
                 .catch(error => console.error(error));
+        });
+
+        app.get(/.*/, function(req, res) {
+            res.sendFile(__dirname + "/dist/index.html");
         });
 
         app.post("/messages", (req, res) => {
