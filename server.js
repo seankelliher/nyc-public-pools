@@ -29,7 +29,7 @@ MongoClient.connect(uri) // Promises approach.
         //app.use(bodyParser.json()); // Without this POST sends empty body to db.
         app.use(express.json());
         //app.use(bodyParser.urlencoded({ extended: true }));
-        app.use(express.urlencoded());
+        //app.use(express.urlencoded());
 
         // ========================
         // Routes
