@@ -2,14 +2,13 @@
 // Packages
 // ========================
 const express = require("express");
-//const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 const app = express();
 
 // ========================
 // Link to Database
 // ========================
-const uri = process.env.MONGO_URI;
+const uri = process.env.MONGO_URI; // Heroku key stored here.
 const client = new MongoClient(uri);
 
 MongoClient.connect(uri) // Promises approach.
@@ -21,12 +20,8 @@ MongoClient.connect(uri) // Promises approach.
         // ========================
         // Middlewares
         // ========================
-        app.use(express.static(__dirname + "/dist/")); //for Heroku deploy.
-
-        //app.use(bodyParser.json()); // Without this POST sends empty body to db.
-        app.use(express.json());
-        //app.use(bodyParser.urlencoded({ extended: true }));
-        //app.use(express.urlencoded());
+        app.use(express.static(__dirname + "/dist/")); // For Heroku deployment.
+        app.use(express.json()); // Without POST sends empty body to MongoDB.
 
         // ========================
         // Routes
@@ -34,7 +29,6 @@ MongoClient.connect(uri) // Promises approach.
         app.get("/log", (req, res) => {
             db.collection("messages").find().toArray()
                 .then(results => {
-                    //res.render("index.ejs", { messages: results });
                     res.send({ messages: results });
                 })
                 .catch(error => console.error(error));
@@ -47,7 +41,7 @@ MongoClient.connect(uri) // Promises approach.
         app.post("/messages", (req, res) => {
             coll.insertOne(req.body)
             .then(result => {
-                res.redirect("/"); //without this browser gets stuck because
+                res.redirect("/"); // without this browser gets stuck because
             }) //  it's expecting something back from the server.
             .catch(error => console.error(error));
         });
