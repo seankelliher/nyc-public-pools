@@ -41,7 +41,7 @@ export default {
             sent.textContent = txt;
             sent.classList.add(color);
         }
-        // For local development use http://localhost:4040/
+        // For local development use http://localhost:4040/log
         fetch("/log")
             .then((response) => {
                 if (response.ok) {

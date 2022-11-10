@@ -8,7 +8,7 @@ const app = express();
 // ========================
 // Link to Database
 // ========================
-const uri = process.env.MONGO_URI; // Heroku key stored here.
+const uri = process.env.MONGO_URI; // In Heroku, key for MongoDB stored here.
 const client = new MongoClient(uri);
 
 MongoClient.connect(uri) // Promises approach.
