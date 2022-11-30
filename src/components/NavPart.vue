@@ -1,50 +1,50 @@
 <template>
     <nav>
-        <button
+        <div
             id="btn-bx"
-            class="nav"
+            class="nav-link"
             @click="goToPage"
         >
             <router-link to="/bronx">
                 BX
             </router-link>
-        </button>
-        <button
+        </div>
+        <div
             id="btn-bk"
-            class="nav"
+            class="nav-link"
             @click="goToPage"
         >
             <router-link to="/brooklyn">
                 BK
             </router-link>
-        </button>
-        <button
+        </div>
+        <div
             id="btn-mn"
-            class="nav"
+            class="nav-link"
             @click="goToPage"
         >
             <router-link to="/manhattan">
                 MN
             </router-link>
-        </button>
-        <button
+        </div>
+        <div
             id="btn-qn"
-            class="nav"
+            class="nav-link"
             @click="goToPage"
         >
             <router-link to="/queens">
                 QN
             </router-link>
-        </button>
-        <button
+        </div>
+        <div
             id="btn-si"
-            class="nav"
+            class="nav-link"
             @click="goToPage" 
         >
             <router-link to="/staten-island">
                 SI
             </router-link>
-        </button>
+        </div>
     </nav>
 </template>
 

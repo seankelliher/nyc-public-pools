@@ -342,16 +342,19 @@ figcaption {
     color: #616161; /* grey 700 */
 }
 
-/* Button for nav: BK, BX, MN, QN, SI */
-button.nav {
+/* "Button" for nav: BK, BX, MN, QN, SI */
+.nav-link {
     background: #0e4996; /* dark blue */
     border: none;
     border-radius: 50%;
     flex: initial; /* flex: 0 1 auto */
-    cursor: pointer;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.8;
     font-weight: 600;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; /* main axis */
+    align-items: center; /* cross axis */
 }
 
 /* Button for "fees and schedules" and "message sent!" */
@@ -400,12 +403,13 @@ li a {
     text-decoration: none;
 }
 
-button.nav a {
+.nav-link a {
     color: #fff;
     text-decoration: none;
+    cursor: pointer;
 }
 
-button.nav a.router-link-exact-active {
+.nav-link a.router-link-exact-active {
     color: #f2e750; /* yellow */
 }
 
@@ -475,7 +479,7 @@ button.notes:hover {
         font-size: 0.75em; /* 12px */
     }
 
-    button.nav {
+    .nav-link {
         width: 42px;
         height: 42px;
         font-size: 0.8125em; /* 13px */
@@ -515,7 +519,7 @@ button.notes:hover {
         font-size: 0.8125em; /* 13px */
     }
 
-    button.nav {
+    .nav-link {
         width: 48px;
         height: 48px;
         font-size: 0.875em; /* 14px */
@@ -555,7 +559,7 @@ button.notes:hover {
         font-size: 0.875em; /* 14px */
     }
 
-    button.nav {
+    .nav-link {
         width: 54px;
         height: 54px;
         font-size: 0.875em; /* 14px */
@@ -595,7 +599,7 @@ button.notes:hover {
         font-size: 0.9375em; /* 15px */
     }
 
-    button.nav {
+    .nav-link {
         width: 60px;
         height: 60px;
         font-size: 1em; /* 16px */
