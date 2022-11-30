@@ -22,6 +22,7 @@
                 >
                     <img
                         src="@/assets/images/accessible-forward-black-24dp.svg"
+                        alt="handicapped accessible wheelchair icon"
                     >
                 </span>
             </li>
