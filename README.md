@@ -1,7 +1,7 @@
 [![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/nyc-public-pools?style=flat-square)](/LICENSE.txt)
 ## Public Swimming pools in New York City
 
-Information on public swimming pools in New York City.
+Information on public swimming pools in New York City. Made with MongoDB, Express.js, Vue.js, and Node.js, collectively known as a MEVN stack. [View working component](https://nyc-public-pools.herokuapp.com). It's on a Heroku "eco-dyno" and may take a few seconds to "wake up."
 
 ## Project Screen Shots
 
