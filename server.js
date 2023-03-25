@@ -11,8 +11,7 @@ const app = express();
 const uri = process.env.MONGO_URI; // In Heroku, key for MongoDB stored here.
 const client = new MongoClient(uri);
 
-MongoClient.connect(uri, (err, client) => {
-    if (err) throw err
+MongoClient.connect(uri) // Promises approach.
     .then(client => {
         console.log("Connected to your database with promises");
         const db = client.db("nyc-public-pools");
@@ -28,13 +27,11 @@ MongoClient.connect(uri, (err, client) => {
         // Routes
         // ========================
         app.get("/log", (req, res) => {
-            db.collection("messages").find().toArray((err, results) => {
-                if (err) throw err
+            db.collection("messages").find().toArray()
                 .then(results => {
                     res.send({ messages: results });
                 })
-                .catch(err => console.log(err));
-            });
+                .catch(error => console.error(error));
         });
 
         app.get(/.*/, function(req, res) {
@@ -42,25 +39,18 @@ MongoClient.connect(uri, (err, client) => {
         });
 
         app.post("/messages", (req, res) => {
-            coll.insertOne(req.body, (err, result) => {
-                if (err) throw err 
-                .then(result => {
-                    res.redirect("/messages-log"); // without this browser gets stuck because
-                }) //  it's expecting something back from the server.
-                .catch(err => console.log(err));
-            });
+            coll.insertOne(req.body)
+            .then(result => {
+                res.redirect("/"); // without this browser gets stuck because
+            }) //  it's expecting something back from the server.
+            .catch(error => console.error(error));
         });
 
         // ========================
         // Listen
         // ========================
-        app.listen(process.env.PORT, () => {
+        app.listen(process.env.PORT || 4040, () => {
             console.log(`Server listening on port ${process.env.PORT}`);
         });
-
-        /* app.listen(4040, () => {
-            console.log("Server listening on port 4040");
-        }); */
     })
-    .catch(err => console.log(err));
-});
+    .catch(error => console.log(error));
