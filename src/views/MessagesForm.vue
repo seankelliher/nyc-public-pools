@@ -145,12 +145,12 @@ export default {
                     if (response.ok) {
                         addRemoveFlash("Message sent!", "compliment", "inline");
                     } else {
-                        return Promise.reject(response.status);
+                        throw new Error(response.status);
                     }
                 })
-                .catch((err) => {
+                .catch((error) => {
                     addRemoveFlash(
-                        `Server error ${err}. Please try again later.`,
+                        `Server error ${error}. Please try again later.`,
                         "warn",
                         "inline",
                     );
