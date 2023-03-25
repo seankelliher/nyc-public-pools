@@ -11,7 +11,8 @@ const app = express();
 const uri = process.env.MONGO_URI; // In Heroku, key for MongoDB stored here.
 const client = new MongoClient(uri);
 
-MongoClient.connect(uri) // Promises approach.
+MongoClient.connect(uri, (err, client) => {
+    if (err) throw err
     .then(client => {
         console.log("Connected to your database with promises");
         const db = client.db("nyc-public-pools");
@@ -27,11 +28,13 @@ MongoClient.connect(uri) // Promises approach.
         // Routes
         // ========================
         app.get("/log", (req, res) => {
-            db.collection("messages").find().toArray()
+            db.collection("messages").find().toArray((err, results) => {
+                if (err) throw err
                 .then(results => {
                     res.send({ messages: results });
                 })
-                .catch(error => console.error(error));
+                .catch(err => console.log(err));
+            });
         });
 
         app.get(/.*/, function(req, res) {
@@ -39,18 +42,25 @@ MongoClient.connect(uri) // Promises approach.
         });
 
         app.post("/messages", (req, res) => {
-            coll.insertOne(req.body)
-            .then(result => {
-                res.redirect("/"); // without this browser gets stuck because
-            }) //  it's expecting something back from the server.
-            .catch(error => console.error(error));
+            coll.insertOne(req.body, (err, result) => {
+                if (err) throw err 
+                .then(result => {
+                    res.redirect("/"); // without this browser gets stuck because
+                }) //  it's expecting something back from the server.
+                .catch(err => console.log(err));
+            });
         });
 
         // ========================
         // Listen
         // ========================
-        app.listen(process.env.PORT || 4040, () => {
+        app.listen(process.env.PORT, () => {
             console.log(`Server listening on port ${process.env.PORT}`);
         });
+
+        /* app.listen(4040, () => {
+            console.log("Server listening on port 4040");
+        }); */
     })
-    .catch(error => console.log(error));
+    .catch(err => console.log(err));
+});
