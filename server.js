@@ -45,7 +45,7 @@ MongoClient.connect(uri, (err, client) => {
             coll.insertOne(req.body, (err, result) => {
                 if (err) throw err 
                 .then(result => {
-                    res.redirect("/"); // without this browser gets stuck because
+                    res.redirect("/messages-log"); // without this browser gets stuck because
                 }) //  it's expecting something back from the server.
                 .catch(err => console.log(err));
             });
