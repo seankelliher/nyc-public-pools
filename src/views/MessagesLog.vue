@@ -47,15 +47,15 @@ export default {
                 if (response.ok) {
                     return response.json();
                 } else {
-                    throw new Error(response.status);
+                    return Promise.reject(response.status);
                 }
             })
             .then((data) => {
                 this.messages = data.messages;
             })
-            .catch((error) => {
+            .catch((err) => {
                 addRemoveFlash(
-                    `Server error ${error}. Please try again later.`,
+                    `Server error ${err}. Please try again later.`,
                     "warn",
                     "block",
                 );
