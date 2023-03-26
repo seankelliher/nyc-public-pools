@@ -15,11 +15,11 @@
 
 <script>
 // @ is an alias to /src
-import PageTitle from "@/components/PageTitle.vue";
-import PoolPhoto from "@/components/PoolPhoto.vue";
-import ParksSummary from "@/components/ParksSummary.vue";
-import IndoorSummary from "@/components/IndoorSummary.vue";
-import OutdoorSummary from "@/components/OutdoorSummary.vue";
+import PageTitle from "../components/PageTitle.vue";
+import PoolPhoto from "../components/PoolPhoto.vue";
+import ParksSummary from "../components/ParksSummary.vue";
+import IndoorSummary from "../components/IndoorSummary.vue";
+import OutdoorSummary from "../components/OutdoorSummary.vue";
 
 export default {
     name: "HomePage",

@@ -14,31 +14,31 @@
 </template>
 
 <script>
-import BaseRadio from "@/components/BaseElements/BaseRadio.vue";
+import BaseRadio from "./BaseRadio.vue";
 
 export default {
     name: "BaseRadioGroup",
     components: {
-        BaseRadio,
+        BaseRadio
     },
     props: {
         label: {
             type: String,
-            required: true,
+            required: true
         },
         options: {
             type: Array,
-            required: true,
+            required: true
         },
         name: {
             type: String,
-            required: true,
+            required: true
         },
         modelValue: {
             type: [String, Number],
-            default: "",
-        },
+            default: ""
+        }
     },
-    emits: ["update:modelValue"],
+    emits: ["update:modelValue"]
 };
 </script>

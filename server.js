@@ -9,12 +9,12 @@ const app = express();
 // Link to Database
 // ========================
 const uri = process.env.MONGO_URI; // In Heroku, key for MongoDB stored here.
-const client = new MongoClient(uri);
+//const client = new MongoClient(uri);
 
 MongoClient.connect(uri) // Promises approach.
     .then(client => {
         console.log("Connected to your database with promises");
-        const db = client.db("nyc-public-pools");
+        const db = client.db("all-public-pools");
         const coll = db.collection("messages");
 
         // ========================
@@ -40,17 +40,21 @@ MongoClient.connect(uri) // Promises approach.
 
         app.post("/messages", (req, res) => {
             coll.insertOne(req.body)
-            .then(result => {
-                res.redirect("/"); // without this browser gets stuck because
-            }) //  it's expecting something back from the server.
-            .catch(error => console.error(error));
-        });
+                .then(() => {
+                    res.redirect("/"); // without this browser gets stuck
+                }) //  it expects something back from the server.
+                .catch(error => console.error(error));
+        }); // Use res.redirect("http://localhost:XXXX") for local development.
 
         // ========================
         // Listen
         // ========================
-        app.listen(process.env.PORT || 4040, () => {
+        app.listen(process.env.PORT, () => {
             console.log(`Server listening on port ${process.env.PORT}`);
         });
+
+        // app.listen(4040, () => {
+        // console.log("Server listening on port 4040");
+        // }); Use this for local development.
     })
-    .catch(error => console.log(error));
+    .catch(err => console.log(err));

@@ -6,21 +6,16 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import HeaderPart from "@/components/HeaderPart.vue";
-import NavPart from "@/components/NavPart.vue";
-import FooterPart from "@/components/FooterPart.vue";
+import HeaderPart from "../src/components/HeaderPart.vue";
+import NavPart from "../src/components/NavPart.vue";
+import FooterPart from "../src/components/FooterPart.vue";
 
 export default {
     name: "App",
     components: {
         HeaderPart,
         NavPart,
-        FooterPart,
-    },
+        FooterPart
+    }
 };
 </script>
-
-<style>
-@import "./assets/style.css";
-</style>

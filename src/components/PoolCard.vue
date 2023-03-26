@@ -21,7 +21,7 @@
                     class="accessible"
                 >
                     <img
-                        src="@/assets/images/accessible-forward-black-24dp.svg"
+                        src="/accessible-forward-black-24dp.svg"
                         alt="handicapped accessible wheelchair icon"
                     >
                 </span>
@@ -35,7 +35,7 @@
                     class="accessible"
                 >
                     <img
-                        src="@/assets/images/accessible-forward-black-24dp.svg"
+                        src="/accessible-forward-black-24dp.svg"
                     >
                 </span>
             </li>
@@ -48,7 +48,7 @@
                     class="accessible"
                 >
                     <img
-                        src="@/assets/images/accessible-forward-black-24dp.svg"
+                        src="/accessible-forward-black-24dp.svg"
                     >
                 </span>
             </li>

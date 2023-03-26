@@ -1,7 +1,7 @@
 <template>
     <figure>
         <img
-            :src="require(`@/assets/images/${src}.jpg`)"
+            :src="`/${src}.jpg`"
             :alt="alt"
         >
         <figcaption>{{ caption }}</figcaption>
@@ -14,16 +14,16 @@ export default {
     props: {
         src: {
             type: String,
-            required: true,
+            required: true
         },
         alt: {
             type: String,
-            required: true,
+            required: true
         },
         caption: {
             type: String,
-            required: true,
-        },
-    },
+            required: true
+        }
+    }
 };
 </script>

@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import UniqueID from "@/features/UniqueID.js";
+import UniqueID from "../../features/UniqueID.js";
 
 export default {
     name: "BaseSelect",

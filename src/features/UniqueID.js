@@ -7,6 +7,6 @@ export default function UniqueID() {
     };
 
     return {
-        getID,
+        getID
     };
 }

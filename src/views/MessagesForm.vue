@@ -77,11 +77,11 @@
 </template>
 
 <script>
-import PageTitle from "@/components/PageTitle.vue";
-import BaseInput from "@/components/BaseElements/BaseInput.vue";
-import BaseSelect from "@/components/BaseElements/BaseSelect.vue";
-import BaseRadioGroup from "@/components/BaseElements/BaseRadioGroup.vue";
-import BaseTextArea from "@/components/BaseElements/BaseTextArea.vue";
+import PageTitle from "../components/PageTitle.vue";
+import BaseInput from "../components/BaseElements/BaseInput.vue";
+import BaseSelect from "../components/BaseElements/BaseSelect.vue";
+import BaseRadioGroup from "../components/BaseElements/BaseRadioGroup.vue";
+import BaseTextArea from "../components/BaseElements/BaseTextArea.vue";
 import { useForm, useField } from "vee-validate";
 import { object, string } from "yup";
 
@@ -92,7 +92,7 @@ export default {
         BaseInput,
         BaseSelect,
         BaseRadioGroup,
-        BaseTextArea,
+        BaseTextArea
     },
     setup() {
         const simpleSchema = object({
@@ -101,18 +101,18 @@ export default {
             borough: string().required().label("Borough"),
             poolName: string(),
             poolType: string(),
-            description: string().required().label("Description"),
+            description: string().required().label("Description")
         });
 
         useForm({
-            validationSchema: simpleSchema,
+            validationSchema: simpleSchema
         });
 
         const { handleSubmit, errors } = useForm({
             validationSchema: simpleSchema,
             initialValues: {
-                resident: 0,
-            },
+                resident: 0
+            }
         });
 
         const { value: name } = useField("name");
@@ -127,9 +127,9 @@ export default {
             const options = {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/json"
                 },
-                body: JSON.stringify(value),
+                body: JSON.stringify(value)
             };
 
             function addRemoveFlash(txt, color, structure) {
@@ -139,20 +139,23 @@ export default {
                 sent.textContent = txt;
                 sent.classList.add(color);
             }
-            // For local development use http://localhost:4040/messages
-            fetch("/messages", options)
+            // For local development, use http://localhost:4040/messages
+            // For remote, use /messages
+            fetch("http://localhost:4040/messages", options)
                 .then((response) => {
                     if (response.ok) {
                         addRemoveFlash("Message sent!", "compliment", "inline");
                     } else {
+                        console.log(response.status);
                         return Promise.reject(response.status);
+
                     }
                 })
                 .catch((err) => {
                     addRemoveFlash(
                         `Server error ${err}. Please try again later.`,
                         "warn",
-                        "inline",
+                        "inline"
                     );
                 });
             resetForm();
@@ -168,7 +171,7 @@ export default {
             description,
             errors,
             handleSubmit,
-            submit,
+            submit
         };
     },
     data() {
@@ -179,9 +182,9 @@ export default {
                 "Brooklyn",
                 "Manhattan",
                 "Queens",
-                "Staten Island",
-            ],
+                "Staten Island"
+            ]
         };
-    },
+    }
 };
 </script>

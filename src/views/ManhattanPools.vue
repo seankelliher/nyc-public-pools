@@ -13,10 +13,10 @@
 
 <script>
 // @ is an alias to /src
-import PageTitle from "@/components/PageTitle.vue";
-import PoolPhoto from "@/components/PoolPhoto.vue";
-import FeesSchedules from "@/components/FeesSchedules.vue";
-import PoolCard from "@/components/PoolCard.vue";
+import PageTitle from "../components/PageTitle.vue";
+import PoolPhoto from "../components/PoolPhoto.vue";
+import FeesSchedules from "../components/FeesSchedules.vue";
+import PoolCard from "../components/PoolCard.vue";
 
 export default {
     name: "BrooklynPools",

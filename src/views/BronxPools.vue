@@ -12,11 +12,10 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import PageTitle from "@/components/PageTitle.vue";
-import PoolPhoto from "@/components/PoolPhoto.vue";
-import FeesSchedules from "@/components/FeesSchedules.vue";
-import PoolCard from "@/components/PoolCard.vue";
+import PageTitle from "../components/PageTitle.vue";
+import PoolPhoto from "../components/PoolPhoto.vue";
+import FeesSchedules from "../components/FeesSchedules.vue";
+import PoolCard from "../components/PoolCard.vue";
 
 export default {
     name: "BrooklynPools",
@@ -24,7 +23,7 @@ export default {
         PageTitle,
         PoolPhoto,
         FeesSchedules,
-        PoolCard,
+        PoolCard
     },
     data() {
         return {
@@ -47,9 +46,9 @@ export default {
                             length: 72,
                             width: 39,
                             depth: 9,
-                            accessible: true,
-                        },
-                    ],
+                            accessible: true
+                        }
+                    ]
                 },
                 {
                     locId: "x008",
@@ -69,7 +68,7 @@ export default {
                             length: 75,
                             width: 60,
                             depth: 3.5,
-                            accessible: true,
+                            accessible: true
                         },
                         {
                             poolId: "x008b",
@@ -78,9 +77,9 @@ export default {
                             length: 24,
                             width: 24,
                             depth: 1,
-                            accessible: false,
-                        },
-                    ],
+                            accessible: false
+                        }
+                    ]
                 },
                 {
                     locId: "x010",
@@ -101,9 +100,9 @@ export default {
                             length: 330,
                             width: 120,
                             depth: 4,
-                            accessible: true,
-                        },
-                    ],
+                            accessible: true
+                        }
+                    ]
                 },
                 {
                     locId: "x165",
@@ -123,9 +122,9 @@ export default {
                             length: 40,
                             width: 20,
                             depth: 3,
-                            accessible: false,
-                        },
-                    ],
+                            accessible: false
+                        }
+                    ]
                 },
                 {
                     locId: "x307",
@@ -145,9 +144,9 @@ export default {
                             length: 82,
                             width: 52,
                             depth: 4,
-                            accessible: true,
-                        },
-                    ],
+                            accessible: true
+                        }
+                    ]
                 },
                 {
                     locId: "x196",
@@ -167,7 +166,7 @@ export default {
                             length: 75,
                             width: 60,
                             depth: 3.5,
-                            accessible: true,
+                            accessible: true
                         },
                         {
                             poolId: "x196a",
@@ -176,9 +175,9 @@ export default {
                             length: 24,
                             width: 24,
                             depth: 1,
-                            accessible: false,
-                        },
-                    ],
+                            accessible: false
+                        }
+                    ]
                 },
                 {
                     locId: "x289",
@@ -198,7 +197,7 @@ export default {
                             length: 75,
                             width: 60,
                             depth: 3.5,
-                            accessible: true,
+                            accessible: true
                         },
                         {
                             poolId: "x289b",
@@ -207,9 +206,9 @@ export default {
                             length: 27,
                             width: 27,
                             depth: 1,
-                            accessible: false,
-                        },
-                    ],
+                            accessible: false
+                        }
+                    ]
                 },
                 {
                     locId: "x034",
@@ -230,7 +229,7 @@ export default {
                             length: 75,
                             width: 60,
                             depth: 3.5,
-                            accessible: true,
+                            accessible: true
                         },
                         {
                             poolId: "x034b",
@@ -239,9 +238,9 @@ export default {
                             length: 24,
                             width: 24,
                             depth: 1,
-                            accessible: false,
-                        },
-                    ],
+                            accessible: false
+                        }
+                    ]
                 },
                 {
                     locId: "x159",
@@ -261,9 +260,9 @@ export default {
                             length: 40,
                             width: 20,
                             depth: 3,
-                            accessible: false,
-                        },
-                    ],
+                            accessible: false
+                        }
+                    ]
                 },
                 {
                     locId: "x092",
@@ -283,7 +282,7 @@ export default {
                             length: 164,
                             width: 104,
                             depth: 3.6,
-                            accessible: true,
+                            accessible: true
                         },
                         {
                             poolId: "x092b",
@@ -292,12 +291,12 @@ export default {
                             length: 48,
                             width: 48,
                             depth: 1,
-                            accessible: true,
-                        },
-                    ],
-                },
-            ],
+                            accessible: true
+                        }
+                    ]
+                }
+            ]
         };
-    },
+    }
 };
 </script>

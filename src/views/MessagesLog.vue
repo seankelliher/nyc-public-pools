@@ -21,16 +21,16 @@
 </template>
 
 <script>
-import PageTitle from "@/components/PageTitle.vue";
+import PageTitle from "../components/PageTitle.vue";
 
 export default {
     name: "MessagesLog",
     components: {
-        PageTitle,
+        PageTitle
     },
     data() {
         return {
-            messages: [],
+            messages: []
         };
     },
     created() {
@@ -41,8 +41,9 @@ export default {
             sent.textContent = txt;
             sent.classList.add(color);
         }
-        // For local development use http://localhost:4040/log
-        fetch("/log")
+        // For local development, use http://localhost:4040/log
+        // For remote, use /log
+        fetch("http://localhost:4040/log")
             .then((response) => {
                 if (response.ok) {
                     return response.json();
@@ -57,9 +58,9 @@ export default {
                 addRemoveFlash(
                     `Server error ${err}. Please try again later.`,
                     "warn",
-                    "block",
+                    "block"
                 );
             });
-    },
+    }
 };
 </script>

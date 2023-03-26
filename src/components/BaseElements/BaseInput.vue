@@ -29,34 +29,34 @@
 </template>
 
 <script>
-import UniqueID from "@/features/UniqueID.js";
+import UniqueID from "../../features/UniqueID.js";
 
 export default {
     name: "BaseInput",
     props: {
         label: {
             type: String,
-            default: "",
+            default: ""
         },
         placeholder: {
             type: String,
-            default: "",
+            default: ""
         },
         modelValue: {
             type: [String, Number],
-            default: "",
+            default: ""
         },
         error: {
             type: String,
-            default: "",
-        },
+            default: ""
+        }
     },
     emits: ["update:modelValue"],
     setup() {
         const uuid = UniqueID().getID();
         return {
-            uuid,
+            uuid
         };
-    },
+    }
 };
 </script>
