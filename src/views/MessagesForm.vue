@@ -141,7 +141,7 @@ export default {
             }
             // For local development, use http://localhost:4040/messages
             // For remote, use /messages
-            fetch("http://localhost:4040/messages", options)
+            fetch("/messages", options)
                 .then((response) => {
                     if (response.ok) {
                         addRemoveFlash("Message sent!", "compliment", "inline");

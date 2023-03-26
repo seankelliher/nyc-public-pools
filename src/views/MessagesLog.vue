@@ -43,7 +43,7 @@ export default {
         }
         // For local development, use http://localhost:4040/log
         // For remote, use /log
-        fetch("http://localhost:4040/log")
+        fetch("/log")
             .then((response) => {
                 if (response.ok) {
                     return response.json();
