@@ -6,7 +6,7 @@
             @click="goToPage"
         >
             <router-link to="/bronx">
-                BX
+                Bronx
             </router-link>
         </div>
         <div
@@ -15,7 +15,7 @@
             @click="goToPage"
         >
             <router-link to="/brooklyn">
-                BK
+                Brooklyn
             </router-link>
         </div>
         <div
@@ -24,7 +24,7 @@
             @click="goToPage"
         >
             <router-link to="/manhattan">
-                MN
+                Manhattan
             </router-link>
         </div>
         <div
@@ -33,7 +33,7 @@
             @click="goToPage"
         >
             <router-link to="/queens">
-                QN
+                Queens
             </router-link>
         </div>
         <div
@@ -42,7 +42,7 @@
             @click="goToPage" 
         >
             <router-link to="/staten-island">
-                SI
+                Staten Island
             </router-link>
         </div>
     </nav>

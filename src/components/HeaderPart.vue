@@ -1,11 +1,11 @@
 <template>
     <header>
-        <h1><a href="/">Public Pools in NYC</a></h1>
+        <h1><a href="/">Public Pools in New York City</a></h1>
     </header>
 </template>
 
 <script>
 export default {
-    name: "HeaderPart",
+    name: "HeaderPart"
 };
 </script>
