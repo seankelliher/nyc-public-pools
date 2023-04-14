@@ -1,6 +1,6 @@
 <template>
     <section>
-        <PageTitle name="Manhattan" />
+        <PageTitle name="Pools in Manhattan" />
         <PoolPhoto
             src="hamilton-fish-pool"
             alt="swimmers at the Hamilton Fish Pool, sunny summer day"

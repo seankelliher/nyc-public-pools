@@ -1,6 +1,6 @@
 <template>
     <section>
-        <PageTitle name="Queens" />
+        <PageTitle name="Pools in Queens" />
         <PoolPhoto
             src="flushing-meadows-corona-pool"
             alt="Flushing Meadows Corona Park Pool, without swimmers"
