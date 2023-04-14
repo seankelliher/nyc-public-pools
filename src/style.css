@@ -404,7 +404,7 @@ figcaption {
 
 /* Button for "fees and schedules" and "submit" */
 button.regular {
-    margin: 0;
+    margin-right: 10px; /* On form, buffer between btn and send/error msg. */
     padding-left: 0.75em;
     padding-right: 0.75em;
     background: #f20505; /* bright red */
