@@ -1,17 +1,12 @@
 <template>
     <footer>
-        <ul>
-            <li>Send us a <a href="messages-form">message</a>.</li>
-            <li>
-                View what others are saying in our
-                <a href="messages-log">Messages Log</a>.
-            </li>
-        </ul>
+        <p class="light-tx"><a href="messages-form">Send a message</a>.</p>
+        <p class="light-tx"><a href="messages-log">View our Messages Log</a>.</p>
     </footer>
 </template>
 
 <script>
 export default {
-    name: "FooterPart",
+    name: "FooterPart"
 };
 </script>
