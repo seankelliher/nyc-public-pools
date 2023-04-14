@@ -14,9 +14,11 @@
                 <br>- submitted by {{ message.name }}.
             </p>
         </div>
-        <p id="flash-msg-form">
-            placeholder
-        </p>
+
+        <div class="intro">
+            <p id="flash-msg-form">placeholder</p>
+        </div>
+
     </section>
 </template>
 

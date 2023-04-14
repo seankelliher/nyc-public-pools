@@ -1,10 +1,10 @@
 <template>
     <section>
         <PageTitle name="Send a Message" />
-        <div class="summary">
+        <div class="intro">
             <p>
                 Thank you for submitting your ideas or letting us know about
-                errors on this site. To see what other have already submitted,
+                errors on this site. To see what others have already submitted,
                 check our <a href="messages-log">Messages Log</a>.
             </p>
             <p><strong>Your email address will not be published.</strong></p>
