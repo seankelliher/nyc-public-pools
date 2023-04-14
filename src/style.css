@@ -305,7 +305,7 @@ textarea {
 /* ANIMATIONS ARE BELOW */
 
 /* Flashes form's "message sent!" text */
-@keyframes flash-message {
+@keyframes flashMessage {
     0% {
         opacity: 0;
     }
