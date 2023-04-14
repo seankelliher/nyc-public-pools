@@ -11,7 +11,7 @@
             {{ pool.borough }}, NY {{ pool.zip }}<br>
             Telephone: {{ pool.phone }}
         </p>
-        <ul>
+        <ol>
             <li v-if="pool.variants[0]">
                 {{ pool.variants[0].desc }}: {{ pool.variants[0].length }}L x
                 {{ pool.variants[0].width }}W x {{ pool.variants[0].depth }}D
@@ -52,7 +52,7 @@
                     >
                 </span>
             </li>
-        </ul>
+        </ol>
         <button
             class="notes"
             @click="pool.show = !pool.show"
