@@ -1,6 +1,6 @@
 <template>
     <div class="fees-sched">
-        <h3>Indoor &amp; Outdoor Pools</h3>
+        <!--<h3>Indoor &amp; Outdoor Pools</h3>-->
         <button
             class="regular"
             @click="show = !show"
@@ -21,8 +21,8 @@ export default {
     name: "FeesSchedules",
     data() {
         return {
-            show: false,
+            show: false
         };
-    },
+    }
 };
 </script>
