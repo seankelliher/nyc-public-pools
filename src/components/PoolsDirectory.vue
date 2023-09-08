@@ -9,7 +9,6 @@ const displayBorough = ref();
 const displayPoolType = ref();
 const searchTerm = ref();
 const noResults = ref("There are no results.");
-const fullPool = ref("x008");
 
 const selects = reactive({
     boroughs: [],
@@ -152,11 +151,6 @@ function reset() {
         }
     });
 }
-
-function showFullPool(clikpool) {
-    fullPool.value = clikpool;
-
-}
 </script>
 
 <template>
@@ -199,7 +193,6 @@ function showFullPool(clikpool) {
                             <dd>{{ pool.borough }}, NY {{ pool.zip }}</dd>
                             <dd>Phone: {{ pool.phone }}</dd>
                         </dl>
-                        <p @click="showFullPool(pool.locId)">show full</p>
                     </div>
                 </template>
                 <template v-if="combined.length === 0">
@@ -232,16 +225,11 @@ function showFullPool(clikpool) {
                     </div>
                 </template>
             </template>
-
-            <template v-for="pool in pools" :key="pool.locId">
-                <div
-                    v-if="pool.locId === fullPool"
-                    class="pools"
-                >
-                    {{ pool.betweens }}. {{ pool.notes }}
-                </div>
-            </template>
-
         </main>
+        <footer>
+            <p>full pool details will go here.</p>
+            <p>full pool details will go here.</p>
+            <p>full pool details will go here.</p>
+        </footer>
     </div>
 </template>
