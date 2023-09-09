@@ -13,7 +13,7 @@ header {
     width: 100%;
     margin-bottom: 2em ;
     padding:  0;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start; /* main axis */
@@ -24,7 +24,7 @@ header {
     width: 70%;
     margin: 0;
     padding: 0;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
 }
 
 form {
@@ -32,7 +32,7 @@ form {
     margin: 0;
     padding: 0.5em 1.5%;
     border-radius: 8px;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start; /* main axis */
@@ -46,14 +46,14 @@ input {
     line-height: 1.5em;
     font-weight: 400;
     color: #001b3f;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
 }
 
 nav {
     width: 41.5625%;
     margin: 0;
     padding:  0;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; /* main axis */
@@ -62,7 +62,7 @@ nav {
 
 #boroughs {
     width: 56.390977443609%;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start; /* main axis */
@@ -71,7 +71,7 @@ nav {
 
 #types {
     width: 37.593984962406%;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start; /* main axis */
@@ -86,7 +86,7 @@ button {
     line-height: 3.75;
     font-weight: 400;
     border: none;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
 }
 
 button:hover {
@@ -143,7 +143,7 @@ button:hover {
     margin-top: 2em;
     margin-bottom: 2em;
     padding: 0;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
 }
 
 main {
@@ -163,7 +163,8 @@ main {
     padding: 0 1.5%;
     background: #e7f2ff;
     border-radius: 8px;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
+    position: relative;
 }
 
 .errors {
@@ -172,23 +173,42 @@ main {
     padding: 0 1.5%;
     background: #ffdad6;
     border-radius: 8px;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
 }
 
-footer {
-    width: 100%;
-    height: 160px;
+#full-pool {
+    position: fixed;
+    max-height: 600px;
+    z-index: 1;
+    background: #fcfcff;
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px 6px #e2e2e5; /* hor, vert, blur, spread */
+    overflow: scroll;
+}
+
+/* Icons */
+figure {
     margin: 0;
     padding: 0;
-    flex: initial;  /* flex 0 1 auto */
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;  /* main axis */
-    align-items: center; /* cross-axis */
-    background: green;
+}
+
+#close-icon {
     position: fixed;
-    left: 0;
-    bottom: 0;
+    z-index: 1;
+}
+
+#close-icon:hover {
+    cursor: pointer;
+}
+
+#open-in-full-icon {
+    position: absolute;
+    bottom: 5px;
+    right:  10px;
+}
+
+#open-in-full-icon:hover {
+    cursor: pointer;
 }
 
 /* Fonts */
