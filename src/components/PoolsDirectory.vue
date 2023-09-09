@@ -10,6 +10,15 @@ const displayPoolType = ref();
 const searchTerm = ref();
 const noResults = ref("There are no results.");
 
+const fullPool = ref();
+const fullPoolWidth = ref();
+const fullPoolPadding = ref();
+const fullPoolTop = ref();
+const fullPoolLeft = ref();
+
+const closeIconTop = ref();
+const closeIconLeft = ref();
+
 const selects = reactive({
     boroughs: [],
     poolTypes: [],
@@ -151,6 +160,29 @@ function reset() {
         }
     });
 }
+
+function showFullPool(fpool) {
+    fullPool.value = fpool;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    // NOTE: SIZE & POSITION NEED SOME MEDIA QUERIES.
+
+    //  Size and position "full-pool" div.
+    fullPoolWidth.value = width / 2;
+    fullPoolPadding.value = width / 15; /* padding */
+    fullPoolLeft.value =  (width / 4) - (width / 15); /* adjusts for padding */
+    fullPoolTop.value = height / 4;
+
+    // Position close icon.
+    closeIconTop.value = (height / 4) + 20;
+    closeIconLeft.value = (width / 4) * 3 + (width / 15) - 44;
+
+}
+
+function closeFullPool() {
+    fullPool.value = "";
+}
 </script>
 
 <template>
@@ -193,6 +225,12 @@ function reset() {
                             <dd>{{ pool.borough }}, NY {{ pool.zip }}</dd>
                             <dd>Phone: {{ pool.phone }}</dd>
                         </dl>
+                        <figure 
+                            id="open-in-full-icon"
+                            @click="showFullPool(pool.locId)"
+                        >
+                            <img src="images/open-in-new-icon-20.svg" alt="close icon">
+                        </figure>
                     </div>
                 </template>
                 <template v-if="combined.length === 0">
@@ -207,6 +245,7 @@ function reset() {
                 <template v-for="pool in pools" :key="pool.locId">
                     <div
                         v-if="selects.search.includes(pool.locId)"
+                        @click="showFullPool(pool.locId)"
                         class="pools"
                     >
                         <h3>{{ pool.name }}</h3>
@@ -226,10 +265,78 @@ function reset() {
                 </template>
             </template>
         </main>
-        <footer>
-            <p>full pool details will go here.</p>
-            <p>full pool details will go here.</p>
-            <p>full pool details will go here.</p>
-        </footer>
+        <template v-for="pool in pools" :key="pool.locId">
+            <div
+                id="full-pool"
+                v-if="pool.locId === fullPool"
+                :style="{
+                    width: fullPoolWidth + 'px',
+                    padding: fullPoolPadding + 'px',
+                    top: fullPoolTop + 'px',
+                    left: fullPoolLeft + 'px'
+                }"
+            >
+                <figure
+                    id="close-icon"
+                    @click="closeFullPool()"
+                    :style="{
+                        top: closeIconTop + 'px',
+                        left: closeIconLeft + 'px'
+                    }"
+                >
+                    <img src="images/close-icon-24.svg" alt="close icon">
+                </figure>
+
+                <h3>{{ pool.name }}</h3>
+
+                <dl>
+                    <dd>{{ pool.street }}</dd>
+                    <dd>{{ pool.borough }}, NY {{ pool.zip }}</dd>
+                    <dd>Phone: {{ pool.phone }}</dd>
+                </dl>
+                <dl>
+                    <dt>Cross streets &amp; notes:</dt>
+                    <dd>{{ pool.betweens }}. {{ pool.notes }}</dd>
+                </dl>
+                <dl>
+                    <dl v-if="pool.variants[0]">
+                        <dt>{{ pool.variants[0].desc }}</dt>
+                        <dd>Length: {{ pool.variants[0].length }} feet</dd>
+                        <dd>Width: {{ pool.variants[0].width }} feet</dd>
+                        <dd>Depth: {{ pool.variants[0].depth }} feet</dd>
+                        <dd v-if="pool.variants[0].accessible === true">
+                            Handicap access: yes
+                        </dd>
+                        <dd v-if="pool.variants[0].accessible === false">
+                            Handicap access: no
+                        </dd>
+                    </dl>
+                </dl>
+                <dl v-if="pool.variants[1]">
+                    <dt>{{ pool.variants[1].desc }}</dt>
+                    <dd>Length: {{ pool.variants[1].length }} feet</dd>
+                    <dd>Width: {{ pool.variants[1].width }} feet</dd>
+                    <dd>Depth: {{ pool.variants[1].depth }} feet</dd>
+                    <dd v-if="pool.variants[1].accessible === true">
+                        Handicap access: yes
+                    </dd>
+                    <dd v-if="pool.variants[1].accessible === false">
+                        Handicap access: no
+                    </dd>
+                </dl>
+                <dl v-if="pool.variants[2]">
+                    <dt>{{ pool.variants[2].desc }}</dt>
+                    <dd>Length: {{ pool.variants[2].length }} feet</dd>
+                    <dd>Width: {{ pool.variants[2].width }} feet</dd>
+                    <dd>Depth: {{ pool.variants[2].depth }} feet</dd>
+                    <dd v-if="pool.variants[2].accessible === true">
+                    Handicap access: yes
+                    </dd>
+                    <dd v-if="pool.variants[2].accessible === false">
+                    Handicap access: no
+                    </dd>
+                </dl>
+            </div>
+        </template>
     </div>
 </template>
