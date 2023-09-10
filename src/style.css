@@ -16,21 +16,22 @@ header {
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start; /* main axis */
+    justify-content: space-between; /* main axis */
     align-items: center; /* cross axis */
 }
 
 .title {
-    width: 70%;
+    /*width: 70%;*/
     margin: 0;
     padding: 0;
     flex: initial; /* flex: 0 1 auto */
 }
 
 form {
-    width: 27%;
+    /*width: 27%;*/
     margin: 0;
-    padding: 0.5em 1.5%;
+    /*padding: 0.5em 1.5%;*/
+    background: #dee3eb;
     border-radius: 8px;
     flex: initial; /* flex: 0 1 auto */
     display: flex;
@@ -39,10 +40,65 @@ form {
     align-items: center; /* cross axis */
 }
 
+@media (width >= 300px) and (width <= 499px) {
+    .title {
+        width: 100%;
+    }
+
+    form {
+        width: 90%;
+        padding: 0.5em 5% 1em 5%;
+    }
+}
+
+@media (width >= 500px) and (width <= 599px) {
+    .title {
+        width: 100%;
+    }
+
+    form {
+        width: 80%;
+        padding: 0.5em 5% 1em 5%;
+    }
+}
+
+@media (width >= 600px) and (width <= 699px) {
+    .title {
+        width: 100%;
+    }
+
+    form {
+        width: 70%;
+        padding: 0.5em 5% 1em 5%;
+    }
+}
+
+@media (width >= 700px) and (width <= 999px) {
+    .title {
+        width: 50%;
+    }
+
+    form {
+        width: 37%;
+        padding: 0.5em 1.5%;
+    }
+}
+
+@media (width >= 1000px) {
+    .title {
+        width: 50%;
+    }
+
+    form {
+        width: 27%;
+        padding: 0.5em 1.5%;
+    }
+}
+
 input {
     width: 100%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em; /* 16px */
+    font-size: 0.875em; /* 14px */
     line-height: 1.5em;
     font-weight: 400;
     color: #001b3f;
@@ -50,7 +106,7 @@ input {
 }
 
 nav {
-    width: 41.5625%;
+    /*width: 41.5625%;*/
     margin: 0;
     padding:  0;
     flex: initial; /* flex: 0 1 auto */
@@ -61,7 +117,7 @@ nav {
 }
 
 #boroughs {
-    width: 56.390977443609%;
+    /*width: 56.390977443609%;*/
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
@@ -70,12 +126,125 @@ nav {
 }
 
 #types {
-    width: 37.593984962406%;
+    /*width: 37.593984962406%;*/
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start; /* main axis */
     align-items: flex-start; /* cross axis */
+}
+
+@media (width >= 300px) and (width <= 399px) {
+    nav {
+        width: 100%;
+    }
+
+    #boroughs {
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+
+    #types {
+        width: 100%;
+    }
+}
+
+@media (width >= 400px) and (width <= 499px) {
+    nav {
+        width: 100%;
+    }
+
+    #boroughs {
+        width: 60%;
+    }
+
+    #types {
+        width: 35%;
+    }
+}
+
+@media (width >= 500px) and (width <= 599px) {
+    nav {
+        width: 90%;
+    }
+
+    #boroughs {
+        width: 60%;
+    }
+
+    #types {
+        width: 35%;
+    }
+}
+
+@media (width >= 600px) and (width <= 699px) {
+    nav {
+        width: 80%;
+    }
+
+    #boroughs {
+        width: 60%;
+    }
+
+    #types {
+        width: 35%;
+    }
+}
+
+@media (width >= 700px) and (width <= 799px) {
+    nav {
+        width: 70%;
+    }
+
+    #boroughs {
+        width: 60%;
+    }
+
+    #types {
+        width: 35%;
+    }
+}
+
+@media (width >= 800px) and (width <= 899px){
+    nav {
+        width: 60%;
+    }
+
+    #boroughs {
+        width: 60%;
+    }
+
+    #types {
+        width: 35%;
+    }
+}
+
+@media (width >= 900px) and (width <= 999px) {
+    nav {
+        width: 50%;
+    }
+
+    #boroughs {
+        width: 60%;
+    }
+
+    #types {
+        width: 35%;
+    }
+}
+
+@media (width >= 1000px) {
+    nav {
+        width: 40%;
+    }
+
+    #boroughs {
+        width: 60%;
+    }
+
+    #types {
+        width: 35%;
+    }
 }
 
 button {
@@ -101,6 +270,11 @@ button:hover {
 
 #button-bx {
     border-right: 1px solid #004b74;
+    border-top-left-radius: 8px;
+}
+
+#button-bk {
+    border-top-right-radius: 8px;
 }
 
 #button-mn {
@@ -116,6 +290,11 @@ button:hover {
 
 #button-si {
     border-right: 1px solid #004b74;
+    border-bottom-left-radius: 8px;
+}
+
+#button-map {
+    border-bottom-right-radius: 8px;
 }
 
 .button-type {
@@ -124,9 +303,19 @@ button:hover {
     background: #cff063;
 }
 
+#button-indoor {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
 #button-outdoor {
     border-top: 1px solid #3d4d00;
     border-bottom: 1px solid #3d4d00;
+}
+
+#button-wading {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 /* Selected buttons in nav */
@@ -158,9 +347,9 @@ main {
 }
 
 .pools {
-    width: 27%;
+    /*width: 27%;*/
     margin-bottom: 2em;
-    padding: 0 1.5%;
+    /*padding: 0 1.5%;*/
     background: #e7f2ff;
     border-radius: 8px;
     flex: initial; /* flex: 0 1 auto */
@@ -168,16 +357,37 @@ main {
 }
 
 .errors {
-    width: 27%;
+    /*width: 27%;*/
     margin-bottom: 2em;
-    padding: 0 1.5%;
+    /*padding: 0 1.5%;*/
     background: #ffdad6;
     border-radius: 8px;
     flex: initial; /* flex: 0 1 auto */
 }
 
+@media (width >= 300px) and (width <= 649px) {
+    .pools, .errors {
+        width: 90%;
+        padding: 0 5%;
+    }
+}
+
+@media (width >= 650px) and (width <= 999px) {
+    .pools, .errors {
+        width: 42%;
+        padding: 0 3%;
+    }
+}
+
+@media (width >= 1000px) {
+    .pools, .errors {
+        width: 27%;
+        padding: 0 2%;
+    }
+}
+
 #full-pool {
-    position: fixed;
+    position: fixed; /* do not use absolute, unreliable results */
     max-height: 600px;
     z-index: 1;
     background: #fcfcff;
@@ -284,5 +494,5 @@ label {
     font-size: 1em; /* 16px */
     line-height: 2;
     font-weight: 400;
-    color: #1a1c1e;
+    color: #42474e;
 }
