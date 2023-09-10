@@ -41,7 +41,7 @@ defineEmits(["getBorough", "getPoolType"]);
                 Staten Island
             </button>
             <button
-                id="map"
+                id="button-map"
                 class="button-borough"
             >
                 Map
