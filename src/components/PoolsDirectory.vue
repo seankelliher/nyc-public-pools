@@ -249,11 +249,17 @@ function closeFullPool() {
                         class="pools"
                     >
                         <h3>{{ pool.name }}</h3>
-                        <p>
-                            {{ pool.street }}<br />
-                            {{ pool.borough }}, NY {{ pool.zip }}<br />
-                            Phone: {{ pool.phone }}<br />
-                        </p>
+                        <dl>
+                            <dd>{{ pool.street }}</dd>
+                            <dd>{{ pool.borough }}, NY {{ pool.zip }}</dd>
+                            <dd>Phone: {{ pool.phone }}</dd>
+                        </dl>
+                        <figure 
+                            id="open-in-full-icon"
+                            @click="showFullPool(pool.locId)"
+                        >
+                            <img src="images/open-in-new-icon-20.svg" alt="close icon">
+                        </figure>
                     </div>
                 </template>
                 <template v-if="selects.search.length === 0">
