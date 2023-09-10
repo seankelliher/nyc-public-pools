@@ -166,18 +166,27 @@ function showFullPool(fpool) {
     const width = window.innerWidth;
     const height = window.innerHeight;
 
-    // NOTE: SIZE & POSITION NEED SOME MEDIA QUERIES.
+    if (width <= 599) {
+        // Size and position "full-pool" div.
+        fullPoolWidth.value = width * 0.7;
+        fullPoolPadding.value = width * 0.05; /* padding */
+        fullPoolLeft.value = width * 0.1;
+        fullPoolTop.value = height * 0.20;
 
-    //  Size and position "full-pool" div.
-    fullPoolWidth.value = width / 2;
-    fullPoolPadding.value = width / 15; /* padding */
-    fullPoolLeft.value =  (width / 4) - (width / 15); /* adjusts for padding */
-    fullPoolTop.value = height / 4;
+        // Position close icon.
+        closeIconTop.value = height * 0.20 + 10;
+        closeIconLeft.value = width * 0.9 - 34;
+    } else {
+        // Size and position "full-pool" div.
+        fullPoolWidth.value = width * 0.5;
+        fullPoolPadding.value = width * 0.05; /* padding */
+        fullPoolLeft.value = width * 0.2;
+        fullPoolTop.value = height * 0.20;
 
-    // Position close icon.
-    closeIconTop.value = (height / 4) + 20;
-    closeIconLeft.value = (width / 4) * 3 + (width / 15) - 44;
-
+        // Position close icon.
+        closeIconTop.value = height * 0.20 + 10;
+        closeIconLeft.value = width * 0.8 - 34;
+    }
 }
 
 function closeFullPool() {
@@ -190,7 +199,7 @@ function closeFullPool() {
 
         <header>
             <div class="title">
-                <h1 @click="reset">A directory of public pools in New York City</h1>
+                <h1 @click="reset">Public pools in New York City</h1>
             </div>
             <form>
                 <label>Search by pool name</label>
