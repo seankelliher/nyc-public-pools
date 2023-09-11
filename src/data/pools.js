@@ -304,7 +304,7 @@ const pools = [
         zip: 11212,
         phone: "718-485-4633",
         betweens: "Linden Boulevard and Christopher Avenue",
-        notes: "Pool is closed for emergency maintenance.",
+        notes: null,
         indoorSchedule: "B270/schedule#Pool",
         variants: [
             {
@@ -860,7 +860,7 @@ const pools = [
         phone: "212-234-9603",
         betweens:
             "East 134th Street between Fifth and Lenox Avenues",
-        notes: "Pool is currently closed for renovation.",
+        notes: null,
         indoorSchedule: "M131/schedule#Pool",
         variants: [
             {
@@ -885,7 +885,7 @@ const pools = [
         phone: "212-754-5411",
         betweens:
             "East 54th Street between First and Second Avenues",
-        notes: "Pool is currently closed for emergency maintenance.",
+        notes: null,
         indoorSchedule: "M130/schedule#Pool",
         variants: [
             {
@@ -909,7 +909,7 @@ const pools = [
         zip: 10014,
         phone: "212-242-5228",
         betweens: "Clarkson Street and Seventh Avenue South",
-        notes: "The Indoor Intermediate Pool is closed for renovation.",
+        notes: null,
         indoorSchedule: "M103/schedule#Pool",
         variants: [
             {
@@ -1301,7 +1301,7 @@ const pools = [
         zip: 10009,
         phone: "212-387-6784",
         betweens: "Avenue A between East 7th and East 10th Streets",
-        notes: "Pool is inside Tompkins Square.",
+        notes: "Pool is inside Tompkins Square Park.",
         indoorSchedule: null,
         variants: [
             {
