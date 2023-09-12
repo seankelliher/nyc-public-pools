@@ -1,4 +1,11 @@
 <script setup>
+defineProps({
+    tabsBase: {
+        type: Number,
+        required: true
+    }
+});
+
 defineEmits(["getBorough", "getPoolType"]);
 </script>
 
@@ -6,66 +13,83 @@ defineEmits(["getBorough", "getPoolType"]);
      <nav>
         <div id="boroughs">
             <button
-                @click="$emit('getBorough','Bronx')"
                 id="button-bx"
                 class="button-borough"
+                :tabindex="tabsBase"
+                @click="$emit('getBorough','Bronx')"
+                @keyup.enter="$emit('getBorough','Bronx')"
             >
                 Bronx
             </button>
             <button
-                @click="$emit('getBorough','Brooklyn')"
                 id="button-bk"
                 class="button-borough"
+                :tabindex="tabsBase"
+                @click="$emit('getBorough','Brooklyn')"
+                @keyup.enter="$emit('getBorough','Brooklyn')"
             >
                 Brooklyn
             </button>
             <button
-                @click="$emit('getBorough','Manhattan')"
                 id="button-mn"
                 class="button-borough"
+                :tabindex="tabsBase"
+                @click="$emit('getBorough','Manhattan')"
+                @keyup.enter="$emit('getBorough','Manhattan')"
             >
                 Manhattan
             </button>
             <button
-                @click="$emit('getBorough','Queens')"
                 id="button-qn"
                 class="button-borough"
+                :tabindex="tabsBase"
+                @click="$emit('getBorough','Queens')"
+                @keyup.enter="$emit('getBorough','Queens')"
             >
                 Queens
             </button>
             <button
-                @click="$emit('getBorough','Staten Island')"
                 id="button-si"
                 class="button-borough"
+                :tabindex="tabsBase"
+                @click="$emit('getBorough','Staten Island')"
+                @keyup.enter="$emit('getBorough','Staten Island')"
             >
                 Staten Island
             </button>
             <button
                 id="button-map"
                 class="button-borough"
+                :tabindex="tabsBase"
             >
                 Map
             </button>
         </div>
         <div id="types">
             <button
-                @click="$emit('getPoolType', 'indoor'), ('selectButton', 'types')"
                 id="button-indoor"
                 class="button-type"
+                :tabindex="tabsBase"
+                @click="$emit('getPoolType', 'indoor'), ('selectButton', 'types')"
+                @keyup.enter="$emit('getPoolType', 'indoor'), ('selectButton', 'types')"
             >
                 Indoor pools
             </button>
             <button
-               @click="$emit('getPoolType', 'outdoor'), ('selectButton', 'types')"
                 id="button-outdoor"
                 class="button-type"
+                :tabindex="tabsBase"
+                @click="$emit('getPoolType', 'outdoor'), ('selectButton', 'types')"
+                @keyup.enter="$emit('getPoolType', 'outdoor'), ('selectButton', 'types')"
             >
                 Outdoor pools
             </button>
             <button
-               @click="$emit('getPoolType', 'wading'), ('selectButton', 'types')"
                 id="button-wading"
                 class="button-type"
+                :tabindex="tabsBase"
+                @click="$emit('getPoolType', 'wading'), ('selectButton', 'types')"
+                @keup.enter="$emit('getPoolType', 'wading'), ('selectButton', 'types')"
               >
                 Wading pools
             </button>

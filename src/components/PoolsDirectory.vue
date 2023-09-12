@@ -25,6 +25,9 @@ const selects = reactive({
     search: []
 });
 
+const tabsBase = ref(0);
+const tabsModal = ref(-1);
+
 onMounted(() => {
     pools.map(function (pool) {
         selects.boroughs.push(pool.locId);
@@ -187,10 +190,26 @@ function showFullPool(fpool) {
         closeIconTop.value = height * 0.20 + 10;
         closeIconLeft.value = width * 0.8 - 34;
     }
+
+    if (tabsBase.value === 0) {
+        tabsBase.value = -1;
+    }
+    
+    if (tabsModal.value === -1) {
+        tabsModal.value = 0;
+    }
 }
 
 function closeFullPool() {
     fullPool.value = "";
+
+    if (tabsBase.value === -1) {
+        tabsBase.value = 0;
+    }
+    
+    if (tabsModal.value === 0) {
+        tabsModal.value = -1;
+    }
 }
 </script>
 
@@ -199,11 +218,18 @@ function closeFullPool() {
 
         <header>
             <div class="title">
-                <h1 @click="reset">Public pools in New York City</h1>
+                <h1
+                    :tabindex="tabsBase"
+                    @click="reset"
+                    @keyup.enter="reset"
+                >
+                    Public pools in New York City
+                </h1>
             </div>
             <form>
                 <label>Search by pool name</label>
                 <input
+                    :tabindex="tabsBase"
                     @focus="doingSearch = true"
                     @input="getSearch()"
                     v-model="searchTerm"
@@ -215,6 +241,7 @@ function closeFullPool() {
             @getBorough="getBorough"
             @getPoolType="getPoolType"
             @selectButton="selectButton"
+            :tabsBase="tabsBase"
         />
 
         <div id="criteria-bar">
@@ -236,7 +263,9 @@ function closeFullPool() {
                         </dl>
                         <figure 
                             id="open-in-full-icon"
+                            :tabindex="tabsBase"
                             @click="showFullPool(pool.locId)"
+                            @keyup.enter="showFullPool(pool.locId)"
                         >
                             <img src="images/open-in-new-icon-20.svg" alt="close icon">
                         </figure>
@@ -265,7 +294,9 @@ function closeFullPool() {
                         </dl>
                         <figure 
                             id="open-in-full-icon"
+                            :tabindex="tabsBase"
                             @click="showFullPool(pool.locId)"
+                            @keyup.enter="showFullPool(pool.locId)"
                         >
                             <img src="images/open-in-new-icon-20.svg" alt="close icon">
                         </figure>
@@ -293,7 +324,9 @@ function closeFullPool() {
             >
                 <figure
                     id="close-icon"
+                    :tabindex="tabsModal"
                     @click="closeFullPool()"
+                    @keyup.enter="closeFullPool()"
                     :style="{
                         top: closeIconTop + 'px',
                         left: closeIconLeft + 'px'
