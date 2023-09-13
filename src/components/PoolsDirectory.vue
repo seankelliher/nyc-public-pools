@@ -267,7 +267,7 @@ function closeFullPool() {
                             @click="showFullPool(pool.locId)"
                             @keyup.enter="showFullPool(pool.locId)"
                         >
-                            <img src="images/open-in-new-icon-20.svg" alt="close icon">
+                            <img src="/images/open-in-new-icon-20.svg" alt="close icon">
                         </figure>
                     </div>
                 </template>
@@ -298,7 +298,7 @@ function closeFullPool() {
                             @click="showFullPool(pool.locId)"
                             @keyup.enter="showFullPool(pool.locId)"
                         >
-                            <img src="images/open-in-new-icon-20.svg" alt="close icon">
+                            <img src="/images/open-in-new-icon-20.svg" alt="close icon">
                         </figure>
                     </div>
                 </template>
@@ -332,7 +332,7 @@ function closeFullPool() {
                         left: closeIconLeft + 'px'
                     }"
                 >
-                    <img src="images/close-icon-24.svg" alt="close icon">
+                    <img src="/images/close-icon-24.svg" alt="close icon">
                 </figure>
 
                 <h3>{{ pool.name }}</h3>
