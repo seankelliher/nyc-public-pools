@@ -3,6 +3,10 @@
 
 Directory of public swimming pools in New York City. [View working component](https://sean-kelliher-nyc-public-pools.netlify.app). Note: I'm still working on the map.
 
+## Project Status
+
+Next steps, I want to do more extensive accessibility and browser testing. Also, I want to experiment with using smaller buttons for boroughs and pool types. They currently take up a lot of space on small screens.
+
 ## Project Screen Shots
 
 * Default view - all pools.
