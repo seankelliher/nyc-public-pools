@@ -37,7 +37,7 @@ form {
     align-items: center; /* cross axis */
 }
 
-@media (width >= 300px) and (width <= 499px) {
+@media (min-width: 300px) and (max-width: 499px) {
     .title {
         width: 100%;
     }
@@ -48,7 +48,7 @@ form {
     }
 }
 
-@media (width >= 500px) and (width <= 599px) {
+@media (min-width: 500px) and (max-width: 599px) {
     .title {
         width: 100%;
     }
@@ -59,7 +59,7 @@ form {
     }
 }
 
-@media (width >= 600px) and (width <= 699px) {
+@media (min-width: 600px) and (max-width: 699px) {
     .title {
         width: 100%;
     }
@@ -70,7 +70,7 @@ form {
     }
 }
 
-@media (width >= 700px) and (width <= 999px) {
+@media (min-width: 700px) and (max-width: 999px) {
     .title {
         width: 50%;
     }
@@ -81,7 +81,7 @@ form {
     }
 }
 
-@media (width >= 1000px) {
+@media (min-width: 1000px) {
     .title {
         width: 50%;
     }
@@ -128,7 +128,7 @@ nav {
     align-items: flex-start; /* cross axis */
 }
 
-@media (width >= 300px) and (width <= 399px) {
+@media (min-width: 300px) and (max-width: 399px) {
     nav {
         width: 100%;
     }
@@ -143,7 +143,7 @@ nav {
     }
 }
 
-@media (width >= 400px) and (width <= 499px) {
+@media (min-width: 400px) and (max-width: 499px) {
     nav {
         width: 100%;
     }
@@ -157,7 +157,7 @@ nav {
     }
 }
 
-@media (width >= 500px) and (width <= 599px) {
+@media (min-width: 500px) and (max-width: 599px) {
     nav {
         width: 90%;
     }
@@ -171,7 +171,7 @@ nav {
     }
 }
 
-@media (width >= 600px) and (width <= 699px) {
+@media (min-width: 600px) and (max-width: 699px) {
     nav {
         width: 80%;
     }
@@ -185,7 +185,7 @@ nav {
     }
 }
 
-@media (width >= 700px) and (width <= 799px) {
+@media (min-width: 700px) and (max-width: 799px) {
     nav {
         width: 70%;
     }
@@ -199,7 +199,7 @@ nav {
     }
 }
 
-@media (width >= 800px) and (width <= 899px){
+@media (min-width: 800px) and (max-width: 899px){
     nav {
         width: 60%;
     }
@@ -213,7 +213,7 @@ nav {
     }
 }
 
-@media (width >= 900px) and (width <= 999px) {
+@media (min-width: 900px) and (max-width: 999px) {
     nav {
         width: 50%;
     }
@@ -227,7 +227,7 @@ nav {
     }
 }
 
-@media (width >= 1000px) {
+@media (min-width: 1000px) {
     nav {
         width: 40%;
     }
@@ -355,21 +355,21 @@ main {
     flex: initial; /* flex: 0 1 auto */
 }
 
-@media (width >= 300px) and (width <= 649px) {
+@media (min-width: 300px) and (max-width: 649px) {
     .pools, .errors {
         width: 90%;
         padding: 0 5%;
     }
 }
 
-@media (width >= 650px) and (width <= 999px) {
+@media (min-width: 650px) and (max-width: 999px) {
     .pools, .errors {
         width: 42%;
         padding: 0 3%;
     }
 }
 
-@media (width >= 1000px) {
+@media (min-width: 1000px) {
     .pools, .errors {
         width: 27%;
         padding: 0 2%;
