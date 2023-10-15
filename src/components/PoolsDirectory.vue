@@ -12,6 +12,7 @@ const noResults = ref("There are no results.");
 
 const fullPool = ref();
 const fullPoolWidth = ref();
+const fullPoolHeight = ref();
 const fullPoolPadding = ref();
 const fullPoolTop = ref();
 const fullPoolLeft = ref();
@@ -172,19 +173,21 @@ function showFullPool(fpool) {
     if (width <= 599) {
         // Size and position "full-pool" div.
         fullPoolWidth.value = width * 0.7;
+        fullPoolHeight.value = height * 0.6;
         fullPoolPadding.value = width * 0.05; /* padding */
         fullPoolLeft.value = width * 0.1;
-        fullPoolTop.value = height * 0.20;
+        fullPoolTop.value = height * 0.2;
 
         // Position close icon.
-        closeIconTop.value = height * 0.20 + 10;
+        closeIconTop.value = height * 0.2 + 10;
         closeIconLeft.value = width * 0.9 - 34;
     } else {
         // Size and position "full-pool" div.
         fullPoolWidth.value = width * 0.5;
+        fullPoolHeight.value = height * 0.6;
         fullPoolPadding.value = width * 0.05; /* padding */
         fullPoolLeft.value = width * 0.2;
-        fullPoolTop.value = height * 0.20;
+        fullPoolTop.value = height * 0.2;
 
         // Position close icon.
         closeIconTop.value = height * 0.20 + 10;
@@ -325,6 +328,7 @@ function closeFullPool() {
                 v-if="pool.locId === fullPool"
                 :style="{
                     width: fullPoolWidth + 'px',
+                    height: fullPoolHeight + 'px',
                     padding: fullPoolPadding + 'px',
                     top: fullPoolTop + 'px',
                     left: fullPoolLeft + 'px'
