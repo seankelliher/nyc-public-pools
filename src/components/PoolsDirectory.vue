@@ -198,6 +198,10 @@ function showFullPool(fpool) {
     if (tabsModal.value === -1) {
         tabsModal.value = 0;
     }
+
+    // Disables background from scrolling.
+    const body = document.querySelector("body");
+    body.style.overflow = "hidden";
 }
 
 function closeFullPool() {
@@ -210,6 +214,10 @@ function closeFullPool() {
     if (tabsModal.value === 0) {
         tabsModal.value = -1;
     }
+
+    // Returns background to default scrolling.
+    const body = document.querySelector("body");
+    body.style.overflow = "scroll";
 }
 </script>
 
