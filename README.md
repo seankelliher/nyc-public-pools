@@ -1,11 +1,11 @@
 [![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/nyc-public-pools?style=flat-square)](/LICENSE.txt)
 ## Public Swimming pools in New York City
 
-Directory of public swimming pools in New York City. [View working component](https://sean-kelliher-nyc-public-pools.netlify.app). Note: I'm still working on the map.
+Directory of public swimming pools in New York City. [View working component](https://sean-kelliher-nyc-public-pools.netlify.app). **Note: Map part still being developed.**
 
 ## Project Status
 
-Next steps, I want to do more extensive accessibility and browser testing. Also, I want to experiment with using smaller buttons for boroughs and pool types. They currently take up a lot of space on small screens.
+Next steps, I want to finish building the accompanying Mapbox map. Also, I want to do more extensive accessibility and browser testing.
 
 ## Project Screen Shots
 
