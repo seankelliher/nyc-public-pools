@@ -57,13 +57,6 @@ defineEmits(["getBorough", "getPoolType"]);
             >
                 Staten Island
             </button>
-            <button
-                id="button-map"
-                class="button-borough"
-                :tabindex="tabsBase"
-            >
-                Map
-            </button>
         </div>
         <div id="types">
             <button
