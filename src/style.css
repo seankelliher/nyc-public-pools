@@ -104,7 +104,7 @@ input {
 
 nav {
     margin: 0;
-    padding:  0;
+    padding: 0;
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
@@ -112,7 +112,64 @@ nav {
     align-items: flex-start; /* cross axis */
 }
 
+@media (min-width: 300px) and (max-width: 399px) {
+    nav {
+        width: 100%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 499px) {
+    nav {
+        width: 90%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 599px) {
+    nav {
+        width: 80%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 699px) {
+    nav {
+        width: 70%;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 799px) {
+    nav {
+        width: 60%;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 899px) {
+    nav {
+        width: 50%;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 999px) {
+    nav {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1099px) {
+    nav {
+        width: 35%;
+    }
+}
+
+@media (min-width: 1100px) {
+    nav {
+        width: 30%;
+    }
+}
+
 #boroughs {
+    width: 45%;
+    margin-bottom: 1em;
+    padding:  0;
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
@@ -121,6 +178,9 @@ nav {
 }
 
 #types {
+    width: 45%;
+    margin: 0;
+    padding:  0;
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
@@ -128,127 +188,17 @@ nav {
     align-items: flex-start; /* cross axis */
 }
 
-@media (min-width: 300px) and (max-width: 399px) {
-    nav {
-        width: 100%;
-    }
-
-    #boroughs {
-        width: 100%;
-        margin-bottom: 1.5em;
-    }
-
-    #types {
-        width: 100%;
-    }
-}
-
-@media (min-width: 400px) and (max-width: 499px) {
-    nav {
-        width: 100%;
-    }
-
-    #boroughs {
-        width: 60%;
-    }
-
-    #types {
-        width: 35%;
-    }
-}
-
-@media (min-width: 500px) and (max-width: 599px) {
-    nav {
-        width: 90%;
-    }
-
-    #boroughs {
-        width: 60%;
-    }
-
-    #types {
-        width: 35%;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 699px) {
-    nav {
-        width: 80%;
-    }
-
-    #boroughs {
-        width: 60%;
-    }
-
-    #types {
-        width: 35%;
-    }
-}
-
-@media (min-width: 700px) and (max-width: 799px) {
-    nav {
-        width: 70%;
-    }
-
-    #boroughs {
-        width: 60%;
-    }
-
-    #types {
-        width: 35%;
-    }
-}
-
-@media (min-width: 800px) and (max-width: 899px){
-    nav {
-        width: 60%;
-    }
-
-    #boroughs {
-        width: 60%;
-    }
-
-    #types {
-        width: 35%;
-    }
-}
-
-@media (min-width: 900px) and (max-width: 999px) {
-    nav {
-        width: 50%;
-    }
-
-    #boroughs {
-        width: 60%;
-    }
-
-    #types {
-        width: 35%;
-    }
-}
-
-@media (min-width: 1000px) {
-    nav {
-        width: 40%;
-    }
-
-    #boroughs {
-        width: 60%;
-    }
-
-    #types {
-        width: 35%;
-    }
-}
-
 button {
-    margin: 0;
+    width: 100%;
+    margin-bottom: 1em;
     padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em; /* 16px */
-    line-height: 3.75;
+    /*line-height: 3.75;*/
+    line-height: 1.8;
     font-weight: 400;
     border: none;
+    border-radius: 8px;
     flex: initial; /* flex: 0 1 auto */
 }
 
@@ -256,75 +206,32 @@ button:hover {
     cursor: pointer;
 }
 
+button:last-child {
+    margin-bottom: 0;
+}
+
 .button-borough {
-    width: 50%;
     color: #001d32;
     background: #cde5ff;
 }
 
-#button-bx {
-    border-right: 1px solid #004b74;
-    border-top-left-radius: 8px;
-}
-
-#button-bk {
-    border-top-right-radius: 8px;
-}
-
-#button-mn {
-    border-top: 1px solid #004b74;
-    border-right: 1px solid #004b74;
-    border-bottom: 1px solid #004b74;
-}
-
-#button-qn {
-    border-top: 1px solid #004b74;
-    border-bottom: 1px solid #004b74;
-}
-
-#button-si {
-    border-right: 1px solid #004b74;
-    border-bottom-left-radius: 8px;
-}
-
-#button-map {
-    border-bottom-right-radius: 8px;
-}
-
 .button-type {
-    width: 100%;
     color: #171e00;
     background: #cff063;
 }
 
-#button-indoor {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-#button-outdoor {
-    border-top: 1px solid #3d4d00;
-    border-bottom: 1px solid #3d4d00;
-}
-
-#button-wading {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
 /* Selected buttons in nav */
 #boroughs .selected {
-    background: #93ccff;
+    background: #61b2f2;
 }
 
 #types .selected {
-    background: #bcdc4a;
+    background: #99b730;
 }
 
 #criteria-bar {
     width: 100%;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin: 0;
     padding: 0;
     flex: initial; /* flex: 0 1 auto */
 }
@@ -338,6 +245,14 @@ main {
     flex-flow: row wrap;
     justify-content: space-between; /* main axis */
     align-items: stretch; /* cross-axis */
+}
+
+@media (min-width: 1000px) {
+    main::after {
+        content: "";
+        width: 27%;
+        padding: 0 2%;
+    }
 }
 
 .pools {
@@ -428,7 +343,7 @@ h2 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em; /* 16px */
     line-height: 2.5;
-    font-weight: 400;
+    font-weight: 500;
     color: #984800;
 }
 
