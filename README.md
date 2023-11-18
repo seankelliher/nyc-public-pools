@@ -1,11 +1,11 @@
 [![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/nyc-public-pools?style=flat-square)](/LICENSE.txt)
 ## Public Swimming pools in New York City
 
-Directory of public swimming pools in New York City. [View working component](https://sean-kelliher-nyc-public-pools.netlify.app). **Note: Map part still being developed.**
+Directory of public swimming pools in New York City. [View working component](https://sean-kelliher-nyc-public-pools.netlify.app).
 
 ## Project Status
 
-Next steps, I want to finish building the accompanying Mapbox map. Also, I want to do more extensive accessibility and browser testing.
+Next steps, I want to do more extensive accessibility and browser testing.
 
 ## Project Screen Shots
 
@@ -15,7 +15,7 @@ Next steps, I want to finish building the accompanying Mapbox map. Also, I want 
 * Queens outdoor pools.
 ![screen shot of project](/screenshots/nyc-public-pools-screenshot2.png?s=600)
 
-* Astoria Pool selected.
+* Manhattan indoor pools, Ederle Pool selected.
 ![screen shot of project](/screenshots/nyc-public-pools-screenshot3.png?s=600)
 
 ## Installation and Setup Instructions
@@ -41,8 +41,6 @@ I set out to build a searchable directory of public swimming pools in New York C
 The results are returned at a comfortable pace. Users first see the pools' locations. From there, they can expand an individual pool to show detailed information such as pool dimensions, and other wayfinding details such a cross streets and if the pool is located within a park. Many pools are inside parks.
 
 For accessibility, all interactive elements can be tabbed through and activated with or without a mouse. Before deploying a production version though, I would want to do more testing for screen readers.
-
-I am now working on a map. I'll add it to the directory when it is completed.
 
 ## Acknowledgments
 
