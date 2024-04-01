@@ -228,18 +228,28 @@ function closeFullPool() {
     <div id="container">
 
         <header>
-            <div class="title">
-                <h1
-                    :tabindex="tabsBase"
-                    @click="reset"
-                    @keyup.enter="reset"
-                >
-                    Public pools in New York City
-                </h1>
+            <div class="logo-title">
+                <figure class="logo">
+                    <img src="/images/nyc-logo.svg" alt="logo for New York City government">
+                    <figcaption hidden>NYC logo</figcaption>
+                </figure>
+
+                <div class="title">
+                    <h1
+                        :tabindex="tabsBase"
+                        @click="reset"
+                        @keyup.enter="reset"
+                        role="link"
+                    >
+                        Public Pools
+                    </h1>
+                </div>
             </div>
+
             <form>
-                <label>Search by pool name</label>
+                <label for="search-bar">Search by pool name</label>
                 <input
+                    id="search-bar"
                     :tabindex="tabsBase"
                     @focus="doingSearch = true"
                     @input="getSearch()"
@@ -277,8 +287,10 @@ function closeFullPool() {
                             :tabindex="tabsBase"
                             @click="showFullPool(pool.locId)"
                             @keyup.enter="showFullPool(pool.locId)"
+                            role="link"
                         >
-                            <img src="/images/open-in-new-icon-20.svg" alt="close icon">
+                            <img src="/images/open-in-new-icon-20.svg" alt="icon, expand box to view full details">
+                            <figcaption hidden>Icon to expand box</figcaption>
                         </figure>
                     </div>
                 </template>
@@ -308,8 +320,10 @@ function closeFullPool() {
                             :tabindex="tabsBase"
                             @click="showFullPool(pool.locId)"
                             @keyup.enter="showFullPool(pool.locId)"
+                            role="link"
                         >
-                            <img src="/images/open-in-new-icon-20.svg" alt="close icon">
+                            <img src="/images/open-in-new-icon-20.svg" alt="icon, expand box to view full details">
+                            <figcaption hidden>Icon to expand box</figcaption>
                         </figure>
                     </div>
                 </template>
@@ -343,8 +357,10 @@ function closeFullPool() {
                         top: closeIconTop + 'px',
                         left: closeIconLeft + 'px'
                     }"
+                    role="link"
                 >
-                    <img src="/images/close-icon-24.svg" alt="close icon">
+                    <img src="/images/close-icon-24.svg" alt="icon, close box with full details">
+                    <figcaption hidden>Icon to close box</figcaption>
                 </figure>
 
                 <h3>{{ pool.name }}</h3>
