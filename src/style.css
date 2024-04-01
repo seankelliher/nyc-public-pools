@@ -1,4 +1,16 @@
 /* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
+body {
+    margin-top: 0;
+    background: #fcfcff;
+}
+
+/* Image becomes no larger than actual size. */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 #container {
     width:  95%;
     max-width: 1280px;
@@ -14,17 +26,55 @@ header {
     width: 100%;
     margin-bottom: 2em ;
     padding:  0;
+    background: #dee3eb;
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; /* main axis */
     align-items: center; /* cross axis */
+    position: relative;
 }
 
-.title {
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2000px;
+    left: 100%;
+    background: #dee3eb;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2000px;
+    right: 100%;
+    background: #dee3eb;
+}
+
+.logo-title {
     margin: 0;
     padding: 0;
     flex: initial; /* flex: 0 1 auto */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; /* main axis */
+    align-items: center; /* cross-axis */
+}
+
+/* Figure class for logo */
+.logo {
+    width: 88px;
+    margin: 0;
+    padding: 0;
+    flex: initial; /* flex: 0 1 auto */;
+}
+
+.title {
+    margin-left: 1em;
 }
 
 form {
@@ -39,7 +89,7 @@ form {
 }
 
 @media (min-width: 300px) and (max-width: 499px) {
-    .title {
+    .logo-title {
         width: 100%;
     }
 
@@ -50,7 +100,7 @@ form {
 }
 
 @media (min-width: 500px) and (max-width: 599px) {
-    .title {
+    .logo-title {
         width: 100%;
     }
 
@@ -61,7 +111,7 @@ form {
 }
 
 @media (min-width: 600px) and (max-width: 699px) {
-    .title {
+    .logo-title {
         width: 100%;
     }
 
@@ -72,7 +122,7 @@ form {
 }
 
 @media (min-width: 700px) and (max-width: 999px) {
-    .title {
+    .logo-title {
         width: 50%;
     }
 
@@ -83,7 +133,7 @@ form {
 }
 
 @media (min-width: 1000px) {
-    .title {
+    .logo-title {
         width: 50%;
     }
 
@@ -97,7 +147,7 @@ input {
     width: 100%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 0.875em; /* 14px */
-    line-height: 1.5em;
+    line-height: 1.5;
     font-weight: 400;
     color: #001b3f;
     flex: initial; /* flex: 0 1 auto */
@@ -222,18 +272,43 @@ button:last-child {
 
 /* Selected buttons in nav */
 #boroughs .selected {
-    background: #61b2f2;
+    border: 2px solid #1b7dba;
 }
 
 #types .selected {
-    background: #99b730;
+    border: 2px solid #688000;
 }
 
 #criteria-bar {
     width: 100%;
     margin: 0;
     padding: 0;
+    border-top: 2px solid #dee3eb;
+    border-bottom: 2px solid #dee3eb;
     flex: initial; /* flex: 0 1 auto */
+    position: relative;
+}
+
+#criteria-bar::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    width: 2000px;
+    left: 100%;
+    border-top: 2px solid #dee3eb;
+    border-bottom: 2px solid #dee3eb;
+}
+
+#criteria-bar::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    width: 2000px;
+    right: 100%;
+    border-top: 2px solid #dee3eb;
+    border-bottom: 2px solid #dee3eb;
 }
 
 main {
@@ -301,13 +376,11 @@ main {
     overflow: scroll;
 }
 
-/* Icons */
-figure {
+/* Figure ids for icons */
+#close-icon {
+    width: 24px;
     margin: 0;
     padding: 0;
-}
-
-#close-icon {
     position: fixed;
     z-index: 1;
 }
@@ -317,6 +390,9 @@ figure {
 }
 
 #open-in-full-icon {
+    width: 20px;
+    margin: 0;
+    padding: 0;
     position: absolute;
     bottom: 5px;
     right:  10px;
@@ -344,7 +420,7 @@ h2 {
     font-size: 1em; /* 16px */
     line-height: 2.5;
     font-weight: 500;
-    color: #984800;
+    color: #1a1c1e;;
 }
 
 h3 {
@@ -395,7 +471,7 @@ dd {
 label {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em; /* 16px */
-    line-height: 2;
+    line-height: 1.2;
     font-weight: 400;
     color: #42474e;
 }
