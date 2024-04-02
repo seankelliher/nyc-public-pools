@@ -246,7 +246,7 @@ button {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em; /* 16px */
     line-height: 1.8;
-    font-weight: 400;
+    font-weight: 500;
     border: none;
     border-radius: 8px;
     flex: initial; /* flex: 0 1 auto */
@@ -389,7 +389,7 @@ main {
     cursor: pointer;
 }
 
-#open-in-full-icon {
+.open-in-full-icon {
     width: 20px;
     margin: 0;
     padding: 0;
@@ -398,7 +398,7 @@ main {
     right:  10px;
 }
 
-#open-in-full-icon:hover {
+.open-in-full-icon:hover {
     cursor: pointer;
 }
 
@@ -423,13 +423,13 @@ h2 {
     color: #1a1c1e;;
 }
 
-h3 {
+/* h3 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em; /* 16px */
+    font-size: 1em;
     line-height: 1.5;
     font-weight: 500;
     color: #001d32;
-}
+} */
 
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -455,7 +455,7 @@ dt {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em; /* 16px */
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 600;
     color: #001d32;
 }
 

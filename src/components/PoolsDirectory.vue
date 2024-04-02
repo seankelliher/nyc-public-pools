@@ -239,7 +239,7 @@ function closeFullPool() {
                         :tabindex="tabsBase"
                         @click="reset"
                         @keyup.enter="reset"
-                        role="link"
+                        role="button"
                     >
                         Public Pools
                     </h1>
@@ -276,14 +276,14 @@ function closeFullPool() {
                         v-if="combined.includes(pool.locId)"
                         class="pools"
                     >
-                        <h3>{{ pool.name }}</h3>
                         <dl>
+                            <dt>{{ pool.name }}</dt>
                             <dd>{{ pool.street }}</dd>
                             <dd>{{ pool.borough }}, NY {{ pool.zip }}</dd>
                             <dd>Phone: {{ pool.phone }}</dd>
                         </dl>
                         <figure 
-                            id="open-in-full-icon"
+                            class="open-in-full-icon"
                             :tabindex="tabsBase"
                             @click="showFullPool(pool.locId)"
                             @keyup.enter="showFullPool(pool.locId)"
@@ -309,14 +309,14 @@ function closeFullPool() {
                         @click="showFullPool(pool.locId)"
                         class="pools"
                     >
-                        <h3>{{ pool.name }}</h3>
                         <dl>
+                            <dt>{{ pool.name }}</dt>
                             <dd>{{ pool.street }}</dd>
                             <dd>{{ pool.borough }}, NY {{ pool.zip }}</dd>
                             <dd>Phone: {{ pool.phone }}</dd>
                         </dl>
                         <figure 
-                            id="open-in-full-icon"
+                            class="open-in-full-icon"
                             :tabindex="tabsBase"
                             @click="showFullPool(pool.locId)"
                             @keyup.enter="showFullPool(pool.locId)"
@@ -363,9 +363,8 @@ function closeFullPool() {
                     <figcaption hidden>Icon to close box</figcaption>
                 </figure>
 
-                <h3>{{ pool.name }}</h3>
-
                 <dl>
+                    <dt>{{ pool.name }}</dt>
                     <dd>{{ pool.street }}</dd>
                     <dd>{{ pool.borough }}, NY {{ pool.zip }}</dd>
                     <dd>Phone: {{ pool.phone }}</dd>
