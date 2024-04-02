@@ -282,7 +282,7 @@ button:last-child {
 #criteria-bar {
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0.5em 0;
     border-top: 2px solid #dee3eb;
     border-bottom: 2px solid #dee3eb;
     flex: initial; /* flex: 0 1 auto */
@@ -418,7 +418,7 @@ h1:hover {
 h2 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em; /* 16px */
-    line-height: 2.5;
+    line-height: 1.5;
     font-weight: 500;
     color: #1a1c1e;;
 }
