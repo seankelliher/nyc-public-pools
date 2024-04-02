@@ -234,15 +234,14 @@ function closeFullPool() {
                     <figcaption hidden>NYC logo</figcaption>
                 </figure>
 
-                <div class="title">
-                    <h1
-                        :tabindex="tabsBase"
-                        @click="reset"
-                        @keyup.enter="reset"
-                        role="button"
-                    >
-                        Public Pools
-                    </h1>
+                <div 
+                    :tabindex="tabsBase"
+                    @click="reset"
+                    @keyup.enter="reset"
+                    role="button"
+                    class="title"
+                >
+                    <h1>Public Pools</h1>
                 </div>
             </div>
 
