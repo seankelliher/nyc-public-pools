@@ -5,7 +5,7 @@ Directory of public swimming pools in New York City. [View working component](ht
 
 ## Project Status
 
-TESTING: Testing for browser compatibility and WACG accessibility after making some renovations.
+Project meets general accessibility (WACG) and cross-browser requirements. More testing with a dedicated services (e.g., Sauce Labs) would be helpful if deploying to production.
 
 ## Project Screen Shots
 
