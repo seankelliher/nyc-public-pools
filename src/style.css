@@ -40,19 +40,10 @@ header::before {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 2000px;
-    left: 100%;
+    right: calc((100vw - 100%) / -2);
+    left: calc((100vw - 100%) / -2);
     background: #dee3eb;
-}
-
-header::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2000px;
-    right: 100%;
-    background: #dee3eb;
+    z-index: -1;
 }
 
 .logo-title {
@@ -294,21 +285,11 @@ button:last-child {
     position: absolute;
     top: -2px;
     bottom: -2px;
-    width: 2000px;
-    left: 100%;
+    right: calc((100vw - 100%) / -2);
+    left: calc((100vw - 100%) / -2);
     border-top: 2px solid #dee3eb;
     border-bottom: 2px solid #dee3eb;
-}
-
-#criteria-bar::after {
-    content: "";
-    position: absolute;
-    top: -2px;
-    bottom: -2px;
-    width: 2000px;
-    right: 100%;
-    border-top: 2px solid #dee3eb;
-    border-bottom: 2px solid #dee3eb;
+    z-index: -1;
 }
 
 main {
