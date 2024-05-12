@@ -5,3 +5,5 @@ import PoolsDirectory from "./components/PoolsDirectory.vue";
 <template>
     <PoolsDirectory />
 </template>
+
+<style scoped></style>

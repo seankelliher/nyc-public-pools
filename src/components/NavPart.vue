@@ -89,3 +89,5 @@ defineEmits(["getBorough", "getPoolType"]);
         </div>
     </nav>
 </template>
+
+<style scoped></style>

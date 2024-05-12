@@ -414,3 +414,5 @@ function closeFullPool() {
         </template>
     </div>
 </template>
+
+<style scoped></style>
