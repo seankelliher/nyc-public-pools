@@ -240,6 +240,7 @@ button {
     font-weight: 500;
     border: none;
     border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px #dee3eb;
     flex: initial; /* flex: 0 1 auto */
 }
 
@@ -316,6 +317,7 @@ main {
     background: #e7f2ff;
     border-radius: 8px;
     flex: initial; /* flex: 0 1 auto */
+    box-shadow: 4px 4px 4px 1px #dee3eb;
     position: relative;
 }
 
