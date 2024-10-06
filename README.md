@@ -1,7 +1,7 @@
 [![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/nyc-public-pools?style=flat-square)](/LICENSE.txt)
 ## Public Swimming pools in New York City
 
-Directory of public swimming pools in New York City. [View working component](https://sean-kelliher-nyc-public-pools.netlify.app).
+Searchable directory of public swimming pools in New York City. Users can filter by borough or pool type, a combination of the two, or search by a pool's name. Click or tap a returned pool to view detailed information about it. Built with Vue.js. [View working component](https://sean-kelliher-nyc-public-pools.netlify.app).
 
 ## Project Status
 
@@ -33,14 +33,6 @@ To Run Vue:
 To Visit App:
 
 Visit the localhost port displayed in the terminal after running `npm run dev`.
-
-## Reflection
-
-I set out to build a searchable directory of public swimming pools in New York City. I wanted users to have several paths to find a pool. Users can search by borough or pool type, individually or combined, and by pool name.
-
-The results are returned at a comfortable pace. Users first see a "summary" box of each pool's location. From there, they can expand an individual pool to show detailed information such as pool dimensions, and other way-finding details such a cross streets and if the pool is located within a park. Many pools are inside parks.
-
-Meeting WACG requirements was challenging. Meetings color contrast requirements only took some testing and colors changes. But, ensuring the directory could function with only a keyboard (no mouse) took some thinking. When a user clicks a pool's "summary" box, the box expands to a larger pop-up box. When this happens, I needed to deactivate the now background elements and only allow a user to tab through and activate elements in the foreground "details" box. I used reactive variables and modified their "tab index" state when necessary. Also, I needed to modify the ARIA "role" of clickable figure icons so browsers viewed them as "links" and not "presentation."
 
 ## Acknowledgments
 
