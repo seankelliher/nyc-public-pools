@@ -1,7 +1,7 @@
 /* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
 body {
     margin-top: 0;
-    background: #fcfcff;
+    background: #f7f9ff; /* N-98 */
 }
 
 /* Image becomes no larger than actual size. */
@@ -12,10 +12,10 @@ img {
 }
 
 #container {
-    width:  95%;
+    width:  100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 2.5%;
+    padding: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start; /* main axis */
@@ -23,10 +23,11 @@ img {
 }
 
 header {
-    width: 100%;
+    width: 95%;
     margin-bottom: 2em ;
-    padding:  0;
-    background: #dee3eb;
+    padding: 0.5em 2.5%;
+    background: #cde5ff; /* P-90 */
+    border-bottom: 2px solid #001d32; /* P-10 */
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
@@ -38,11 +39,9 @@ header {
 header::before {
     content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: calc((100vw - 100%) / -2);
-    left: calc((100vw - 100%) / -2);
-    background: #dee3eb;
+    inset: -2px calc((100vw - 100%) / -2);
+    background: #cde5ff; /* P-90 */
+    border-bottom: 2px solid #001d32; /* P-10 */
     z-index: -1;
 }
 
@@ -70,7 +69,7 @@ header::before {
 
 form {
     margin: 0;
-    background: #dee3eb;
+    border: 2px solid #fff; /* N-100 */
     border-radius: 8px;
     flex: initial; /* flex: 0 1 auto */
     display: flex;
@@ -146,7 +145,7 @@ input {
 
 nav {
     margin: 0;
-    padding: 0;
+    padding: 0 2.5%;
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
@@ -156,55 +155,55 @@ nav {
 
 @media (min-width: 300px) and (max-width: 399px) {
     nav {
-        width: 100%;
+        width: 95%;
     }
 }
 
 @media (min-width: 400px) and (max-width: 499px) {
     nav {
-        width: 90%;
+        width: 85%;
     }
 }
 
 @media (min-width: 500px) and (max-width: 599px) {
     nav {
-        width: 80%;
+        width: 75%;
     }
 }
 
 @media (min-width: 600px) and (max-width: 699px) {
     nav {
-        width: 70%;
+        width: 65%;
     }
 }
 
 @media (min-width: 700px) and (max-width: 799px) {
     nav {
-        width: 60%;
+        width: 55%;
     }
 }
 
 @media (min-width: 800px) and (max-width: 899px) {
     nav {
-        width: 50%;
+        width: 45%;
     }
 }
 
 @media (min-width: 900px) and (max-width: 999px) {
     nav {
-        width: 40%;
+        width: 35%;
     }
 }
 
 @media (min-width: 1000px) and (max-width: 1099px) {
     nav {
-        width: 35%;
+        width: 30%;
     }
 }
 
 @media (min-width: 1100px) {
     nav {
-        width: 30%;
+        width: 25%;
     }
 }
 
@@ -253,18 +252,21 @@ button:last-child {
 }
 
 .button-borough {
-    color: #001d32;
-    background: #cde5ff;
+    color: #001d32; /* P-10 */
+    background: #cde5ff; /* P-90 */
+    border: 2px solid #cde5ff; /* P-90 */
 }
 
+/* Styles for button-type differ from Material Design. Its green is drab. */
 .button-type {
     color: #171e00;
     background: #cff063;
+    border: 2px solid #cff063;
 }
 
 /* Selected buttons in nav */
 #boroughs .selected {
-    border: 2px solid #1b7dba;
+    border: 2px solid #2d638b; /* P-40 */
 }
 
 #types .selected {
@@ -272,11 +274,11 @@ button:last-child {
 }
 
 #criteria-bar {
-    width: 100%;
+    width: 95%;
     margin: 0;
-    padding: 0.5em 0;
-    border-top: 2px solid #dee3eb;
-    border-bottom: 2px solid #dee3eb;
+    padding: 0.5em 2.5%;
+    border-top: 2px solid #72787e; /* NV-50 */
+    border-bottom: 2px solid #72787e; /* NV-50 */
     flex: initial; /* flex: 0 1 auto */
     position: relative;
 }
@@ -284,19 +286,16 @@ button:last-child {
 #criteria-bar::before {
     content: "";
     position: absolute;
-    top: -2px;
-    bottom: -2px;
-    right: calc((100vw - 100%) / -2);
-    left: calc((100vw - 100%) / -2);
-    border-top: 2px solid #dee3eb;
-    border-bottom: 2px solid #dee3eb;
+    inset: -2px calc((100vw - 100%) / -2);
+    border-top: 2px solid #72787e; /* NV-50 */
+    border-bottom: 2px solid #72787e; /* NV-50 */
     z-index: -1;
 }
 
 main {
-    width: 100%;
+    width: 95%;
     margin: 0;
-    padding: 1em 0;
+    padding: 1em 2.5%;
     flex: 1; /* flex: 1 1 auto */
     display: flex;
     flex-flow: row wrap;
@@ -314,7 +313,7 @@ main {
 
 .pools {
     margin-bottom: 2em;
-    background: #e7f2ff;
+    background: #cde5ff; /* P-90 */
     border-radius: 8px;
     flex: initial; /* flex: 0 1 auto */
     box-shadow: 4px 4px 4px 1px #dee3eb;
@@ -323,7 +322,7 @@ main {
 
 .errors {
     margin-bottom: 2em;
-    background: #ffdad6;
+    background: #ffdad6; /* E-90 */
     border-radius: 8px;
     flex: initial; /* flex: 0 1 auto */
 }
@@ -353,7 +352,7 @@ main {
     position: fixed; /* do not use absolute, unreliable results */
     max-height: 600px;
     z-index: 1;
-    background: #fcfcff;
+    background: #f7f9ff; /* N-98 */
     border-radius: 8px;
     box-shadow: 3px 3px 6px 6px #e2e2e5; /* hor, vert, blur, spread */
     overflow: scroll;
@@ -389,9 +388,9 @@ main {
 h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.25em; /* 20px */
-    line-height: 3;
+    line-height: 1.5;
     font-weight: 600;
-    color: #1a1c1e;
+    color: #001d32; /* P-10 */
 }
 
 h1:hover {
@@ -403,7 +402,7 @@ h2 {
     font-size: 1em; /* 16px */
     line-height: 1.5;
     font-weight: 500;
-    color: #1a1c1e;;
+    color: #181c20; /* N-10 */
 }
 
 p {
@@ -415,7 +414,7 @@ p {
 }
 
 .error-text {
-    color: #410002;
+    color: #410002; /* E-10 */
 }
 
 dl {
@@ -431,7 +430,7 @@ dt {
     font-size: 1em; /* 16px */
     line-height: 1.5;
     font-weight: 600;
-    color: #001d32;
+    color: #001d32; /* P-10 */
 }
 
 dd {
@@ -439,7 +438,7 @@ dd {
     font-size: 1em; /* 16px */
     line-height: 1.5;
     font-weight: 400;
-    color: #001d32;
+    color: #001d32; /* P-10 */
     margin-left: 0;
 }
 
@@ -448,5 +447,5 @@ label {
     font-size: 1em; /* 16px */
     line-height: 1.2;
     font-weight: 400;
-    color: #42474e;
+    color: #001d32; /* P-10 */
 }
