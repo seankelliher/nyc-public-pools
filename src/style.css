@@ -1,3 +1,10 @@
+/* @link https://utopia.fyi/type/calculator?c=320,15,1.125,1280,17,1.125,1,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+:root {
+    --fs-1: clamp(0.8333rem, 0.7963rem + 0.1852vw, 0.9444rem);
+    --fs0: clamp(0.9375rem, 0.8958rem + 0.2083vw, 1.0625rem);
+    --fs1: clamp(1.0547rem, 1.0078rem + 0.2344vw, 1.1953rem);
+}
+
 /* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
 body {
     margin-top: 0;
@@ -136,7 +143,7 @@ form {
 input {
     width: 100%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 0.875em; /* 14px */
+    font-size: var(--fs-1);
     line-height: 1.5;
     font-weight: 400;
     color: #001b3f;
@@ -234,7 +241,7 @@ button {
     margin-bottom: 1em;
     padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em; /* 16px */
+    font-size: var(--fs0);
     line-height: 1.8;
     font-weight: 500;
     border: none;
@@ -387,7 +394,7 @@ main {
 /* Fonts */
 h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.25em; /* 20px */
+    font-size: var(--fs1);
     line-height: 1.5;
     font-weight: 600;
     color: #001d32; /* P-10 */
@@ -399,7 +406,7 @@ h1:hover {
 
 h2 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em; /* 16px */
+    font-size: var(--fs0);
     line-height: 1.5;
     font-weight: 500;
     color: #181c20; /* N-10 */
@@ -407,7 +414,7 @@ h2 {
 
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em; /* 16px */
+    font-size: var(--fs0);
     line-height: 1.5;
     font-weight: 400;
     color: #001d32;
@@ -427,7 +434,7 @@ dl:last-child {
 
 dt {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em; /* 16px */
+    font-size: var(--fs0);
     line-height: 1.5;
     font-weight: 600;
     color: #001d32; /* P-10 */
@@ -435,7 +442,7 @@ dt {
 
 dd {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em; /* 16px */
+    font-size: var(--fs0);
     line-height: 1.5;
     font-weight: 400;
     color: #001d32; /* P-10 */
@@ -444,7 +451,7 @@ dd {
 
 label {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em; /* 16px */
+    font-size: var(--fs-1);
     line-height: 1.2;
     font-weight: 400;
     color: #001d32; /* P-10 */
