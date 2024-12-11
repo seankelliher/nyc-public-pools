@@ -8,7 +8,7 @@
 /* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
 body {
     margin-top: 0;
-    background: #f7f9ff; /* N-98 */
+    background: #f8f9ff; /* N-98 */
 }
 
 /* Image becomes no larger than actual size. */
@@ -31,10 +31,11 @@ img {
 
 header {
     width: 95%;
-    margin-bottom: 2em ;
+    margin: 0;
     padding: 0.5em 2.5%;
-    background: #cde5ff; /* P-90 */
-    border-bottom: 2px solid #001d32; /* P-10 */
+    background: #baeaff; /* S-90 */
+    background: #d3e3ff; /* P-90 */
+    border-bottom: 2px solid #001f29; /* S-10 */
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
@@ -47,12 +48,15 @@ header::before {
     content: "";
     position: absolute;
     inset: -2px calc((100vw - 100%) / -2);
-    background: #cde5ff; /* P-90 */
-    border-bottom: 2px solid #001d32; /* P-10 */
+    background: #baeaff; /* S-90 */
+    background: #d3e3ff; /* P-90 */
+    border-bottom: 2px solid #001f29; /* S-10 */
+    border-bottom: 2px solid #001c39; /* P-10 */
     z-index: -1;
 }
 
 .logo-title {
+    width: 50%;
     margin: 0;
     padding: 0;
     flex: initial; /* flex: 0 1 auto */
@@ -75,178 +79,45 @@ header::before {
 }
 
 form {
+    width: 30%;
     margin: 0;
-    border: 2px solid #fff; /* N-100 */
     border-radius: 8px;
-    flex: initial; /* flex: 0 1 auto */
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start; /* main axis */
-    align-items: center; /* cross axis */
-}
-
-@media (min-width: 300px) and (max-width: 499px) {
-    .logo-title {
-        width: 100%;
-    }
-
-    form {
-        width: 90%;
-        padding: 0.5em 5% 1em; /* longhand 0.5em 5% 1em 5% */
-    }
-}
-
-@media (min-width: 500px) and (max-width: 599px) {
-    .logo-title {
-        width: 100%;
-    }
-
-    form {
-        width: 80%;
-        padding: 0.5em 5% 1em; /* longhand 0.5em 5% 1em 5%; */
-    }
-}
-
-@media (min-width: 600px) and (max-width: 699px) {
-    .logo-title {
-        width: 100%;
-    }
-
-    form {
-        width: 70%;
-        padding: 0.5em 5% 1em; /* longhand 0.5em 5% 1em 5% */
-    }
-}
-
-@media (min-width: 700px) and (max-width: 999px) {
-    .logo-title {
-        width: 50%;
-    }
-
-    form {
-        width: 37%;
-        padding: 0.5em 1.5%;
-    }
-}
-
-@media (min-width: 1000px) {
-    .logo-title {
-        width: 50%;
-    }
-
-    form {
-        width: 27%;
-        padding: 0.5em 1.5%;
-    }
-}
-
-input {
-    width: 100%;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: var(--fs-1);
-    line-height: 1.5;
-    font-weight: 400;
-    color: #001b3f;
-    flex: initial; /* flex: 0 1 auto */
-}
-
-nav {
-    margin: 0;
-    padding: 0 2.5%;
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; /* main axis */
-    align-items: flex-start; /* cross axis */
+    align-items: center; /* cross axis */
 }
 
-@media (min-width: 300px) and (max-width: 399px) {
-    nav {
-        width: 95%;
-    }
-}
-
-@media (min-width: 400px) and (max-width: 499px) {
-    nav {
-        width: 85%;
-    }
-}
-
-@media (min-width: 500px) and (max-width: 599px) {
-    nav {
-        width: 75%;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 699px) {
-    nav {
-        width: 65%;
-    }
-}
-
-@media (min-width: 700px) and (max-width: 799px) {
-    nav {
-        width: 55%;
-    }
-}
-
-@media (min-width: 800px) and (max-width: 899px) {
-    nav {
-        width: 45%;
-    }
-}
-
-@media (min-width: 900px) and (max-width: 999px) {
-    nav {
-        width: 35%;
-    }
-}
-
-@media (min-width: 1000px) and (max-width: 1099px) {
-    nav {
-        width: 30%;
-    }
-}
-
-@media (min-width: 1100px) {
-    nav {
-        width: 25%;
-    }
-}
-
-#boroughs {
-    width: 45%;
-    margin-bottom: 1em;
-    padding:  0;
+input {
+    width: 75%;
+    padding: 0 2.5%;
+    font-size: var(--fs-1);
+    line-height: 1.5;
+    font-weight: 400;
+    border: 1px solid #001f29; /* S-10 */
+    border-radius: 6px;
+    color: #191c20; /* N-10 */
     flex: initial; /* flex: 0 1 auto */
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start; /* main axis */
-    align-items: flex-start; /* cross axis */
 }
 
-#types {
-    width: 45%;
+label {
+    font-size: var(--fs-1);
+    line-height: 1.3;
+    color: #001f29; /* S-10 */
+    color: #001c39; /* P-10 */
+}
+
+.button-submit {
+    width: 12%;
     margin: 0;
-    padding:  0;
-    flex: initial; /* flex: 0 1 auto */
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start; /* main axis */
-    align-items: flex-start; /* cross axis */
-}
-
-button {
-    width: 100%;
-    margin-bottom: 1em;
     padding: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #001f29; /* S-10 */
+    color: #001c39; /* P-10 */
+    background: none;
+    border: none;
     font-size: var(--fs0);
     line-height: 1.8;
-    font-weight: 500;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px 1px #dee3eb;
     flex: initial; /* flex: 0 1 auto */
 }
 
@@ -254,38 +125,40 @@ button:hover {
     cursor: pointer;
 }
 
-button:last-child {
-    margin-bottom: 0;
+nav {
+    width: 95%;
+    margin: 0;
+    padding: 1em 2.5%;
+    flex: initial; /* flex: 0 1 auto */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; /* main axis */
+    align-items: flex-start; /* cross axis */
 }
 
-.button-borough {
-    color: #001d32; /* P-10 */
-    background: #cde5ff; /* P-90 */
-    border: 2px solid #cde5ff; /* P-90 */
+/* For dl in nav */
+.filter-group {
+    width: 15%;
+    margin: 0;
+    padding: 0;
+    flex: initial; /* flex: 0 1 auto */
 }
 
-/* Styles for button-type differ from Material Design. Its green is drab. */
-.button-type {
-    color: #171e00;
-    background: #cff063;
-    border: 2px solid #cff063;
+.filter:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
-/* Selected buttons in nav */
-#boroughs .selected {
-    border: 2px solid #2d638b; /* P-40 */
-}
-
-#types .selected {
-    border: 2px solid #688000;
+.active {
+    color: #7326a6; /* custom color */
 }
 
 #criteria-bar {
     width: 95%;
     margin: 0;
     padding: 0.5em 2.5%;
-    border-top: 2px solid #72787e; /* NV-50 */
-    border-bottom: 2px solid #72787e; /* NV-50 */
+    /* border-top: 2px solid #73777f;  NV-50 */
+    /* border-bottom: 2px solid #73777f;  NV-50 */
     flex: initial; /* flex: 0 1 auto */
     position: relative;
 }
@@ -294,110 +167,70 @@ button:last-child {
     content: "";
     position: absolute;
     inset: -2px calc((100vw - 100%) / -2);
-    border-top: 2px solid #72787e; /* NV-50 */
-    border-bottom: 2px solid #72787e; /* NV-50 */
+    border-top: 2px solid #73777f; /* NV-50 */
+    border-bottom: 2px solid #73777f; /* NV-50 */
     z-index: -1;
 }
 
 main {
     width: 95%;
+    margin: 0 2.5%;
+    padding: 1em 0;
+    flex: initial; /* flex: 0 1 auto */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start; /* main axis */
+    align-items: stretch; /* cross-axis */
+    overflow-x: scroll;
+}
+
+/* box-shadow: hor, vert, blur, spread */
+.pool-card {
+    width: 18%;
+    margin-right: 2%;
+    padding: 1em 2%;
+    background: #ededf4; /* N-94 */
+    border-radius: 8px;
+    flex: none; /* flex: 0 1 auto */
+    box-shadow: 4px 4px 4px 1px #d9dae0; /* N-87 */
+}
+
+.pool-card:hover {
+    cursor: pointer;
+}
+
+/* For dl in .pool-card  */
+.pool-card-list {
+    width: 100%;
     margin: 0;
-    padding: 1em 2.5%;
-    flex: 1; /* flex: 1 1 auto */
+    padding: 0;
+    flex: initial; /* flex: 0 1 auto */
+}
+
+.full-pool {
+    width: 95%;
+    margin: 0;
+    padding: 0.5em 2.5%;
+    flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between; /* main axis */
-    align-items: stretch; /* cross-axis */
+    align-items: stretch; /* cross axis */
 }
 
-@media (min-width: 1000px) {
-    main::after {
-        content: "";
-        width: 27%;
-        padding: 0 2%;
-    }
-}
-
-.pools {
-    margin-bottom: 2em;
-    background: #cde5ff; /* P-90 */
-    border-radius: 8px;
-    flex: initial; /* flex: 0 1 auto */
-    box-shadow: 4px 4px 4px 1px #dee3eb;
-    position: relative;
-}
-
-.errors {
-    margin-bottom: 2em;
-    background: #ffdad6; /* E-90 */
-    border-radius: 8px;
-    flex: initial; /* flex: 0 1 auto */
-}
-
-@media (min-width: 300px) and (max-width: 649px) {
-    .pools, .errors {
-        width: 90%;
-        padding: 0 5%;
-    }
-}
-
-@media (min-width: 650px) and (max-width: 999px) {
-    .pools, .errors {
-        width: 42%;
-        padding: 0 3%;
-    }
-}
-
-@media (min-width: 1000px) {
-    .pools, .errors {
-        width: 27%;
-        padding: 0 2%;
-    }
-}
-
-#full-pool {
-    position: fixed; /* do not use absolute, unreliable results */
-    max-height: 600px;
-    z-index: 1;
-    background: #f7f9ff; /* N-98 */
-    border-radius: 8px;
-    box-shadow: 3px 3px 6px 6px #e2e2e5; /* hor, vert, blur, spread */
-    overflow: scroll;
-}
-
-/* Figure ids for icons */
-#close-icon {
-    width: 24px;
-    margin: 0;
+/* For dl in .full-pool  */
+.full-pool-list {
+    width: 55%;
+    margin-bottom: 1em;
     padding: 0;
-    position: fixed;
-    z-index: 1;
-}
-
-#close-icon:hover {
-    cursor: pointer;
-}
-
-.open-in-full-icon {
-    width: 20px;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 5px;
-    right:  10px;
-}
-
-.open-in-full-icon:hover {
-    cursor: pointer;
+    flex: initial; /* flex: 0 1 auto */
 }
 
 /* Fonts */
 h1 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: var(--fs1);
     line-height: 1.5;
-    font-weight: 600;
-    color: #001d32; /* P-10 */
+    color: #001c39; /* P-10 */
 }
 
 h1:hover {
@@ -405,54 +238,72 @@ h1:hover {
 }
 
 h2 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
     font-size: var(--fs0);
     line-height: 1.5;
-    font-weight: 500;
-    color: #181c20; /* N-10 */
+    color: #191c20; /* N-10 */
 }
 
 p {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: var(--fs0);
     line-height: 1.5;
-    font-weight: 400;
-    color: #001d32;
+    color: #191c20; /* N-10 */
 }
 
 .error-text {
-    color: #410002; /* E-10 */
-}
-
-dl {
-    padding-bottom: 1.5em;
-}
-
-dl:last-child {
-    padding-bottom: 0;
+    color: #ba1a1a; /* E-40 */
 }
 
 dt {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
     font-size: var(--fs0);
     line-height: 1.5;
-    font-weight: 600;
-    color: #001d32; /* P-10 */
+    color: #191c20; /* N-10 */
 }
 
 dd {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
     font-size: var(--fs0);
     line-height: 1.5;
-    font-weight: 400;
-    color: #001d32; /* P-10 */
+    color: #191c20; /* N-10 */
     margin-left: 0;
 }
 
-label {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: var(--fs-1);
-    line-height: 1.2;
+/* GOOGLE FONT - roboto-flex - variable weight font, 100 to 1000 */
+.roboto-flex {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+}
+/* Font weights CHECL - SOME WEIGHT MAY BE UNUSED */
+.three {
+    font-weight: 300;
+}
+
+.four {
     font-weight: 400;
-    color: #001d32; /* P-10 */
+}
+
+.five {
+    font-weight: 500;
+}
+
+.six {
+    font-weight: 600;
+}
+
+.seven {
+    font-weight: 700;
 }
