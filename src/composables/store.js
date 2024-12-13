@@ -4,7 +4,7 @@ import { pools } from "../data/pools.js";
 export const store = reactive({
     searchTerm: "",
     borough: "",
-    locationType: "",
+    siteType: "",
     swimType: "",
     selects:[],
     commons: [],
@@ -17,7 +17,7 @@ export const store = reactive({
     resetMessages: function() {
         store.commons.length = 0;
         store.borough = "";
-        store.locationType = "",
+        store.siteType = "",
         store.swimType = "",
         store.noResults = false;
         store.searchTerm = "";
@@ -53,24 +53,24 @@ export const store = reactive({
             store.selects.push(boroughSelects);
         }
 
-        // Location Types - group and push pools from selected type.
-        if (store.locationType !== "") {
-            const locationTypeSelects = [];
+        // Site Types - group and push pools from selected type.
+        if (store.siteType !== "") {
+            const siteTypeSelects = [];
 
-            if (store.locationType === "indoor") {
+            if (store.siteType === "indoor") {
                 const indoor = Object.groupBy(pools, ({ indoor }) => indoor);
                 for (const item in indoor.true) {
-                    locationTypeSelects.push(indoor.true[item].locId);
+                    siteTypeSelects.push(indoor.true[item].locId);
                 }
-                store.selects.push(locationTypeSelects);
+                store.selects.push(siteTypeSelects);
             }
             
-            if (store.locationType === "outdoor") {
+            if (store.siteType === "outdoor") {
                 const outdoor = Object.groupBy(pools, ({ outdoor }) => outdoor);
                 for (const item in outdoor.true) {
-                    locationTypeSelects.push(outdoor.true[item].locId);
+                    siteTypeSelects.push(outdoor.true[item].locId);
                 }
-                store.selects.push(locationTypeSelects);
+                store.selects.push(siteTypeSelects);
             }
         }
 
@@ -125,8 +125,8 @@ export const store = reactive({
         store.borough = bor;
         store.processInputs();
     },
-    updateLocationType: function(loc) {
-        store.locationType = loc;
+    updateSiteType: function(type) {
+        store.siteType = type;
         store.processInputs();
     },
     updateSwimType: function(swim) {
