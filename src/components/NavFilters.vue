@@ -77,20 +77,20 @@ import { store } from "../composables/store.js";
         </dl>
 
         <dl class="filter-group">
-            <dt class="roboto-flex seven">Location type</dt>
+            <dt class="roboto-flex seven">Site type</dt>
             <dd
                 class="filter roboto-flex four"
-                :class="{active: store.locationType === 'indoor'}"
-                @click="store.updateLocationType('indoor')"
-                @keyup.enter="store.updateLocationType('indoor')"
+                :class="{active: store.siteType === 'indoor'}"
+                @click="store.updateSiteType('indoor')"
+                @keyup.enter="store.updateSiteType('indoor')"
             >
                 Indoor
             </dd>
             <dd
                 class="filter roboto-flex four"
-                :class="{active: store.locationType === 'outdoor'}"
-                @click="store.updateLocationType('outdoor')"
-                @keyup.enter="store.updateLocationType('outdoor')"
+                :class="{active: store.siteType === 'outdoor'}"
+                @click="store.updateSiteType('outdoor')"
+                @keyup.enter="store.updateSiteType('outdoor')"
             >
                 Outdoor
             </dd>
