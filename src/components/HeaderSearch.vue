@@ -17,12 +17,12 @@ import { store } from "../composables/store.js";
                 role="button"
                 class="title"
             >
-                <h1 class="roboto-flex seven">Public Pools</h1>
+                <h1 class="roboto-flex seven">Public Swimming Pools</h1>
             </div>
         </div>
 
         <form @submit.prevent="store.runSearch()">
-            <label for="search-bar" class="roboto-flex three">Search by pool name</label>
+            <label for="search-bar" class="roboto-flex three">Search names</label>
             <input
                 id="search-bar"
                 class="roboto-flex three"
@@ -30,7 +30,7 @@ import { store } from "../composables/store.js";
                 v-model="store.searchTerm"
                 placeholder="Haffen Pool"
             />
-            <button class="button-submit roboto-flex four" type="submit">Search</button> 
+            <button class="button-submit roboto-flex three" type="submit">Go</button> 
         </form>
     </header>
 </template>
