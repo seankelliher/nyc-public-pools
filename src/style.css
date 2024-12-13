@@ -39,9 +39,23 @@ header {
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; /* main axis */
-    align-items: center; /* cross axis */
+    /* justify-content: flex-start; main axis */
+    /* align-items: flex-start; cross axis */
     position: relative;
+}
+
+@media (min-width: 300px) and (max-width: 699px) {
+    header {
+        justify-content: flex-start; /* main axis */
+        align-items: flex-start; /* cross axis */
+    }
+}
+
+@media (min-width: 700px) {
+    header {
+        justify-content: space-between; /* main axis */
+        align-items: center; /* cross axis */
+    }
 }
 
 header::before {
@@ -56,7 +70,7 @@ header::before {
 }
 
 .logo-title {
-    width: 50%;
+    /* width: 100%; */
     margin: 0;
     padding: 0;
     flex: initial; /* flex: 0 1 auto */
@@ -68,37 +82,60 @@ header::before {
 
 /* Figure class for logo */
 .logo {
-    width: 88px;
+    width: 68px;
     margin: 0;
     padding: 0;
     flex: initial; /* flex: 0 1 auto */;
 }
 
 .title {
-    margin-left: 1em;
+    margin-left: 0.5em
 }
 
 form {
-    width: 30%;
+    /* width: 100%; */
     margin: 0;
     border-radius: 8px;
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; /* main axis */
+    /* justify-content: flex-start; main axis */
     align-items: center; /* cross axis */
 }
 
+@media (min-width: 300px) and (max-width: 699px) {
+    .logo-title {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+        justify-content: flex-start; /* main axis */
+    }
+}
+
+@media (min-width: 700px) {
+    .logo-title {
+        width: 50%;
+    }
+
+    form {
+        width: 50%;
+        justify-content: flex-end; /* main axis */
+    }
+}
+
 input {
-    width: 75%;
-    padding: 0 2.5%;
+    width: 10em;
+    margin: 0 2.5%;
+    padding: 0 0.5em;
+    flex: initial;
     font-size: var(--fs-1);
     line-height: 1.5;
     font-weight: 400;
     border: 1px solid #001f29; /* S-10 */
-    border-radius: 6px;
+    border-radius: 8px;
     color: #191c20; /* N-10 */
-    flex: initial; /* flex: 0 1 auto */
 }
 
 label {
@@ -109,16 +146,15 @@ label {
 }
 
 .button-submit {
-    width: 12%;
     margin: 0;
     padding: 0;
+    flex: initial; /* flex: 0 1 auto */
     color: #001f29; /* S-10 */
     color: #001c39; /* P-10 */
     background: none;
     border: none;
     font-size: var(--fs0);
     line-height: 1.8;
-    flex: initial; /* flex: 0 1 auto */
 }
 
 button:hover {
@@ -132,16 +168,61 @@ nav {
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start; /* main axis */
+    /* justify-content: space-between; main axis */
     align-items: flex-start; /* cross axis */
 }
 
 /* For dl in nav */
 .filter-group {
-    width: 15%;
+    /* width: 15%; */
     margin: 0;
     padding: 0;
     flex: initial; /* flex: 0 1 auto */
+
+}
+
+@media (min-width: 300px) and (max-width: 499px) {
+    nav {
+        justify-content: space-between; /* main axis */
+    }
+
+    .filter-group {
+        width: 35%;
+    }
+
+    .filter-group:first-child {
+        margin-bottom: 1em;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 799px) {
+    nav {
+        justify-content: space-between; /* main axis */
+    }
+
+    .filter-group {
+        width: 20%;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1099px) {
+    nav {
+        justify-content: flex-start; /* main axis */
+    }
+
+    .filter-group {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1100px) {
+    nav {
+        justify-content: flex-start; /* main axis */
+    }
+
+    .filter-group {
+        width: 15%;
+    }
 }
 
 .filter:hover {
@@ -173,6 +254,18 @@ nav {
 }
 
 main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: initial; /* flex: 0 1 auto */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; /* main axis */
+    align-items: flex-start; /* cross-axis */
+    position: relative; /* TESTING */
+}
+
+.inner-main {
     width: 95%;
     margin: 0 2.5%;
     padding: 1em 0;
@@ -184,15 +277,85 @@ main {
     overflow-x: scroll;
 }
 
+/* forward arrow icon */
+.icon-forward {
+    width: 24px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+/* back arrow icon */
+.icon-back {
+    width: 24px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
 /* box-shadow: hor, vert, blur, spread */
 .pool-card {
-    width: 18%;
+    /*width: 18%;
     margin-right: 2%;
-    padding: 1em 2%;
+    padding: 1em 2%;*/
     background: #ededf4; /* N-94 */
     border-radius: 8px;
     flex: none; /* flex: 0 1 auto */
     box-shadow: 4px 4px 4px 1px #d9dae0; /* N-87 */
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+    .pool-card {
+        width: 55%;
+        margin-right: 5%;
+        padding: 1em 5%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 499px) {
+    .pool-card {
+        width: 45%;
+        margin-right: 5%;
+        padding: 1em 5%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 599px) {
+    .pool-card {
+        width: 35%;
+        margin-right: 5%;
+        padding: 1em 5%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 699px) {
+    .pool-card {
+        width: 25%;
+        margin-right: 5%;
+        padding: 1em 5%;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 899px) {
+    .pool-card {
+        width: 20%;
+        margin-right: 5%;
+        padding: 1em 5%;
+    }
+}
+
+@media (min-width: 900px) {
+    .pool-card {
+        width: 18%;
+        margin-right: 3%;
+        padding: 1em 2.5%;
+    }
 }
 
 .pool-card:hover {
