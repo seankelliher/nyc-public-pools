@@ -275,6 +275,8 @@ main {
     justify-content: flex-start; /* main axis */
     align-items: stretch; /* cross-axis */
     overflow-x: scroll;
+    overscroll-behavior: none; /* For Safari */
+    /* https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft */
 }
 
 /* forward arrow icon */
