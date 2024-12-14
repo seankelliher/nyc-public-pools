@@ -5,7 +5,7 @@ Searchable directory of public swimming pools in New York City. Users can filter
 
 ## Project Status
 
-TESTING: Testimg for bugs, general accessibility (WACG), and cross-browser requirements.
+Project meets general accessibility (WACG) and cross-browser requirements. More testing with a dedicated services (e.g., Sauce Labs) would be helpful if deploying to production.
 
 ## Project Screen Shots
 
