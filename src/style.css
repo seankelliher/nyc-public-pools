@@ -367,7 +367,7 @@ main {
 /* For dl in .full-pool  */
 .full-pool-list {
     width: 55%;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     padding: 0;
     flex: initial; /* flex: 0 1 auto */
 }
