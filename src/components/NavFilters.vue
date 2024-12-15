@@ -5,8 +5,10 @@ import { store } from "../composables/store.js";
 <template>
      <nav>
         <dl class="filter-group">
-            <dt class="roboto-flex seven">Boroughs</dt>
-            <dd
+            <div class="roboto-flex seven">
+                <dt>Boroughs</dt>
+            </div>
+            <div
                 class="filter roboto-flex four"
                 :class="{active: store.borough === 'Bronx'}"
                 tabindex="0"
@@ -14,9 +16,9 @@ import { store } from "../composables/store.js";
                 @click="store.updateBorough('Bronx')"
                 @keyup.enter="store.updateBorough('Bronx')"
             >
-                Bronx
-            </dd>
-            <dd
+                <dd>Bronx</dd>
+            </div>
+            <div
                 class="filter roboto-flex four"
                 :class="{active: store.borough === 'Brooklyn'}"
                 tabindex="0"
@@ -24,9 +26,9 @@ import { store } from "../composables/store.js";
                 @click="store.updateBorough('Brooklyn')"
                 @keyup.enter="store.updateBorough('Brooklyn')"
             >
-                Brooklyn
-            </dd>
-            <dd
+                <dd>Brooklyn</dd>
+            </div>
+            <div
                 class="filter roboto-flex four"
                 :class="{active: store.borough === 'Manhattan'}"
                 tabindex="0"
@@ -34,9 +36,9 @@ import { store } from "../composables/store.js";
                 @click="store.updateBorough('Manhattan')"
                 @keyup.enter="store.updateBorough('Manhattan')"
             >
-                Manhattan
-            </dd>
-            <dd
+                <dd>Manhattan</dd>
+            </div>
+            <div
                 class="filter roboto-flex four"
                 :class="{active: store.borough === 'Queens'}"
                 tabindex="0"
@@ -44,9 +46,9 @@ import { store } from "../composables/store.js";
                 @click="store.updateBorough('Queens')"
                 @keyup.enter="store.updateBorough('Queens')"
             >
-                Queens
-            </dd>
-            <dd
+                <dd>Queens</dd>
+            </div>
+            <div
                 class="filter roboto-flex four"
                 :class="{active: store.borough === 'Staten Island'}"
                 tabindex="0"
@@ -54,8 +56,8 @@ import { store } from "../composables/store.js";
                 @click="store.updateBorough('Staten Island')"
                 @keyup.enter="store.updateBorough('Staten Island')"
             >
-                Staten Island
-            </dd>
+                <dd>Staten Island</dd>
+            </div>
         </dl>
 
         <dl class="filter-group">
