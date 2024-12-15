@@ -5,59 +5,70 @@ import { store } from "../composables/store.js";
 <template>
      <nav>
         <dl class="filter-group">
-            <div class="roboto-flex seven">
-                <dt>Boroughs</dt>
-            </div>
-            <div
-                class="filter roboto-flex four"
-                :class="{active: store.borough === 'Bronx'}"
-                tabindex="0"
-                role="button"
-                @click="store.updateBorough('Bronx')"
-                @keyup.enter="store.updateBorough('Bronx')"
-            >
-                <dd>Bronx</dd>
-            </div>
-            <div
-                class="filter roboto-flex four"
-                :class="{active: store.borough === 'Brooklyn'}"
-                tabindex="0"
-                role="button"
-                @click="store.updateBorough('Brooklyn')"
-                @keyup.enter="store.updateBorough('Brooklyn')"
-            >
-                <dd>Brooklyn</dd>
-            </div>
-            <div
-                class="filter roboto-flex four"
-                :class="{active: store.borough === 'Manhattan'}"
-                tabindex="0"
-                role="button"
-                @click="store.updateBorough('Manhattan')"
-                @keyup.enter="store.updateBorough('Manhattan')"
-            >
-                <dd>Manhattan</dd>
-            </div>
-            <div
-                class="filter roboto-flex four"
-                :class="{active: store.borough === 'Queens'}"
-                tabindex="0"
-                role="button"
-                @click="store.updateBorough('Queens')"
-                @keyup.enter="store.updateBorough('Queens')"
-            >
-                <dd>Queens</dd>
-            </div>
-            <div
-                class="filter roboto-flex four"
-                :class="{active: store.borough === 'Staten Island'}"
-                tabindex="0"
-                role="button"
-                @click="store.updateBorough('Staten Island')"
-                @keyup.enter="store.updateBorough('Staten Island')"
-            >
-                <dd>Staten Island</dd>
-            </div>
+            <dt>
+                <div class="roboto-flex seven">Boroughs</div>
+            </dt>
+            
+            <dd>
+                <div
+                    class="filter roboto-flex four"
+                    :class="{active: store.borough === 'Bronx'}"
+                    tabindex="0"
+                    role="button"
+                    @click="store.updateBorough('Bronx')"
+                    @keyup.enter="store.updateBorough('Bronx')"
+                >
+                    Bronx
+                </div>
+            </dd>
+            <dd>
+                <div 
+                    class="filter roboto-flex four"
+                    :class="{active: store.borough === 'Brooklyn'}"
+                    tabindex="0"
+                    role="button"
+                    @click="store.updateBorough('Brooklyn')"
+                    @keyup.enter="store.updateBorough('Brooklyn')"
+                >
+                    Brooklyn
+                </div>
+            </dd>
+            <dd>
+                <div 
+                    class="filter roboto-flex four"
+                    :class="{active: store.borough === 'Manhattan'}"
+                    tabindex="0"
+                    role="button"
+                    @click="store.updateBorough('Manhattan')"
+                    @keyup.enter="store.updateBorough('Manhattan')"
+                >
+                    Manhattan
+                </div>
+            </dd>
+            <dd>
+                <div
+                    class="filter roboto-flex four"
+                    :class="{active: store.borough === 'Queens'}"
+                    tabindex="0"
+                    role="button"
+                    @click="store.updateBorough('Queens')"
+                    @keyup.enter="store.updateBorough('Queens')"
+                >
+                    Queens
+                </div>
+            </dd>
+            <dd>
+                <div 
+                    class="filter roboto-flex four"
+                    :class="{active: store.borough === 'Staten Island'}"
+                    tabindex="0"
+                    role="button"
+                    @click="store.updateBorough('Staten Island')"
+                    @keyup.enter="store.updateBorough('Staten Island')"
+                >
+                    Staten Island
+                </div>
+            </dd>
         </dl>
 
         <dl class="filter-group">
