@@ -8,7 +8,7 @@
 /* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
 body {
     margin-top: 0;
-    background: #f8f9ff; /* N-98 */
+    background: #f8f9ff; /* surface */
 }
 
 /* Image becomes no larger than actual size. */
@@ -33,7 +33,7 @@ header {
     width: 95%;
     margin: 0;
     padding: 0.5em 2.5%;
-    background: #d3e3ff; /* P-90 */
+    background: #34618d; /* primary */
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
@@ -57,9 +57,8 @@ header {
 header::before {
     content: "";
     position: absolute;
-    inset: -2px calc((100vw - 100%) / -2);
-    background: #d3e3ff; /* P-90 */
-    border-bottom: 2px solid #001c39; /* P-10 */
+    inset: 0 calc((100vw - 100%) / -2);
+    background: #34618d; /* primary  */
     z-index: -1;
 }
 
@@ -124,22 +123,26 @@ input {
     font-size: var(--fs-1);
     line-height: 1.5;
     font-weight: 400;
-    border: 1px solid #001f29; /* S-10 */
+    border: 1px solid #fff; /* on primary */
     border-radius: 8px;
-    color: #191c20; /* N-10 */
+    color: #191c20; /* on surface */
+}
+
+input::placeholder {
+    color: #42474e; /* on surface variant */
 }
 
 label {
     font-size: var(--fs-1);
     line-height: 1.3;
-    color: #001c39; /* P-10 */
+    color: #fff; /* on primary */
 }
 
 .button-submit {
     margin: 0;
     padding: 0;
     flex: initial; /* flex: 0 1 auto */
-    color: #001c39; /* P-10 */
+    color: #fff; /* on primary */
     background: none;
     border: none;
     font-size: var(--fs0);
@@ -154,24 +157,33 @@ nav {
     width: 95%;
     margin: 0;
     padding: 1em 2.5%;
+    background: #f2f3f9; /* surface container low */
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-start; /* cross axis */
+    justify-content: space-between; /* main axis */
+    align-items: stretch; /* cross axis */
+    position: relative;
+}
+
+nav::before {
+    content: "";
+    position: absolute;
+    inset: 0 calc((100vw - 100%) / -2);
+    background: #f2f3f9; /* surface container low */
+    z-index: -1;
 }
 
 /* For dl in nav */
 .filter-group {
     margin: 0;
-    padding: 0;
+    padding: 0 2.5%;
     flex: initial; /* flex: 0 1 auto */
+    background: #e6e8ee; /* surface container high */
+    border-radius: 12px;
 }
 
 @media (min-width: 300px) and (max-width: 499px) {
-    nav {
-        justify-content: space-between; /* main axis */
-    }
-
     .filter-group {
         width: 35%;
     }
@@ -179,35 +191,27 @@ nav {
     .filter-group:first-child {
         margin-bottom: 1em;
     }
-}
 
-@media (min-width: 500px) and (max-width: 799px) {
-    nav {
-        justify-content: space-between; /* main axis */
-    }
-
-    .filter-group {
-        width: 20%;
+    .filter-group:nth-child(2) {
+        margin-bottom: 1em;
     }
 }
 
-@media (min-width: 800px) and (max-width: 1099px) {
-    nav {
-        justify-content: flex-start; /* main axis */
-    }
-
+@media (min-width: 500px) and (max-width: 899px) {
     .filter-group {
-        width: 20%;
+        width: 18%;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1099px) {
+    .filter-group {
+        width: 15%;
     }
 }
 
 @media (min-width: 1100px) {
-    nav {
-        justify-content: flex-start; /* main axis */
-    }
-
     .filter-group {
-        width: 15%;
+        width: 12%;
     }
 }
 
@@ -216,14 +220,13 @@ nav {
     text-decoration: underline;
 }
 
-.active {
-    color: #7326a6; /* custom color */
-}
-
 #criteria-bar {
     width: 95%;
     margin: 0;
     padding: 0.5em 2.5%;
+    background: #f2f3f9; /* surface container low */
+    border-top: 2px solid #c2c7cf; /* outline variant */
+    border-bottom: 2px solid #c2c7cf; /* outline variant */
     flex: initial; /* flex: 0 1 auto */
     position: relative;
 }
@@ -232,8 +235,9 @@ nav {
     content: "";
     position: absolute;
     inset: -2px calc((100vw - 100%) / -2);
-    border-top: 2px solid #73777f; /* NV-50 */
-    border-bottom: 2px solid #73777f; /* NV-50 */
+    background: #f2f3f9; /* surface container low */
+    border-top: 2px solid #c2c7cf; /* outline variant */
+    border-bottom: 2px solid #c2c7cf; /* outline variant */
     z-index: -1;
 }
 
@@ -287,10 +291,10 @@ main {
 
 /* box-shadow: hor, vert, blur, spread */
 .pool-card {
-    background: #ededf4; /* N-94 */
+    background: #d0e4ff; /* primary container */
     border-radius: 8px;
     flex: none; /* flex: 0 1 auto */
-    box-shadow: 4px 4px 4px 1px #d9dae0; /* N-87 */
+    box-shadow: 4px 4px 4px 1px #d8dae0; /* surface dim */
 }
 
 @media (min-width: 300px) and (max-width: 399px) {
@@ -376,7 +380,7 @@ main {
 h1 {
     font-size: var(--fs1);
     line-height: 1.5;
-    color: #001c39; /* P-10 */
+    color: #fff; /* on primary */
 }
 
 h1:hover {
@@ -386,32 +390,40 @@ h1:hover {
 h2 {
     font-size: var(--fs0);
     line-height: 1.5;
-    color: #191c20; /* N-10 */
+    color: #191c20; /* on surface */
 }
 
 p {
     font-size: var(--fs0);
     line-height: 1.5;
-    color: #191c20; /* N-10 */
+    color: #191c20; /* on surface */
 }
 
 .error-text {
-    color: #ba1a1a; /* E-40 */
+    color: #ba1a1a; /* error */
 }
 
 dt {
     width: 100%;
     font-size: var(--fs0);
     line-height: 1.5;
-    color: #191c20; /* N-10 */
+    color: #191c20; /* on surface */
 }
 
 dd {
     width: 100%;
     font-size: var(--fs0);
     line-height: 1.5;
-    color: #191c20; /* N-10 */
+    color: #191c20; /* on surface */
     margin-left: 0;
+}
+
+.pool-card-text {
+    color: #164974; /* on secondary container */
+}
+
+.active {
+    color: #bf2424; /* custom color */
 }
 
 /* GOOGLE FONT - roboto-flex - variable weight font, 100 to 1000 */
@@ -433,7 +445,7 @@ dd {
     "YTUC" 712;
 }
 
-/* Font weights CHECL - SOME WEIGHT MAY BE UNUSED */
+/* Font weights */
 .three {
     font-weight: 300;
 }
