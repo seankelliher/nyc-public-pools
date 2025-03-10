@@ -15,7 +15,7 @@ Project meets general accessibility (WACG) and cross-browser requirements. More 
 * Outdoor swimming pools in Queens
 ![screen shot of project](/screenshots/nyc-public-pools-screenshot2.png?s=600)
 
-* With Flushing Meadows Corona Park Pool selected.
+* With Astoria Pool selected.
 ![screen shot of project](/screenshots/nyc-public-pools-screenshot3.png?s=600)
 
 ## Installation and Setup Instructions
