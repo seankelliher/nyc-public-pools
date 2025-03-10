@@ -73,13 +73,17 @@ onMounted(() => {
                 >
                     <dl class="pool-card-list">
                         <dt
-                            class="roboto-flex seven"
+                            class="roboto-flex seven pool-card-text"
                             :class="{active: store.fullPoolName === pool.name}"
                         >
                             {{ pool.name }}
                         </dt>
-                        <dd class="roboto-flex four">{{ pool.neighborhood }}</dd>
-                        <dd class="roboto-flex four">{{ pool.borough }}</dd>
+                        <dd class="roboto-flex four pool-card-text">
+                            {{ pool.neighborhood }}
+                        </dd>
+                        <dd class="roboto-flex four pool-card-text">
+                            {{ pool.borough }}
+                        </dd>
                     </dl>
                 </div>
             </template>
