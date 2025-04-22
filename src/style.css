@@ -3,6 +3,10 @@
     --fs-1: clamp(0.8333rem, 0.7963rem + 0.1852vw, 0.9444rem);
     --fs0: clamp(0.9375rem, 0.8958rem + 0.2083vw, 1.0625rem);
     --fs1: clamp(1.0547rem, 1.0078rem + 0.2344vw, 1.1953rem);
+    --primary95: #e9f1ff;
+    --on-primary: #164974;
+    --on-surface: #191c20;
+    --outline-variant: #c2c7cf;
 }
 
 /* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
@@ -33,7 +37,7 @@ header {
     width: 95%;
     margin: 0;
     padding: 0.5em 2.5%;
-    background: #34618d; /* primary */
+    background: var(--primary95);
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
@@ -58,7 +62,7 @@ header::before {
     content: "";
     position: absolute;
     inset: 0 calc((100vw - 100%) / -2);
-    background: #34618d; /* primary  */
+    background: var(--primary95);
     z-index: -1;
 }
 
@@ -135,14 +139,14 @@ input::placeholder {
 label {
     font-size: var(--fs-1);
     line-height: 1.3;
-    color: #fff; /* on primary */
+    color: var(--on-primary);
 }
 
 .button-submit {
     margin: 0;
     padding: 0;
     flex: initial; /* flex: 0 1 auto */
-    color: #fff; /* on primary */
+    color: var(--on-primary);
     background: none;
     border: none;
     font-size: var(--fs0);
@@ -156,21 +160,30 @@ button:hover {
 nav {
     width: 95%;
     margin: 0;
-    padding: 1em 2.5%;
-    background: #f2f3f9; /* surface container low */
+    padding: 0 2.5%;
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; /* main axis */
     align-items: stretch; /* cross axis */
     position: relative;
+}
+
+@media (min-width: 300px) and (max-width: 499px) {
+    nav {
+        justify-content: space-between; /* main axis */
+    }
+}
+
+@media (min-width: 500px) {
+    nav {
+        justify-content: flex-start; /* main axis */
+    }
 }
 
 nav::before {
     content: "";
     position: absolute;
     inset: 0 calc((100vw - 100%) / -2);
-    background: #f2f3f9; /* surface container low */
     z-index: -1;
 }
 
@@ -179,8 +192,11 @@ nav::before {
     margin: 0;
     padding: 0 2.5%;
     flex: initial; /* flex: 0 1 auto */
-    background: #e6e8ee; /* surface container high */
-    border-radius: 12px;
+    color: var(--on-surface);
+}
+
+.filter-group:last-of-type {
+    border-right: none;
 }
 
 @media (min-width: 300px) and (max-width: 499px) {
@@ -188,11 +204,11 @@ nav::before {
         width: 35%;
     }
 
-    .filter-group:first-child {
+    .filter-group:first-of-type {
         margin-bottom: 1em;
     }
 
-    .filter-group:nth-child(2) {
+    .filter-group: {
         margin-bottom: 1em;
     }
 }
@@ -200,18 +216,21 @@ nav::before {
 @media (min-width: 500px) and (max-width: 899px) {
     .filter-group {
         width: 18%;
+        border-right: 1px solid var(--outline-variant);
     }
 }
 
 @media (min-width: 900px) and (max-width: 1099px) {
     .filter-group {
         width: 15%;
+        border-right: 1px solid var(--outline-variant);
     }
 }
 
 @media (min-width: 1100px) {
     .filter-group {
         width: 12%;
+        border-right: 1px solid var(--outline-variant);
     }
 }
 
@@ -225,8 +244,8 @@ nav::before {
     margin: 0;
     padding: 0.5em 2.5%;
     background: #f2f3f9; /* surface container low */
-    border-top: 2px solid #c2c7cf; /* outline variant */
-    border-bottom: 2px solid #c2c7cf; /* outline variant */
+    border-top: 1px solid var(--outline-variant);
+    border-bottom: 1px solid var(--outline-variant);
     flex: initial; /* flex: 0 1 auto */
     position: relative;
 }
@@ -234,10 +253,10 @@ nav::before {
 #criteria-bar::before {
     content: "";
     position: absolute;
-    inset: -2px calc((100vw - 100%) / -2);
+    inset: -1px calc((100vw - 100%) / -2);
     background: #f2f3f9; /* surface container low */
-    border-top: 2px solid #c2c7cf; /* outline variant */
-    border-bottom: 2px solid #c2c7cf; /* outline variant */
+    border-top: 1px solid var(--outline-variant);
+    border-bottom: 1px solid var(--outline-variant);
     z-index: -1;
 }
 
@@ -291,7 +310,7 @@ main {
 
 /* box-shadow: hor, vert, blur, spread */
 .pool-card {
-    background: #d0e4ff; /* primary container */
+    background: var(--primary95);
     border-radius: 8px;
     flex: none; /* flex: 0 1 auto */
     box-shadow: 4px 4px 4px 1px #d8dae0; /* surface dim */
@@ -354,6 +373,7 @@ main {
     width: 100%;
     margin: 0;
     padding: 0;
+    color: var(--on-primary);
     flex: initial; /* flex: 0 1 auto */
 }
 
@@ -373,6 +393,7 @@ main {
     width: 55%;
     margin-bottom: 0.5em;
     padding: 0;
+    color: var(--on-surface);
     flex: initial; /* flex: 0 1 auto */
 }
 
@@ -380,7 +401,7 @@ main {
 h1 {
     font-size: var(--fs1);
     line-height: 1.5;
-    color: #fff; /* on primary */
+    color: var(--on-primary);
 }
 
 h1:hover {
@@ -390,13 +411,13 @@ h1:hover {
 h2 {
     font-size: var(--fs0);
     line-height: 1.5;
-    color: #191c20; /* on surface */
+    color: var(--on-surface); /* on surface */
 }
 
 p {
     font-size: var(--fs0);
     line-height: 1.5;
-    color: #191c20; /* on surface */
+    color: var(--on-surface); /* on surface */
 }
 
 .error-text {
@@ -407,14 +428,12 @@ dt {
     width: 100%;
     font-size: var(--fs0);
     line-height: 1.5;
-    color: #191c20; /* on surface */
 }
 
 dd {
     width: 100%;
     font-size: var(--fs0);
     line-height: 1.5;
-    color: #191c20; /* on surface */
     margin-left: 0;
 }
 
@@ -423,7 +442,8 @@ dd {
 }
 
 .active {
-    color: #bf2424; /* custom color */
+    background: #F3FA39; /* secondary 95 */
+    display: inline;
 }
 
 /* GOOGLE FONT - roboto-flex - variable weight font, 100 to 1000 */
